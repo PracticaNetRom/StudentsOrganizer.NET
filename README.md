@@ -1,1 +1,0 @@
-# StudentsOrganizer for .NET
