@@ -1,0 +1,38 @@
+CREATE TABLE STUDENTS
+(
+	ID_Students INT  PRIMARY KEY,
+	First_Name VARCHAR(50),
+	Last_Name VARCHAR(10),
+        Gender VARCHAR (20),
+        Birth_date Date,
+        Email VARCHAR(40),
+        Phone_Numbers VARCHAR(10),
+        Faculty VARCHAR(20),
+        Faculty_start_year DATE
+	
+) ;
+  
+
+CREATE TABLE EVENT
+(
+   ID_Students int ,
+  ID_Event INT PRIMARY KEY,
+  Practice VARCHAR (20),
+  Internship VARCHAR(30),
+  NSA VARCHAR(50),
+  Period_of_event DATE,
+  Departament VARCHAR (20)
+  
+   foreign key(ID_Students) references STUDENTS(ID_Students)
+);
+
+
+CREATE TABLE TASK
+(
+   ID_Event int ,
+  ID_Task INT PRIMARY KEY,
+  Task_Name VARCHAR (30),
+  Remarks VARCHAR (20)
+
+    foreign key(ID_Event) references EVENT(ID_Event)
+);
