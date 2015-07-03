@@ -1,0 +1,8 @@
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\bin\Debug\DBConnection.exe.config
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\bin\Debug\DBConnection.exe
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\bin\Debug\DBConnection.pdb
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.csprojResolveAssemblyReference.cache
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.Properties.Resources.resources
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.csproj.GenerateResource.Cache
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.exe
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.pdb
