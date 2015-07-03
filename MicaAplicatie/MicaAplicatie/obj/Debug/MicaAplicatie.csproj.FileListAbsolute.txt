@@ -1,0 +1,9 @@
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.exe
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.pdb
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.Form1.resources
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.Properties.Resources.resources
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.csproj.GenerateResource.Cache
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.exe
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.pdb
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.exe.config
