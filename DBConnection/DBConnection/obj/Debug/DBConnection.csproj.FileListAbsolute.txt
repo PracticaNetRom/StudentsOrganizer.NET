@@ -6,3 +6,5 @@ c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnec
 c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.csproj.GenerateResource.Cache
 c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.exe
 c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.pdb
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.Form1.resources
+c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.exe.licenses

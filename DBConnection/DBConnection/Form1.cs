@@ -23,7 +23,10 @@ namespace DBConnection
         {
             SqlConnection con = new SqlConnection(Properties.Settings.Default.Connection);
             con.Open();
-
+            if (con.State == ConnectionState.Open) 
+            {
+                MessageBox.Show("Connection OK!");
+            }
         }
     }
 }
