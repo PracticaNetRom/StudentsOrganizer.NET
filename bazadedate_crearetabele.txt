@@ -1,5 +1,5 @@
-create table participants (
-	idparticipant NUMBER NOT NULL,
+create table students (
+	idstudent NUMBER NOT NULL,
 	firstname VARCHAR(15),
 	lastname VARCHAR(15),
 	gender NUMBER,
@@ -14,39 +14,24 @@ create table participants (
 create table event(
 	idevent NUMBER NOT NULL,
 	name_event VARCHAR(20),
-	period_event VARCHAR(30),
-	department VARCHAR(20),
 	CONSTRAINT event_id_pk PRIMARY KEY(idevent)
 );
 
-create table tasks(
-	idtask NUMBER NOT NULL,
-	name_task VARCHAR(30),
-	CONSTRAINT tasks_id_pk PRIMARY KEY(idtask)
+create table students_event(
+	id NUMBER NOT NULL,
+	idstudent NUMBER ,
+	idevent NUMBER,
+	period DATE,
+	department VARCHAR(100),
+	task VARCHAR(100),
+	remarks VARCHAR(200)
+	CONSTRAINT students_event_id_pk PRIMARY KEY(id)	
 );
 
-create table participantsevent(
-	idparticipant NUMBER NOT NULL,
-	idevent NUMBER NOT NULL,
-	CONSTRAINT participantsevent_id_pk PRIMARY KEY(idparticipant, idevent)	
-);
-
-create table parttasks(
-	idparticipant NUMBER NOT NULL,
-	idtask NUMBER NOT NULL,
-	remarks VARCHAR(100),
-	CONSTRAINT parttasks_id_pk PRIMARY KEY(idparticipant, idtask)
-);
-
-ALTER TABLE participantsevent 
-ADD(CONSTRAINT participants_event_fk FOREIGN KEY(idparticipant) 
-REFERENCES participants(idparticipant));
+ALTER TABLE students_event 
+ADD(CONSTRAINT students_event_fk FOREIGN KEY(idstudent) 
+REFERENCES students(idstudent));
 ADD(CONSTRAINT participants_event_fk FOREIGN KEY(idevent) 
 REFERENCES event(idevent));
 
-ALTER TABLE participants
-ADD(CONSTRAINT participants_tasks_fk FOREIGN KEY(idparticipant) 
-REFERENCES participants(idparticipant));
-ADD(CONSTRAINT participants_tasks_fk FOREIGN KEY(idtask) 
-REFERENCES tasks(idtask));
 
