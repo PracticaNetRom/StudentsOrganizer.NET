@@ -16,6 +16,6 @@ namespace DBConnection.Model
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string Faculty { get; set; }
-        public int FacultyStart { get; set; }
+        public int FacultyStartYear { get; set; }
     }
 }

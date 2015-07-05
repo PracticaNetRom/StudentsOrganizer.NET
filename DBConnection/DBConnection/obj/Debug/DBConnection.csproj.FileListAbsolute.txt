@@ -8,3 +8,13 @@ c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnec
 c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.pdb
 c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.Form1.resources
 c:\users\laboratory1\documents\visual studio 2013\Projects\DBConnection\DBConnection\obj\Debug\DBConnection.exe.licenses
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\DBConnection.exe.config
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.exe
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.pdb
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\DBConnection.exe
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\DBConnection.pdb
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.csprojResolveAssemblyReference.cache
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.Form1.resources
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.Properties.Resources.resources
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.csproj.GenerateResource.Cache
+E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.exe.licenses

@@ -1,119 +1,107 @@
-create table person(
-	personID int not null,
-	firstName varchar(20),
-	lastName varchar(20),
-	gender varchar(10),
-	birthDate date,
-	email varchar(25),
-	phoneNr varchar(15),
+USE [Practica]
+GO
 
-	primary key(personID)
-);
+/****** Object:  Table [dbo].[event]    Script Date: 05.07.2015 21:01:51 ******/
+SET ANSI_NULLS ON
+GO
 
-create table participant(
-	participantID int not null,
-	faculty varchar(30),
-	facultyStartYear int,
+SET QUOTED_IDENTIFIER ON
+GO
 
-	primary key(participantID),
-	foreign key(participantID) references person(personID)
-);
+SET ANSI_PADDING ON
+GO
 
-create table event(
-	eventType varchar(20) not null,--name of event
-	eventPeriod varchar(40),--period , ex : 1.07.2015-15.07.2015
-	primary key(eventType)
-);
+CREATE TABLE [dbo].[event](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](50) NULL,
+ CONSTRAINT [PK_event] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
 
-create table work(
-	departament varchar(20),
-	eventType varchar (20) not null,
-	participantID int not null,
-	taskRecieved varchar(50) ,
-	remarks varchar(50),
+GO
 
-	primary key(participantID),
-	foreign key(participantID) references participant(participantID),
-	foreign key(eventType) references event(eventType)
-);
+SET ANSI_PADDING OFF
+GO
 
+-----
 
-insert into person values(
-	1,
-	'Petre',
-	'Mazilu',
-	'M',
-	'1994-06-01',
-	'mazilu_petre@yahoo.ro',
-	'0760073998'
-);
+USE [Practica]
+GO
 
-insert into person values(
-	2,
-	'Andrei',
-	'Bolovan',
-	'M',
-	'1994-09-07',
-	'-',
-	'0745757502'
-);
+/****** Object:  Table [dbo].[student]    Script Date: 05.07.2015 21:02:17 ******/
+SET ANSI_NULLS ON
+GO
 
-insert into person values(
-	3,
-	'Marina',
-	'Marinescu',
-	'F',
-	'1993-06-11',
-	'-',
-	'0761147515'
-);
+SET QUOTED_IDENTIFIER ON
+GO
 
-insert into participant values(
-	1,
-	'ACE',
-	2012
-);
+SET ANSI_PADDING ON
+GO
 
-insert into participant values(
-	2,
-	'ACE',
-	2013
-);
+CREATE TABLE [dbo].[student](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [varchar](100) NULL,
+	[LastName] [varchar](100) NULL,
+	[Gender] [varchar](50) NULL,
+	[BirthDate] [date] NULL,
+	[Email] [varchar](50) NULL,
+	[PhoneNumber] [varchar](50) NULL,
+	[Faculty] [varchar](50) NULL,
+	[FacultyStartYear] [int] NULL,
+ CONSTRAINT [PK_student] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
 
-insert into participant values(
-	3,
-	'ACE',
-	2012
-);
+GO
 
-insert into event values(
-	'practica',
-	'01/07/2015-15/07/2015'
-);
-
-insert into work values(
-	'dotNet',
-	'practica',
-	1,
-	'StudentOrganizer',
-	'-'
-);
-
-insert into work values(
-	'dotNet',
-	'practica',
-	2,
-	'StudentOrganizer',
-	'-'
-);
-
-insert into work values(
-	'dotNet',
-	'practica',
-	3,
-	'StudentOrganizer',
-	'-'
-);
+SET ANSI_PADDING OFF
+GO
 
 
-select person.firstName,person.lastName,work.departament,event.eventType,event.eventPeriod from work,person,event where work.participantID = person.personID and work.eventType=event.eventType;
+----
+
+USE [Practica]
+GO
+
+/****** Object:  Table [dbo].[StudentEvent]    Script Date: 05.07.2015 21:02:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[StudentEvent](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Id_Student] [int] NULL,
+	[Id_Event] [int] NULL,
+	[Period] [date] NULL,
+	[Departament] [varchar](50) NULL,
+	[Task] [varchar](200) NULL,
+	[Remarks] [varchar](200) NULL,
+ CONSTRAINT [PK_StudentEvent] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[StudentEvent]  WITH CHECK ADD FOREIGN KEY([Id_Event])
+REFERENCES [dbo].[event] ([id])
+GO
+
+ALTER TABLE [dbo].[StudentEvent]  WITH CHECK ADD FOREIGN KEY([Id_Student])
+REFERENCES [dbo].[student] ([id])
+GO
+
+
