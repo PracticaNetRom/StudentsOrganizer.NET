@@ -10,3 +10,6 @@ c:\users\andrei\documents\visual studio 2013\Projects\Student_Organizer\Student_
 c:\users\andrei\documents\visual studio 2013\Projects\Student_Organizer\Student_Organizer\obj\Debug\Student_Organizer.MainForm.resources
 c:\users\andrei\documents\visual studio 2013\Projects\Student_Organizer\Student_Organizer\obj\Debug\Student_Organizer.exe.licenses
 c:\users\andrei\documents\visual studio 2013\Projects\Student_Organizer\Student_Organizer\obj\Debug\Student_Organizer.ListWithStudents.resources
+D:\Work\Student_Organizer\Student_Organizer\bin\Debug\Student_Organizer.exe.config
+D:\Work\Student_Organizer\Student_Organizer\obj\Debug\Student_Organizer.exe
+D:\Work\Student_Organizer\Student_Organizer\obj\Debug\Student_Organizer.pdb
