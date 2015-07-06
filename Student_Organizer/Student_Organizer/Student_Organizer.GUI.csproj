@@ -103,6 +103,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MODEL.BO\Student_Organizer.MODEL.BO.csproj">
+      <Project>{b5d540f0-3c9d-4995-b8d6-ee1e71a8751c}</Project>
+      <Name>Student_Organizer.MODEL.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Student_Organizer.Model.DBOp\Student_Organizer.Model.DBOp.csproj">
+      <Project>{2c5a40f0-8912-4ddd-9e82-92a4b2a61505}</Project>
+      <Name>Student_Organizer.Model.DBOp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

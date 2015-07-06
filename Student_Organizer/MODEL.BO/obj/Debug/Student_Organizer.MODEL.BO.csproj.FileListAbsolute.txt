@@ -1,0 +1,5 @@
+D:\Work\Student_Organizer\MODEL.BO\bin\Debug\MODEL.BO.dll
+D:\Work\Student_Organizer\MODEL.BO\bin\Debug\MODEL.BO.pdb
+D:\Work\Student_Organizer\MODEL.BO\obj\Debug\Student_Organizer.MODEL.BO.csprojResolveAssemblyReference.cache
+D:\Work\Student_Organizer\MODEL.BO\obj\Debug\MODEL.BO.dll
+D:\Work\Student_Organizer\MODEL.BO\obj\Debug\MODEL.BO.pdb
