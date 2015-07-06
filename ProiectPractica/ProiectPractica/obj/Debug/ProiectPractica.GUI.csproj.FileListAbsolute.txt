@@ -1,0 +1,2 @@
+C:\Users\laboratory1\Documents\Visual Studio 2013\Projects\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.exe.config
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.exe.config
