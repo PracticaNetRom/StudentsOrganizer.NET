@@ -1,0 +1,5 @@
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\StudentsOrganizerModel.BO\obj\Debug\StudentsOrganizerModel.BO.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\StudentsOrganizerModel.BO\bin\Debug\StudentsOrganizerModel.BO.dll
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\StudentsOrganizerModel.BO\bin\Debug\StudentsOrganizerModel.BO.pdb
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\StudentsOrganizerModel.BO\obj\Debug\StudentsOrganizerModel.BO.dll
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\StudentsOrganizerModel.BO\obj\Debug\StudentsOrganizerModel.BO.pdb

@@ -1,0 +1,8 @@
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.GUI.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.Properties.Resources.resources
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.GUI.csproj.GenerateResource.Cache
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.exe.config
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.exe
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.pdb
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.exe
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.pdb

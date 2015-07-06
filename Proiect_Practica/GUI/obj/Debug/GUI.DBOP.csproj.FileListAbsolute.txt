@@ -1,0 +1,7 @@
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\GUI\bin\Debug\GUI.dll
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\GUI\bin\Debug\GUI.pdb
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\GUI\bin\Debug\StudentsOrganizerModel.BO.dll
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\GUI\bin\Debug\StudentsOrganizerModel.BO.pdb
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\GUI\obj\Debug\GUI.DBOP.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\GUI\obj\Debug\GUI.dll
+C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\GUI\obj\Debug\GUI.pdb
