@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicaAplicatie", "MicaAplicatie\MicaAplicatie.csproj", "{A7456E75-14B9-4EAB-AA68-6A57A1E6F348}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsOrganiser.GUI", "MicaAplicatie\StudentsOrganiser.GUI.csproj", "{A7456E75-14B9-4EAB-AA68-6A57A1E6F348}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentOrganiser.Model.BO", "StudentOrganiser.Model.BO\StudentOrganiser.Model.BO.csproj", "{350FC9C2-52F7-4D18-A3D9-2C082B6814F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentORganiser.Model.DBOp", "StudentORganiser.Model.DBOp\StudentORganiser.Model.DBOp.csproj", "{80B275B6-3304-4982-97B5-4862E4B2A043}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A7456E75-14B9-4EAB-AA68-6A57A1E6F348}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7456E75-14B9-4EAB-AA68-6A57A1E6F348}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7456E75-14B9-4EAB-AA68-6A57A1E6F348}.Release|Any CPU.Build.0 = Release|Any CPU
+		{350FC9C2-52F7-4D18-A3D9-2C082B6814F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350FC9C2-52F7-4D18-A3D9-2C082B6814F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350FC9C2-52F7-4D18-A3D9-2C082B6814F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350FC9C2-52F7-4D18-A3D9-2C082B6814F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B275B6-3304-4982-97B5-4862E4B2A043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B275B6-3304-4982-97B5-4862E4B2A043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B275B6-3304-4982-97B5-4862E4B2A043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B275B6-3304-4982-97B5-4862E4B2A043}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

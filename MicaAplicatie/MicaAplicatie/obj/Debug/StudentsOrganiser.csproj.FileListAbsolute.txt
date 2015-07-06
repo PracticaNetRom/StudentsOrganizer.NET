@@ -1,0 +1,3 @@
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.exe.config
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.exe
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.pdb

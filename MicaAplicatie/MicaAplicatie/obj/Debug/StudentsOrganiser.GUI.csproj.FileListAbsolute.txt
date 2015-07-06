@@ -1,0 +1,13 @@
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.exe.config
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.exe
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.pdb
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\StudentOrganiser.Model.BO.dll
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\StudentORganiser.Model.DBOp.dll
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\StudentOrganiser.Model.BO.pdb
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\bin\Debug\StudentORganiser.Model.DBOp.pdb
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\StudentsOrganiser.GUI.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.Form1.resources
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.Properties.Resources.resources
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\StudentsOrganiser.GUI.csproj.GenerateResource.Cache
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.exe
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.pdb

@@ -76,6 +76,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentOrganiser.Model.BO\StudentOrganiser.Model.BO.csproj">
+      <Project>{350fc9c2-52f7-4d18-a3d9-2c082b6814f4}</Project>
+      <Name>StudentOrganiser.Model.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentORganiser.Model.DBOp\StudentORganiser.Model.DBOp.csproj">
+      <Project>{80b275b6-3304-4982-97b5-4862e4b2a043}</Project>
+      <Name>StudentORganiser.Model.DBOp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

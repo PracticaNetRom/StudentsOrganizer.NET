@@ -1,0 +1,5 @@
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\StudentOrganiser.Model.BO\bin\Debug\StudentOrganiser.Model.BO.dll
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\StudentOrganiser.Model.BO\bin\Debug\StudentOrganiser.Model.BO.pdb
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\StudentOrganiser.Model.BO\obj\Debug\StudentOrganiser.Model.BO.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\StudentOrganiser.Model.BO\obj\Debug\StudentOrganiser.Model.BO.dll
+C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\StudentOrganiser.Model.BO\obj\Debug\StudentOrganiser.Model.BO.pdb
