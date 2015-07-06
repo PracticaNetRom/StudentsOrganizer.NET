@@ -6,20 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Collections;
+using StudentOrganizer.BO;
 
-namespace DBConnection.Model
+
+namespace StudentOrganizer.DBOp
 {
-    class EventCommands
+    public class EventCommands
     {
         private SqlConnection conn ;
 
         public EventCommands(SqlConnection connection) 
         {
             conn = connection;
-          
         }
 
-        public void insertEvent(Event ev) 
+        public void InsertEvent(Event ev) 
         {
             string insertString = "INSERT INTO EVENT(NAME) values(@param1)";
        
@@ -30,19 +31,17 @@ namespace DBConnection.Model
             command.ExecuteNonQuery();
         }
 
-        public void updateEvent(Event ev) 
+        public void UpdateEvent(Event ev) 
         {
-            string updateString = "UPDATE EVENT SET name = '"+ev.Name+"' WHERE event.id = '"+ev.IdEvent+"'";
+            string updateString = "UPDATE EVENT SET name = @name WHERE event.id = '"+ev.IdEvent+"'";
 
             SqlCommand command = new SqlCommand(updateString, conn);
-            //command.Parameters.Add("@param1",ev.IdEvent);
-           // command.Parameters.Add("@param2",ev.Name);
-            //command.Parameters.Add("@param3",oldID);
+            command.Parameters.Add("@name",ev.Name);
             command.ExecuteNonQuery();
             
         }
 
-        public void deleteEvent(Event ev) 
+        public void DeleteEvent(Event ev) 
         {
             string deleteString = "DELETE FROM EVENT WHERE id = '"+ev.IdEvent+"'";
 
@@ -50,7 +49,7 @@ namespace DBConnection.Model
             command.ExecuteNonQuery();
         }
 
-        public ArrayList getEvents() 
+        public ArrayList GetEvents() 
         {
             Event ev = new Event();
             ArrayList eventList = new ArrayList();
@@ -73,7 +72,7 @@ namespace DBConnection.Model
             return eventList;
         }
 
-        public Event searchEvent(int evID)
+        public Event SearchEvent(int evID)
         {
             Event ev = new Event();
             ev.IdEvent = evID;

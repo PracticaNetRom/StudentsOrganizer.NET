@@ -1,0 +1,5 @@
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\StudentOrganizer.BO\bin\Debug\StudentOrganizer.BO.dll
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\StudentOrganizer.BO\bin\Debug\StudentOrganizer.BO.pdb
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\StudentOrganizer.BO\obj\Debug\StudentOrganizer.BO.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\StudentOrganizer.BO\obj\Debug\StudentOrganizer.BO.dll
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\StudentOrganizer.BO\obj\Debug\StudentOrganizer.BO.pdb

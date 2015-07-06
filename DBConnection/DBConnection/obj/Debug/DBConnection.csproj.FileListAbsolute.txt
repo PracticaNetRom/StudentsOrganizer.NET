@@ -18,3 +18,13 @@ E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBC
 E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.Properties.Resources.resources
 E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.csproj.GenerateResource.Cache
 E:\Practica\GitHub\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.exe.licenses
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\DBConnection.exe.config
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.exe
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.pdb
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\DBConnection.exe
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\DBConnection.pdb
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.Form1.resources
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.Properties.Resources.resources
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.csproj.GenerateResource.Cache
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.exe.licenses

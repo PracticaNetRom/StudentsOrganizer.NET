@@ -1,0 +1,15 @@
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\StudentOrganizer.GUI.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\StudentOrganizer.GUI.Form1.resources
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\StudentOrganizer.GUI.Form2.resources
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.Properties.Resources.resources
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\StudentOrganizer.GUI.csproj.GenerateResource.Cache
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.exe.licenses
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.exe
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\obj\Debug\DBConnection.pdb
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\DBConnection.exe.config
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\DBConnection.exe
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\DBConnection.pdb
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\StudentOrganizer.BO.dll
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\StudentOrganizer.DBOp.dll
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\StudentOrganizer.BO.pdb
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\DBConnection\DBConnection\bin\Debug\StudentOrganizer.DBOp.pdb

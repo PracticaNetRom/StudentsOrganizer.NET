@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBConnection.Model
+namespace StudentOrganizer.BO
 {
-    class Event
+    public class Event
     {
         public int IdEvent { get; set; }
         public string Name { get; set; }
