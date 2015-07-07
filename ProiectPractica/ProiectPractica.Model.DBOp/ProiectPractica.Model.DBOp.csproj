@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentsOperations.cs" />
+    <Compile Include="StudentEventOperations.cs" />
+    <Compile Include="StudentOperations.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

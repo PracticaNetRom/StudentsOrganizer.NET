@@ -8,7 +8,7 @@ namespace ProiectPractica
 {
   public class  Event
     {
-        public int idevent { get; set; }
+        public int id_event { get; set; }
         public string name_event { get; set; }
     }
 }

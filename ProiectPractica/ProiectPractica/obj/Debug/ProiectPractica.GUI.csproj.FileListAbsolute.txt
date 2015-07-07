@@ -1,2 +1,11 @@
 C:\Users\laboratory1\Documents\Visual Studio 2013\Projects\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.exe.config
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.exe.config
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.exe.config
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.exe
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.pdb
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.GUI.csprojResolveAssemblyReference.cache
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.LogIn.resources
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.Properties.Resources.resources
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.GUI.csproj.GenerateResource.Cache
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.exe
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.pdb
