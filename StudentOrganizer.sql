@@ -104,4 +104,13 @@ ALTER TABLE [dbo].[StudentEvent]  WITH CHECK ADD FOREIGN KEY([Id_Student])
 REFERENCES [dbo].[student] ([id])
 GO
 
+create table USER_Table(
+	userName varchar(100),
+	pass varchar(500),
+
+	primary key(userName)
+);
+
+insert into USER_Table values('petre','WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=');
+
 

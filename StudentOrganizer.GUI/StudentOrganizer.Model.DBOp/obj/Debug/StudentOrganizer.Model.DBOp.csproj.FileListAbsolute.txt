@@ -1,0 +1,7 @@
+c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\bin\Debug\StudentOrganizer.Model.DBOp.dll
+c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\bin\Debug\StudentOrganizer.Model.DBOp.pdb
+c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\bin\Debug\StudentOrganizer.Model.BO.dll
+c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\bin\Debug\StudentOrganizer.Model.BO.pdb
+c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\obj\Debug\StudentOrganizer.Model.DBOp.csprojResolveAssemblyReference.cache
+c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\obj\Debug\StudentOrganizer.Model.DBOp.dll
+c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\obj\Debug\StudentOrganizer.Model.DBOp.pdb
