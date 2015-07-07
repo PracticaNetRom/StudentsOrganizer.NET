@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventOperation.cs" />
     <Compile Include="StudentsOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student_EventOperation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StudentsOrganizerModel.BO\StudentsOrganizerModel.BO.csproj">

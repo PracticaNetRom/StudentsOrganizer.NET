@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentsOrganizerModel.BO
 {
-    class Event
+     public class Event
 
     {
         public int ID_Event { get; set; }
