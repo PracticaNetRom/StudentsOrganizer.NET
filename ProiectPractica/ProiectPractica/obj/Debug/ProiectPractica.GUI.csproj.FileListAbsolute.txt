@@ -9,3 +9,5 @@ C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPr
 C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.GUI.csproj.GenerateResource.Cache
 C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.exe
 C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.pdb
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.AddStudent.resources
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.StudentList.resources

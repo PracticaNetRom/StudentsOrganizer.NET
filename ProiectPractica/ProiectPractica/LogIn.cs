@@ -20,14 +20,11 @@ namespace ProiectPractica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection();
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login Where User='" + textBox1.Text + "'and Password='" + textBox2.Text + "'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
-            {
+            string username = "user";
+            string password = "1234";
 
-                this.Hide();
+            if ((textBox1.Text == username) && (textBox2.Text == password))
+            {
                 StudentList sl = new StudentList();
                 sl.Show();
             }
