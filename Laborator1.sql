@@ -47,4 +47,10 @@ CREATE TABLE EVENT_TYPE
    Description varchar (60)
    )
 
+   CREATE TABLE Login
+(
+    Username varchar (100) ,
+   Password varchar (60)
+   )
+
 
