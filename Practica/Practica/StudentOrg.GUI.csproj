@@ -64,30 +64,31 @@
     <Compile Include="Events.Designer.cs">
       <DependentUpon>Events.cs</DependentUpon>
     </Compile>
-    <Compile Include="EvidentaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EvidentaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Studenti.cs">
+    <Compile Include="Evidenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Studenti.Designer.cs">
-      <DependentUpon>Studenti.cs</DependentUpon>
+    <Compile Include="Evidenta.Designer.cs">
+      <DependentUpon>Evidenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Studenti.resx">
-      <DependentUpon>Studenti.cs</DependentUpon>
+    <EmbeddedResource Include="Evidenta.resx">
+      <DependentUpon>Evidenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -99,17 +100,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="EvidentaDataSet.xsc">
-      <DependentUpon>EvidentaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="EvidentaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>EvidentaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="EvidentaDataSet.xss">
-      <DependentUpon>EvidentaDataSet.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -122,6 +115,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentOrg.Model.BO\StudentOrg.Model.BO.csproj">
+      <Project>{020af5b2-b01b-47b0-b85d-32872df8d77b}</Project>
+      <Name>StudentOrg.Model.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentOrg.Model.DBO\StudentOrg.Model.DBO.csproj">
+      <Project>{c342f746-6a7a-4ac8-99fb-6b0191181cd2}</Project>
+      <Name>StudentOrg.Model.DBO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,7 @@
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.DBO\bin\Debug\StudentOrg.Model.DBO.dll
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.DBO\bin\Debug\StudentOrg.Model.DBO.pdb
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.DBO\bin\Debug\StudentOrg.Model.BO.dll
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.DBO\bin\Debug\StudentOrg.Model.BO.pdb
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.DBO\obj\Debug\StudentOrg.Model.DBO.csprojResolveAssemblyReference.cache
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.DBO\obj\Debug\StudentOrg.Model.DBO.dll
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.DBO\obj\Debug\StudentOrg.Model.DBO.pdb

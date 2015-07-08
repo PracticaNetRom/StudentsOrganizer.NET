@@ -9,3 +9,14 @@ C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Practica\obj\Debug
 C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Practica\obj\Debug\Practica.pdb
 C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Practica\obj\Debug\Studenti.csprojResolveAssemblyReference.cache
 C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Practica\obj\Debug\Practica.Login.resources
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\bin\Debug\Practica.exe.config
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\obj\Debug\Practica.exe
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\obj\Debug\Practica.pdb
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\bin\Debug\Practica.exe
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\bin\Debug\Practica.pdb
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\obj\Debug\Studenti.csprojResolveAssemblyReference.cache
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\obj\Debug\Practica.Login.resources
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\obj\Debug\Practica.Evidenta.resources
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\obj\Debug\Practica.Properties.Resources.resources
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\obj\Debug\Studenti.csproj.GenerateResource.Cache
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\Practica\obj\Debug\Practica.exe.licenses

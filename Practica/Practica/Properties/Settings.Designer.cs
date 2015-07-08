@@ -32,5 +32,16 @@ namespace Practica.Properties {
                 return ((string)(this["EvidentaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NETSRV-DB01\\SQL2012;Initial Catalog=NetRom.Practica5;User ID=Practica" +
+            "User;Password=!khyVSJ2")]
+        public string NetRom_Practica5ConnectionString {
+            get {
+                return ((string)(this["NetRom_Practica5ConnectionString"]));
+            }
+        }
     }
 }
