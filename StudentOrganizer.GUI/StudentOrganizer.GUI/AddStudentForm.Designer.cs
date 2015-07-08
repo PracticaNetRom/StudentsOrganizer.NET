@@ -47,6 +47,8 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.SaveStudentButton = new DevExpress.XtraEditors.SimpleButton();
             this.BirthTimeEdit = new DevExpress.XtraEditors.DateEdit();
+            this.eventListCheckBox = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.eventListCheck = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.FirstNameTextField.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextField.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextField.Properties)).BeginInit();
@@ -58,20 +60,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BirthTimeEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BirthTimeEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventListCheckBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // FirstNameTextField
             // 
-            this.FirstNameTextField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FirstNameTextField.Location = new System.Drawing.Point(220, 123);
+            this.FirstNameTextField.Location = new System.Drawing.Point(220, 121);
             this.FirstNameTextField.Name = "FirstNameTextField";
-            this.FirstNameTextField.Size = new System.Drawing.Size(137, 20);
+            this.FirstNameTextField.Size = new System.Drawing.Size(138, 20);
             this.FirstNameTextField.TabIndex = 0;
             // 
             // FistNameLabel
             // 
-            this.FistNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FistNameLabel.Location = new System.Drawing.Point(75, 126);
+            this.FistNameLabel.Location = new System.Drawing.Point(75, 124);
             this.FistNameLabel.Name = "FistNameLabel";
             this.FistNameLabel.Size = new System.Drawing.Size(51, 13);
             this.FistNameLabel.TabIndex = 1;
@@ -79,8 +80,7 @@
             // 
             // phoneNumberLabel
             // 
-            this.phoneNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.phoneNumberLabel.Location = new System.Drawing.Point(75, 301);
+            this.phoneNumberLabel.Location = new System.Drawing.Point(75, 299);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
             this.phoneNumberLabel.Size = new System.Drawing.Size(70, 13);
             this.phoneNumberLabel.TabIndex = 3;
@@ -88,16 +88,14 @@
             // 
             // PhoneNumberTextField
             // 
-            this.PhoneNumberTextField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhoneNumberTextField.Location = new System.Drawing.Point(220, 298);
+            this.PhoneNumberTextField.Location = new System.Drawing.Point(220, 296);
             this.PhoneNumberTextField.Name = "PhoneNumberTextField";
-            this.PhoneNumberTextField.Size = new System.Drawing.Size(137, 20);
+            this.PhoneNumberTextField.Size = new System.Drawing.Size(138, 20);
             this.PhoneNumberTextField.TabIndex = 2;
             // 
             // emailLabel
             // 
-            this.emailLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.emailLabel.Location = new System.Drawing.Point(75, 260);
+            this.emailLabel.Location = new System.Drawing.Point(75, 258);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(24, 13);
             this.emailLabel.TabIndex = 5;
@@ -105,16 +103,14 @@
             // 
             // EmailTextField
             // 
-            this.EmailTextField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmailTextField.Location = new System.Drawing.Point(220, 257);
+            this.EmailTextField.Location = new System.Drawing.Point(220, 255);
             this.EmailTextField.Name = "EmailTextField";
-            this.EmailTextField.Size = new System.Drawing.Size(137, 20);
+            this.EmailTextField.Size = new System.Drawing.Size(138, 20);
             this.EmailTextField.TabIndex = 4;
             // 
             // lastNameLabel
             // 
-            this.lastNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lastNameLabel.Location = new System.Drawing.Point(75, 161);
+            this.lastNameLabel.Location = new System.Drawing.Point(75, 159);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(50, 13);
             this.lastNameLabel.TabIndex = 7;
@@ -122,36 +118,32 @@
             // 
             // LastNameTextField
             // 
-            this.LastNameTextField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LastNameTextField.Location = new System.Drawing.Point(220, 158);
+            this.LastNameTextField.Location = new System.Drawing.Point(220, 156);
             this.LastNameTextField.Name = "LastNameTextField";
-            this.LastNameTextField.Size = new System.Drawing.Size(137, 20);
+            this.LastNameTextField.Size = new System.Drawing.Size(138, 20);
             this.LastNameTextField.TabIndex = 6;
             // 
             // MaleButton
             // 
-            this.MaleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaleButton.Location = new System.Drawing.Point(220, 184);
+            this.MaleButton.Location = new System.Drawing.Point(220, 182);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Properties.Caption = "Male";
-            this.MaleButton.Size = new System.Drawing.Size(112, 19);
+            this.MaleButton.Size = new System.Drawing.Size(113, 19);
             this.MaleButton.TabIndex = 9;
             this.MaleButton.CheckedChanged += new System.EventHandler(this.MaleButton_CheckedChanged);
             // 
             // FamaleButton
             // 
-            this.FamaleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FamaleButton.Location = new System.Drawing.Point(301, 184);
+            this.FamaleButton.Location = new System.Drawing.Point(301, 182);
             this.FamaleButton.Name = "FamaleButton";
             this.FamaleButton.Properties.Caption = "Famale";
-            this.FamaleButton.Size = new System.Drawing.Size(112, 19);
+            this.FamaleButton.Size = new System.Drawing.Size(113, 19);
             this.FamaleButton.TabIndex = 10;
             this.FamaleButton.CheckedChanged += new System.EventHandler(this.FamaleButton_CheckedChanged);
             // 
             // GenderLabel
             // 
-            this.GenderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.GenderLabel.Location = new System.Drawing.Point(75, 187);
+            this.GenderLabel.Location = new System.Drawing.Point(75, 185);
             this.GenderLabel.Name = "GenderLabel";
             this.GenderLabel.Size = new System.Drawing.Size(35, 13);
             this.GenderLabel.TabIndex = 11;
@@ -159,8 +151,7 @@
             // 
             // FacultyLabel
             // 
-            this.FacultyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FacultyLabel.Location = new System.Drawing.Point(75, 346);
+            this.FacultyLabel.Location = new System.Drawing.Point(75, 344);
             this.FacultyLabel.Name = "FacultyLabel";
             this.FacultyLabel.Size = new System.Drawing.Size(35, 13);
             this.FacultyLabel.TabIndex = 13;
@@ -168,8 +159,7 @@
             // 
             // BirthLabel
             // 
-            this.BirthLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BirthLabel.Location = new System.Drawing.Point(75, 224);
+            this.BirthLabel.Location = new System.Drawing.Point(75, 222);
             this.BirthLabel.Name = "BirthLabel";
             this.BirthLabel.Size = new System.Drawing.Size(48, 13);
             this.BirthLabel.TabIndex = 15;
@@ -177,8 +167,7 @@
             // 
             // FacultyStartLabel
             // 
-            this.FacultyStartLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FacultyStartLabel.Location = new System.Drawing.Point(75, 395);
+            this.FacultyStartLabel.Location = new System.Drawing.Point(75, 393);
             this.FacultyStartLabel.Name = "FacultyStartLabel";
             this.FacultyStartLabel.Size = new System.Drawing.Size(87, 13);
             this.FacultyStartLabel.TabIndex = 17;
@@ -186,22 +175,20 @@
             // 
             // FacultyComboBox
             // 
-            this.FacultyComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FacultyComboBox.Location = new System.Drawing.Point(220, 343);
+            this.FacultyComboBox.Location = new System.Drawing.Point(220, 341);
             this.FacultyComboBox.Name = "FacultyComboBox";
             this.FacultyComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.FacultyComboBox.Size = new System.Drawing.Size(137, 20);
+            this.FacultyComboBox.Size = new System.Drawing.Size(138, 20);
             this.FacultyComboBox.TabIndex = 18;
             // 
             // FacultyStartComboBox
             // 
-            this.FacultyStartComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FacultyStartComboBox.Location = new System.Drawing.Point(220, 388);
+            this.FacultyStartComboBox.Location = new System.Drawing.Point(220, 386);
             this.FacultyStartComboBox.Name = "FacultyStartComboBox";
             this.FacultyStartComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.FacultyStartComboBox.Size = new System.Drawing.Size(137, 20);
+            this.FacultyStartComboBox.Size = new System.Drawing.Size(138, 20);
             this.FacultyStartComboBox.TabIndex = 19;
             // 
             // pictureEdit1
@@ -215,7 +202,7 @@
             // 
             // SaveStudentButton
             // 
-            this.SaveStudentButton.Location = new System.Drawing.Point(75, 441);
+            this.SaveStudentButton.Location = new System.Drawing.Point(75, 511);
             this.SaveStudentButton.Name = "SaveStudentButton";
             this.SaveStudentButton.Size = new System.Drawing.Size(75, 23);
             this.SaveStudentButton.TabIndex = 21;
@@ -234,11 +221,30 @@
             this.BirthTimeEdit.Size = new System.Drawing.Size(137, 20);
             this.BirthTimeEdit.TabIndex = 22;
             // 
+            // eventListCheckBox
+            // 
+            this.eventListCheckBox.Location = new System.Drawing.Point(220, 443);
+            this.eventListCheckBox.Name = "eventListCheckBox";
+            this.eventListCheckBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.eventListCheckBox.Size = new System.Drawing.Size(137, 20);
+            this.eventListCheckBox.TabIndex = 23;
+            // 
+            // eventListCheck
+            // 
+            this.eventListCheck.Location = new System.Drawing.Point(75, 446);
+            this.eventListCheck.Name = "eventListCheck";
+            this.eventListCheck.Size = new System.Drawing.Size(70, 13);
+            this.eventListCheck.TabIndex = 24;
+            this.eventListCheck.Text = "Participates At";
+            // 
             // AddStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 476);
+            this.ClientSize = new System.Drawing.Size(510, 564);
+            this.Controls.Add(this.eventListCheck);
+            this.Controls.Add(this.eventListCheckBox);
             this.Controls.Add(this.BirthTimeEdit);
             this.Controls.Add(this.SaveStudentButton);
             this.Controls.Add(this.pictureEdit1);
@@ -271,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BirthTimeEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BirthTimeEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventListCheckBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,5 +304,7 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.SimpleButton SaveStudentButton;
         private DevExpress.XtraEditors.DateEdit BirthTimeEdit;
+        private DevExpress.XtraEditors.CheckedComboBoxEdit eventListCheckBox;
+        private DevExpress.XtraEditors.LabelControl eventListCheck;
     }
 }

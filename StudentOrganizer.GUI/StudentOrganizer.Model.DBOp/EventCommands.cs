@@ -1,11 +1,11 @@
-﻿using System;
+﻿using StudentOrganizer.Model.BO;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
-using StudentOrganizer.Model.BO;
 
 namespace StudentOrganizer.Model.DBOp
 {
@@ -21,14 +21,25 @@ namespace StudentOrganizer.Model.DBOp
 
         public void InsertEvent(Event ev)
         {
-            string insertString = "INSERT INTO EVENT(NAME) values(@name)";
+            string insertString = @"INSERT INTO StudentEVENT(
+                                                Period,
+                                                Departament,Task,
+                                                Remarks,eventTypes_ID) 
+                                                            values(
+                                                            @period,@departament,
+                                                            @task,@remarks,@eventTypes_ID
+                                                                        )";
 
             using (conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand(insertString, conn);
 
-                command.Parameters.Add("@name", ev.Name);
+                SqlCommand command = new SqlCommand(insertString, conn);
+                command.Parameters.Add("@period",ev.Period);
+                command.Parameters.Add("@departament", ev.Departament);
+                command.Parameters.Add("@task", ev.Task);
+                command.Parameters.Add("@remarks", ev.Remarks);
+                command.Parameters.Add("@eventTypes_ID", ev.EventTypes_ID);
                 command.CommandType = CommandType.Text;
                 command.ExecuteNonQuery();
 
@@ -38,28 +49,39 @@ namespace StudentOrganizer.Model.DBOp
 
         public void UpdateEvent(Event ev)
         {
-            string updateString = "UPDATE EVENT SET name = @name WHERE event.id = '" + ev.IdEvent + "'";
+            string updateString = @"UPDATE StudentEVENT 
+                                           SET 
+                                               Period=@period, 
+                                               Departament=@departament, 
+                                               Task=@task, 
+                                               Remarks=@remarks ,
+                                               eventTypes_ID = @eventTypes_ID
+                                               WHERE id = '" + ev.ID + "'";
 
             using (conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-
                 SqlCommand command = new SqlCommand(updateString, conn);
-                command.Parameters.Add("@name", ev.Name);
+
+                command.Parameters.Add("@period", ev.Period);
+                command.Parameters.Add("@departament", ev.Departament);
+                command.Parameters.Add("@task", ev.Task);
+                command.Parameters.Add("@remarks", ev.Remarks);
+                command.Parameters.Add("@eventTypes_ID", ev.EventTypes_ID);
+
                 command.ExecuteNonQuery();
 
                 conn.Close();
             }
-
         }
 
         public void DeleteEvent(Event ev)
         {
-            string deleteString = "DELETE FROM EVENT WHERE id = '" + ev.IdEvent + "'";
+            string deleteString = "DELETE FROM EVENT WHERE id = '" + ev.ID + "'";
+
             using (conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-
                 SqlCommand command = new SqlCommand(deleteString, conn);
                 command.ExecuteNonQuery();
 
@@ -67,45 +89,17 @@ namespace StudentOrganizer.Model.DBOp
             }
         }
 
-        public List<Event> GetEvents()
-        {
-            Event ev = new Event();
-            List<Event> eventList = new List<Event>();
-
-            string selectString = "SELECT * FROM EVENT ";
-
-            using (conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                SqlCommand command = new SqlCommand(selectString, conn);
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        ev.Name = reader.GetString(reader.GetOrdinal("Name"));
-                        ev.IdEvent = reader.GetInt32(reader.GetOrdinal("id"));
-                        eventList.Add(ev);
-                    }
-                }
-
-                conn.Close();
-            }
-
-            return eventList;
-        }
-
         public Event SearchEvent(int evID)
         {
             Event ev = new Event();
-            ev.IdEvent = evID;
+            ev.ID = evID;
 
-            string searchString = "SELECT * FROM EVENT where id = " + ev.IdEvent;
-            
+            string searchString = "SELECT * FROM EVENT where id = " + ev.ID;
+
             using (conn = new SqlConnection(connectionString))
             {
                 conn.Open();
+
                 SqlCommand command = new SqlCommand(searchString, conn);
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -113,7 +107,11 @@ namespace StudentOrganizer.Model.DBOp
                 {
                     while (reader.Read())
                     {
-                        ev.Name = reader.GetString(reader.GetOrdinal("Name"));
+                        ev.Period = reader.GetDateTime(reader.GetOrdinal("Period"));
+                        ev.Remarks = reader.GetString(reader.GetOrdinal("Remarks"));
+                        ev.Task = reader.GetString(reader.GetOrdinal("Task"));
+                        ev.Departament = reader.GetString(reader.GetOrdinal("Departament"));
+                        ev.EventTypes_ID = reader.GetInt32(reader.GetOrdinal("eventTypes_ID"));
                     }
                 }
 

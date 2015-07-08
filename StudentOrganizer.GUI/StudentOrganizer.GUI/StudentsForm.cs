@@ -33,9 +33,8 @@ namespace StudentOrganizer.GUI
                                                             email,phoneNumber,faculty,
                                                             facultyStartYear FROM Student", connection);
             sqlAdapter.Fill(dataTable);
-
-
-            TableView.DataSource = dataTable;
+            
+            GridControl.DataSource = dataTable;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

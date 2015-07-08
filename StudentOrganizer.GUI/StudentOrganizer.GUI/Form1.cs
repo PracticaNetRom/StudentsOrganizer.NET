@@ -40,7 +40,7 @@ namespace StudentOrganizer.GUI
             }
             else 
             {
-                MessageBox.Show("User Name or Password are Wrong !");
+                MessageBox.Show("Wrong UserName or Password !");
             }
         }
     }

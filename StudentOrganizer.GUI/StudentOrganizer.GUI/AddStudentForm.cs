@@ -24,10 +24,13 @@ namespace StudentOrganizer.GUI
 
             FacultyComboBox.Properties.Items.Add("Mate-Info");
             FacultyComboBox.Properties.Items.Add("Automatica");
+
             FacultyStartComboBox.Properties.Items.Add("2011");
             FacultyStartComboBox.Properties.Items.Add("2012");
             FacultyStartComboBox.Properties.Items.Add("2013");
             FacultyStartComboBox.Properties.Items.Add("2014");
+
+            eventListCheckBox.Properties.Items.Add("Practica");
 
             student = new Student();
             studComm = new StudentCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
@@ -66,6 +69,9 @@ namespace StudentOrganizer.GUI
             FamaleButton.Checked = false;
             MaleButton.Checked = false;
 
+            this.Hide();
+            StudentsForm studentForm = new StudentsForm();
+            studentForm.Show();
          
         }
 

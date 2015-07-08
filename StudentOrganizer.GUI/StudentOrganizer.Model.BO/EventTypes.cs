@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StudentOrganizer.Model.BO
 {
-    public class StudentEvent
+    public class EventTypes
     {
-        public int Id_Student { get; set; }
-        public int Id_Event { get; set; }
+        public int IdEvent { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -2,3 +2,8 @@ c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\Stude
 c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.BO\bin\Debug\StudentOrganizer.Model.BO.pdb
 c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.dll
 c:\users\mazilu\documents\visual studio 2013\Projects\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.pdb
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\bin\Debug\StudentOrganizer.Model.BO.dll
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\bin\Debug\StudentOrganizer.Model.BO.pdb
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.dll
+C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.pdb

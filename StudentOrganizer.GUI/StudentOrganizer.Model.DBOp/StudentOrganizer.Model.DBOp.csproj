@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventCommands.cs" />
+    <Compile Include="EventTypesCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentCommands.cs" />
     <Compile Include="StudentEventCommands.cs" />
