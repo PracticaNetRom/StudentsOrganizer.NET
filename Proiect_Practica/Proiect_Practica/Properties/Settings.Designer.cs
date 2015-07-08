@@ -26,8 +26,8 @@ namespace Proiect_Practica.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NETSRV-DB01\\SQL2012;Initial Catalog=NetRom.Practica;Persist Security " +
-            "Info=True;User ID=PracticaUser;Password=!khyVSJ2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NETSRV-DB01\\SQL2012;Initial Catalog=NetRom.Practica4;Persist Security" +
+            " Info=True;User ID=PracticaUser;Password=!khyVSJ2")]
         public string Setting {
             get {
                 return ((string)(this["Setting"]));

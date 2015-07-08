@@ -8,7 +8,7 @@ namespace StudentsOrganizerModel.BO
 {
     public class Students
     {
-        public int id { get; set; }
+       
         public int ID_Student { get; set; }
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
@@ -20,5 +20,7 @@ namespace StudentsOrganizerModel.BO
         public string Faculty_start_year { get; set; }
 
 
+
+        public string id { get; set; }
     }
 }

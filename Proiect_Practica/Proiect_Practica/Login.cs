@@ -14,13 +14,16 @@ namespace ProiectPractica
 {
     public partial class Login : Form
     {
-     
 
+        public Login()
+        {
+            InitializeComponent();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("");
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login Where User='" + textBox2.Text + "'and Password='" + textBox1.Text + "'", con);
+            SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login Where Username='" + textBox2.Text + "'and Password='" + textBox1.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")

@@ -21,7 +21,8 @@ namespace StudentsOrganizer.DBO
 
         public void InsertEvent(Event ev) 
         {
-            string InsertString = "INSERT INTO Event(Name) values(@param1)";
+          
+            string insertString = "INSERT INTO EVENT(ID,Period,Departament,Tasks,Remarks) values(@param1)";
        
             SqlCommand command = new SqlCommand(InsertString,Con);
 
@@ -31,7 +32,7 @@ namespace StudentsOrganizer.DBO
         }
         public void UpdateEvent(Event ev)
         {
-            string updateString = "UPDATE EVENT SET name = @name WHERE event.id = '" + ev.ID_Event + "'";
+            string updateString = "UPDATE Event SET name = @name WHERE Event.ID = '" + ev.ID_Event + "'";
 
             SqlCommand command = new SqlCommand(updateString, Con);
             command.Parameters.Add("@name", ev.Name);
@@ -40,7 +41,7 @@ namespace StudentsOrganizer.DBO
         }
         public void DeleteEvent(Event ev)
         {
-            string deleteString = "DELETE FROM EVENT WHERE id = '" + ev.ID_Event + "'";
+            string deleteString = "DELETE FROM EVENT WHERE ID = '" + ev.ID_Event + "'";
 
             SqlCommand command = new SqlCommand(deleteString, Con);
             command.ExecuteNonQuery();

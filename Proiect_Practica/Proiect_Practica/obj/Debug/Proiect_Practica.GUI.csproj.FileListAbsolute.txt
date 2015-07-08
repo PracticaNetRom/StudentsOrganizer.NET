@@ -7,3 +7,15 @@ C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proi
 C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.exe
 C:\Users\Laboratory1\documents\visual studio 2013\Projects\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.pdb
 C:\Users\Alina D\Desktop\Laborator1\StudentsOrganizer.NET-a.dia\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.exe.config
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.exe.config
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.exe
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.pdb
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.GUI.csprojResolveAssemblyReference.cache
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.AddStudent.resources
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\ProiectPractica.Login.resources
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.Properties.Resources.resources
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.StudentList.resources
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.GUI.csproj.GenerateResource.Cache
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.exe
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.pdb
+D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.exe.licenses

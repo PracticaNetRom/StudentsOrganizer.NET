@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,22 @@ namespace Proiect_Practica
 
         private void StudentList_Load(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
+            SqlDataAdapter sda = new SqlDataAdapter("Select * From STUDENTS", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            gridControl1.DataSource = dt;
+            
+        }
+        private void AddStudent_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
+            SqlDataAdapter sda = new SqlDataAdapter("Select * From STUDENTS", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            gridControl1.DataSource = dt;
 
         }
+
     }
 }
