@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Event_TypesCommands.cs" />
     <Compile Include="StudentCommands.cs" />
     <Compile Include="EventCommands.cs" />
     <Compile Include="StudentEventCommands.cs" />

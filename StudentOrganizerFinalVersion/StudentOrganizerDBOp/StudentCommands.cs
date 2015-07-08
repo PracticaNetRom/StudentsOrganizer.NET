@@ -25,9 +25,10 @@ namespace StudentOrganizer.DBOp
                                         FirstName,
                                         LastName,
                                         Gender,
+                                        Email,
                                         BirthDate,
                                         PhoneNumber,
-            Faculty,FacultyStartYear) values(@firstName,@lastName,@gender,@birthDate,@phoneNumber,@faculty,@facultyStart)";
+            Faculty,FacultyStartYear) values(@firstName,@lastName,@gender,@email,@birthDate,@phoneNumber,@faculty,@facultyStart)";
 
             using (conn = new SqlConnection(connectionString))
             {
@@ -38,6 +39,7 @@ namespace StudentOrganizer.DBOp
                 command.Parameters.Add("@firstName", stud.FirstName);
                 command.Parameters.Add("@lastName", stud.LastName);
                 command.Parameters.Add("@gender", stud.Gender);
+                command.Parameters.Add("@email", stud.Gender);
                 command.Parameters.Add("@birthDate", stud.BirthDate);
                 command.Parameters.Add("@phoneNumber", stud.PhoneNumber);
                 command.Parameters.Add("@faculty", stud.Faculty);
@@ -52,7 +54,7 @@ namespace StudentOrganizer.DBOp
 
         public void UpdateStudent(StudentOrganizer.BO.Student stud)
         {
-            string updateString = "UPDATE STUDENT SET FirstName = @firstName,LastName = @lastName, Gender=@gender, BirthDate=@birthDate, Email=@email, PhoneNumber = @phoneNumber, Faculty = @faculty, FacultyStartYear = @facultyStart WHERE student.id = '" + stud.Id + "'";
+            string updateString = "UPDATE STUDENT SET FirstName = @firstName,LastName = @lastName, Gender=@gender,Email = @email, BirthDate=@birthDate, Email=@email, PhoneNumber = @phoneNumber, Faculty = @faculty, FacultyStartYear = @facultyStart WHERE student.id = '" + stud.IdStudent + "'";
 
             using (conn = new SqlConnection(connectionString))
             {
@@ -62,6 +64,7 @@ namespace StudentOrganizer.DBOp
                 command.Parameters.Add("@firstName", stud.FirstName);
                 command.Parameters.Add("@lastName", stud.LastName);
                 command.Parameters.Add("@gender", stud.Gender);
+                command.Parameters.Add("@email", stud.Gender);
                 command.Parameters.Add("@birthDate", stud.BirthDate);
                 command.Parameters.Add("@phoneNumber", stud.PhoneNumber);
                 command.Parameters.Add("@faculty", stud.Faculty);
@@ -75,7 +78,7 @@ namespace StudentOrganizer.DBOp
 
         public void DeleteStudent(Student stud)
         {
-            string deleteString = "DELETE FROM Student WHERE id = '" + stud.Id + "'";
+            string deleteString = "DELETE FROM Student WHERE id = '" + stud.IdStudent + "'";
 
             using (conn = new SqlConnection(connectionString))
             {
@@ -89,9 +92,9 @@ namespace StudentOrganizer.DBOp
         public StudentOrganizer.BO.Student SearchStudent(int studID)
         {
             StudentOrganizer.BO.Student student = new StudentOrganizer.BO.Student();
-            student.Id = studID;
+            student.IdStudent = studID;
 
-            string searchString = "SELECT * FROM student where id = " + student.Id;
+            string searchString = "SELECT * FROM student where id = " + student.IdStudent;
 
             using (conn = new SqlConnection(connectionString))
             {
@@ -108,6 +111,7 @@ namespace StudentOrganizer.DBOp
                         student.FirstName = reader.GetString(reader.GetOrdinal("FirstName"));
                         student.LastName = reader.GetString(reader.GetOrdinal("LastName"));
                         student.Gender = reader.GetString(reader.GetOrdinal("Gender"));
+                        student.Gender = reader.GetString(reader.GetOrdinal("Email"));
                         student.BirthDate = reader.GetDateTime(reader.GetOrdinal("BirthDate"));
                         student.PhoneNumber = reader.GetString(reader.GetOrdinal("PhoneNumber"));
                         student.Faculty = reader.GetString(reader.GetOrdinal("Faculty"));

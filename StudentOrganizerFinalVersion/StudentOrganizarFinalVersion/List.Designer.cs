@@ -28,68 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Faculty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FacultyStartYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.First_Name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Last_Name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Gender = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Birth_Date = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Email = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Phone_Number = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Faculty = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Faculty_start = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Event = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FirstName,
-            this.Column1,
-            this.Gender,
-            this.Birthdate,
-            this.PhoneNumber,
-            this.Faculty,
-            this.FacultyStartYear});
-            this.dataGridView1.Location = new System.Drawing.Point(-2, 78);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 336);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.Name = "FirstName";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Last Name";
-            this.Column1.Name = "Column1";
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            // 
-            // Birthdate
-            // 
-            this.Birthdate.HeaderText = "Birth Date";
-            this.Birthdate.Name = "Birthdate";
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.HeaderText = "Phone Number";
-            this.PhoneNumber.Name = "PhoneNumber";
-            // 
-            // Faculty
-            // 
-            this.Faculty.HeaderText = "Faculty";
-            this.Faculty.Name = "Faculty";
-            // 
-            // FacultyStartYear
-            // 
-            this.FacultyStartYear.HeaderText = "Faculty Start Year";
-            this.FacultyStartYear.Name = "FacultyStartYear";
             // 
             // simpleButton1
             // 
@@ -99,30 +53,125 @@
             this.simpleButton1.TabIndex = 1;
             this.simpleButton1.Text = "Create new";
             // 
+            // gridControl1
+            // 
+            gridLevelNode1.RelationName = "Level1";
+            this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+            this.gridControl1.Location = new System.Drawing.Point(0, 76);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(638, 368);
+            this.gridControl1.TabIndex = 2;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.First_Name,
+            this.Last_Name,
+            this.Gender,
+            this.Birth_Date,
+            this.Email,
+            this.Phone_Number,
+            this.Faculty,
+            this.Faculty_start,
+            this.Event});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // First_Name
+            // 
+            this.First_Name.Caption = "First Name";
+            this.First_Name.Name = "First_Name";
+            this.First_Name.Visible = true;
+            this.First_Name.VisibleIndex = 0;
+            // 
+            // Last_Name
+            // 
+            this.Last_Name.Caption = "Last Name";
+            this.Last_Name.Name = "Last_Name";
+            this.Last_Name.Visible = true;
+            this.Last_Name.VisibleIndex = 1;
+            // 
+            // Gender
+            // 
+            this.Gender.Caption = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.Visible = true;
+            this.Gender.VisibleIndex = 2;
+            // 
+            // Birth_Date
+            // 
+            this.Birth_Date.Caption = "Birth Date";
+            this.Birth_Date.Name = "Birth_Date";
+            this.Birth_Date.Visible = true;
+            this.Birth_Date.VisibleIndex = 3;
+            // 
+            // Email
+            // 
+            this.Email.Caption = "Email";
+            this.Email.Name = "Email";
+            this.Email.Visible = true;
+            this.Email.VisibleIndex = 4;
+            // 
+            // Phone_Number
+            // 
+            this.Phone_Number.Caption = "Phone Number";
+            this.Phone_Number.Name = "Phone_Number";
+            this.Phone_Number.Visible = true;
+            this.Phone_Number.VisibleIndex = 5;
+            // 
+            // Faculty
+            // 
+            this.Faculty.Caption = "Faculty";
+            this.Faculty.Name = "Faculty";
+            this.Faculty.Visible = true;
+            this.Faculty.VisibleIndex = 6;
+            // 
+            // Faculty_start
+            // 
+            this.Faculty_start.Caption = "Faculty start";
+            this.Faculty_start.Name = "Faculty_start";
+            this.Faculty_start.Visible = true;
+            this.Faculty_start.VisibleIndex = 7;
+            // 
+            // Event
+            // 
+            this.Event.Caption = "Event";
+            this.Event.Name = "Event";
+            this.Event.Visible = true;
+            this.Event.VisibleIndex = 8;
+            // 
             // List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 442);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "List";
             this.Text = "List";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Birthdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Faculty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FacultyStartYear;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn First_Name;
+        private DevExpress.XtraGrid.Columns.GridColumn Last_Name;
+        private DevExpress.XtraGrid.Columns.GridColumn Gender;
+        private DevExpress.XtraGrid.Columns.GridColumn Birth_Date;
+        private DevExpress.XtraGrid.Columns.GridColumn Email;
+        private DevExpress.XtraGrid.Columns.GridColumn Phone_Number;
+        private DevExpress.XtraGrid.Columns.GridColumn Faculty;
+        private DevExpress.XtraGrid.Columns.GridColumn Faculty_start;
+        private DevExpress.XtraGrid.Columns.GridColumn Event;
     }
 }

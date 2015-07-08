@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace StudentOrganizer.BO
 {
-    public class StudentEvent
+    public class Event_Types
     {
-        
-        public int Id_Student { get; set; }
-        public int Id_Event { get; set; }
-        
+        public int Id { get; set; }
+        public string Description { get; set; }
     }
 }

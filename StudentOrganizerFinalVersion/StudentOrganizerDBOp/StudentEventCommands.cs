@@ -20,38 +20,32 @@ namespace StudentOrganizer.DBOp
 
         public void InsertStudentEvent(StudentEvent studentEvent)
         {
-            string insertString = "INSERT INTO StudentEVENT(Id_Student,Id_Event,Period,Departament,Task,Remarks) values(@idStudent,@idEvent,@period,@departament,@task,@remarks)";
+            string insertString = "INSERT INTO StudentEVENT(Id_Student,Id_Event) values(@id_Student,@id_Event)";
 
             SqlCommand command = new SqlCommand(insertString, conn);
-            command.Parameters.Add("@idStudent", studentEvent.Id_Student);
-            command.Parameters.Add("@idEvent", studentEvent.Id_Event);
-            command.Parameters.Add("@period", studentEvent.Period);
-            command.Parameters.Add("@departament", studentEvent.Departament);
-            command.Parameters.Add("@task", studentEvent.TASK);
-            command.Parameters.Add("@remarks", studentEvent.Remarks);
+            command.Parameters.Add("@id_Student", studentEvent.Id_Student);
+            command.Parameters.Add("@id_Event", studentEvent.Id_Event);
+
             command.CommandType = CommandType.Text;
             command.ExecuteNonQuery();
         }
 
         public void UpdateStudentEvent(StudentEvent studentEvent)
         {
-            string updateString = "UPDATE StudentEVENT SET set Id_Student = @idStudent, Id_Event = @idEvent , Period=@period, Departament=@departament, Task=@task, Remarks=@remarks WHERE id = '" + studentEvent.ID + "'";
+            string updateString = "UPDATE StudentEVENT SET set Id_Student = @id_Student, Id_Event = @id_Event  WHERE id = '" + studentEvent.Id_Event + "'";
 
             SqlCommand command = new SqlCommand(updateString, conn);
 
-            command.Parameters.Add("@idStudent", studentEvent.Id_Student);
-            command.Parameters.Add("@idEvent", studentEvent.Id_Event);
-            command.Parameters.Add("@period", studentEvent.Period);
-            command.Parameters.Add("@departament", studentEvent.Departament);
-            command.Parameters.Add("@task", studentEvent.TASK);
-            command.Parameters.Add("@remarks", studentEvent.Remarks);
+            command.Parameters.Add("@id_Student", studentEvent.Id_Student);
+            command.Parameters.Add("@id_Event", studentEvent.Id_Event);
+            
             command.ExecuteNonQuery();
 
         }
 
         public void DeleteStudentEvent(StudentEvent studentEvent)
         {
-            string deleteString = "DELETE FROM StudentEVENT WHERE id = '" + studentEvent.ID + "'";
+            string deleteString = "DELETE FROM StudentEVENT WHERE id = '" + studentEvent.Id_Event + "'";
 
             SqlCommand command = new SqlCommand(deleteString, conn);
             command.ExecuteNonQuery();
@@ -60,9 +54,9 @@ namespace StudentOrganizer.DBOp
         public StudentEvent SearchStudentEvent(int studID)
         {
             StudentEvent studentEvent = new StudentEvent();
-            studentEvent.ID = studID;
+            studentEvent.Id_Event = studID;
 
-            string searchString = "SELECT * FROM studentEVENT where id = " + studentEvent.ID;
+            string searchString = "SELECT * FROM studentEVENT where id = " + studentEvent.Id_Event;
 
             SqlCommand command = new SqlCommand(searchString, conn);
             SqlDataReader reader = command.ExecuteReader();
@@ -73,10 +67,7 @@ namespace StudentOrganizer.DBOp
                 {
                     studentEvent.Id_Student = reader.GetInt32(reader.GetOrdinal("Id_Student"));
                     studentEvent.Id_Event = reader.GetInt32(reader.GetOrdinal("Id_Event"));
-                    studentEvent.Period = reader.GetDateTime(reader.GetOrdinal("Period"));
-                    studentEvent.Remarks = reader.GetString(reader.GetOrdinal("Remarks"));
-                    studentEvent.TASK = reader.GetString(reader.GetOrdinal("TASK"));
-                    studentEvent.Departament = reader.GetString(reader.GetOrdinal("Departament"));
+                    
                 }
             }
 

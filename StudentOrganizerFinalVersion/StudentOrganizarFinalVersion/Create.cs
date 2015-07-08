@@ -37,6 +37,16 @@ namespace StudentOrganizarFinalVersion
 
         }
 
+        private void labelControl7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxEdit2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }

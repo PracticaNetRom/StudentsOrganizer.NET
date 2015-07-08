@@ -22,21 +22,34 @@ namespace StudentOrganizerDBOp
 
         public void InsertEvent(Event ev) 
         {
-            string insertString = "INSERT INTO EVENT(NAME) values(@param1)";
-       
+            //string insertString = "INSERT INTO EVENT(NAME) values(@param1)";
+            string insertString = @"INSERT INTO EVENT (
+                                                 Period
+                                                 Department
+                                                 Task
+                                                 Remarks)
+                                               values(@period,@Department,@Task,@Remarks)";
+
             SqlCommand command = new SqlCommand(insertString,conn);
 
-            command.Parameters.Add("@param1", ev.Name);
+            command.Parameters.Add("@period", ev.Period);
+            command.Parameters.Add("@Department", ev.Department);
+            command.Parameters.Add("@Task", ev.Task);
+            command.Parameters.Add("@Remarks", ev.Remarks);
             command.CommandType = CommandType.Text;
             command.ExecuteNonQuery();
         }
 
         public void UpdateEvent(Event ev) 
         {
-            string updateString = "UPDATE EVENT SET name = @name WHERE event.id = '"+ev.IdEvent+"'";
+            string updateString = "UPDATE EVENT SET Period = @Period, Department = @Department, Task = @Task WHERE event.id = '"+ev.IdEvent+"'";
 
             SqlCommand command = new SqlCommand(updateString, conn);
-            command.Parameters.Add("@name",ev.Name);
+            command.Parameters.Add("@Period",ev.Period);
+            command.Parameters.Add("@Department", ev.Department);
+            command.Parameters.Add("@Task", ev.Task);
+            command.Parameters.Add("@Remarks", ev.Remarks);
+
             command.ExecuteNonQuery();
             
         }
@@ -49,10 +62,10 @@ namespace StudentOrganizerDBOp
             command.ExecuteNonQuery();
         }
 
-        public ArrayList GetEvents() 
+        public List<Event> GetEvents() 
         {
             Event ev = new Event();
-            ArrayList eventList = new ArrayList();
+            List<Event> eventList = new List<Event>();
 
             string selectString = "SELECT * FROM EVENT ";
 
@@ -63,8 +76,13 @@ namespace StudentOrganizerDBOp
             {
                 while (reader.Read())
                 {
-                    ev.Name = reader.GetString(reader.GetOrdinal("Name"));
                     ev.IdEvent = reader.GetInt32(reader.GetOrdinal("id"));
+                    ev.Period = reader.GetString(reader.GetOrdinal("Period"));
+                    ev.Department = reader.GetString(reader.GetOrdinal("Department"));
+                    ev.Task = reader.GetString(reader.GetOrdinal("Task"));
+                    ev.Remarks = reader.GetString(reader.GetOrdinal("Remarks"));
+                    ev.Event_Type_ID = reader.GetInt32(reader.GetOrdinal("Event_Type_ID"));
+                    
                     eventList.Add(ev);
                 }
             }
@@ -86,7 +104,11 @@ namespace StudentOrganizerDBOp
             {
                 while (reader.Read())
                 {
-                    ev.Name = reader.GetString(reader.GetOrdinal("Name"));
+                    ev.Period = reader.GetString(reader.GetOrdinal("Period"));
+                    ev.Department = reader.GetString(reader.GetOrdinal("Department"));
+                    ev.Task = reader.GetString(reader.GetOrdinal("Task"));
+                    ev.Remarks = reader.GetString(reader.GetOrdinal("Remarks"));
+                    
                 }
             }
 
