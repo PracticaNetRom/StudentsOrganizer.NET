@@ -47,7 +47,7 @@ namespace ProiectPractica.Model.DBOp
         public void DeleteStudent(Student stud)
         {
 
-            string DeleteString = "Delete From Student Where idstudent = " + stud.idstudent;
+            string DeleteString = "Delete From Student Where id_student = " + stud.id_student;
 
             using (con = new SqlConnection(connectionString))
             {
@@ -61,7 +61,7 @@ namespace ProiectPractica.Model.DBOp
         public void UpdateStudent(Student stud)
         {
 
-            string UpdateString = "Update Into Student(FName, LName, Gender, Birthdate, Email, PhoneNumbers, Faculty, FacultyStartYear) values (@FName, @LName, @Gender, @Birthdate, @PhoneNumbers, @Faculty, @FacultyStartYear)";
+            string UpdateString = "Update Student SET FName=@FName, LName=@LName, Gender=@Gender, Birthdate=@Birthdate, Email=@Email, PhoneNumbers=@PhoneNumbers, Faculty=@Faculty, FacultyStartYear=@FacultyStartYear WHERE id_student= " + stud.id_student;
             using (con = new SqlConnection(connectionString))
             {
                 con.Open();

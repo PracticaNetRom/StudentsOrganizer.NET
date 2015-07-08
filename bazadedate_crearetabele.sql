@@ -1,20 +1,24 @@
-create table students (
+create table student (
 	idstudent NUMBER NOT NULL,
-	firstname VARCHAR(15),
-	lastname VARCHAR(15),
-	gender NUMBER,
-	birthdate DATE,
-	email VARCHAR(10),
-	phonenumbers VARCHAR(22),
-	faculty VARCHAR(50),
-	facultystartyear VARCHAR(30),
+	Ftname VARCHAR(15),
+	Lname VARCHAR(15),
+	Gender NUMBER,
+	Birthdate DATE,
+	Email VARCHAR(10),
+	PhoneNumbers VARCHAR(22),
+	Faculty VARCHAR(50),
+	FacultyStartYear VARCHAR(30),
 	CONSTRAINT participants_id_pk PRIMARY KEY(idparticipant)
 );
 
 create table event(
-	idevent NUMBER NOT NULL,
-	name_event VARCHAR(20),
-	CONSTRAINT event_id_pk PRIMARY KEY(idevent)
+	id_event NUMBER NOT NULL,
+	Period VARCHAR(20),
+	Department VARCHAR(50),
+	Tasks VARCHAR(100),
+	Remarks VARCHAR(200),
+	Event
+	CONSTRAINT event_id_pk PRIMARY KEY(id_event)
 );
 
 create table students_event(

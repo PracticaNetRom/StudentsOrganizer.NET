@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EventOperations.cs" />
+    <Compile Include="EventTypesOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentEventOperations.cs" />
     <Compile Include="StudentOperations.cs" />

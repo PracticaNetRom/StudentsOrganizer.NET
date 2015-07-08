@@ -8,7 +8,7 @@ namespace ProiectPractica
 {
    public class  Student
     {
-        public int idstudent { get; set; }
+        public int id_student { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
         public int Gender { get; set; }

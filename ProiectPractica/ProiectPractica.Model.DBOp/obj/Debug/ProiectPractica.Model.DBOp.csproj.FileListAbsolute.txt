@@ -1,0 +1,9 @@
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\bin\Debug\ProiectPractica.Model.DBOp.dll
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\bin\Debug\ProiectPractica.Model.DBOp.pdb
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\bin\Debug\ProiectPractica.GUI.dll
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\bin\Debug\ProiectPractica.GUI.pdb
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.csprojResolveAssemblyReference.cache
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.Properties.Resources.resources
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.csproj.GenerateResource.Cache
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.dll
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.pdb

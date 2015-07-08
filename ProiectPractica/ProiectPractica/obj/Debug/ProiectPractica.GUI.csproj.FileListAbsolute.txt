@@ -11,3 +11,14 @@ C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPr
 C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.pdb
 C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.AddStudent.resources
 C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.StudentList.resources
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.exe
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.pdb
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.GUI.csprojResolveAssemblyReference.cache
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.AddStudent.resources
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.LogIn.resources
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.Properties.Resources.resources
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.StudentList.resources
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.GUI.csproj.GenerateResource.Cache
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.exe
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.pdb
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.exe.licenses

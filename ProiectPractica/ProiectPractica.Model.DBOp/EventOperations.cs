@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProiectPractica.Model.DBOp
 {
-    class EventOperations
+    public class EventOperations
     {
         SqlConnection con; 
         
@@ -18,19 +18,23 @@ namespace ProiectPractica.Model.DBOp
         }
 
         public void InsertEvent(Event ev) {
-            
-            string InsertString = "Insert Into Event (name_event) values (@name_event)";
+
+            string InsertString = "Insert Into Event (Period, Department, Tasks, Remarks, Event_Type_id ) values (@Period, @Deparment, @Tasks, @Remarks, @Event_Type_id )";
             
             SqlCommand command = new SqlCommand(InsertString, con);
 
-            command.Parameters.Add("@param1", ev.name_event);
+            command.Parameters.Add("@Period", ev.Period);
+            command.Parameters.Add("@Department", ev.Department);
+            command.Parameters.Add("@Tasks", ev.Tasks);
+            command.Parameters.Add("@Remarks", ev.Remarks);
+            command.Parameters.Add("@ Event_Type_id", ev.Event_Type_id);
             command.CommandType = CommandType.Text;
             command.ExecuteNonQuery();
 
         }
 
         public void DeleteEvent(Event ev) {
-            string DeleteString = "DELETE From Event Where id = '" + ev.id_event + "'";
+            string DeleteString = "DELETE From Event Where id_event = '" + ev.id_event + "'";
             SqlCommand command = new SqlCommand(DeleteString, con);
             command.ExecuteNonQuery();
 
@@ -38,10 +42,14 @@ namespace ProiectPractica.Model.DBOp
 
         public void UpdateEvent(Event ev)
         {
-            string UpdateString = "UPDATE Event Set name = @name Where event.id = '" + ev.id_event + "'";
+            string UpdateString = "UPDATE Event Set Period = @Period, Department= @Department, Tasks=@Tasks, Remarks=@Remarks, Event_Type_id=@ Event_Type_id  Where id_event = '" + ev.id_event + "'";
 
             SqlCommand command = new SqlCommand(UpdateString, con);
-            command.Parameters.Add("@name", ev.name_event);
+            command.Parameters.Add("@Period", ev.Period);
+            command.Parameters.Add("@Department", ev.Department);
+            command.Parameters.Add("@Tasks", ev.Tasks);
+            command.Parameters.Add("@Remarks", ev.Remarks);
+            command.Parameters.Add("@Event_Type_id", ev.Event_Type_id);
             command.ExecuteNonQuery();
 
         }
