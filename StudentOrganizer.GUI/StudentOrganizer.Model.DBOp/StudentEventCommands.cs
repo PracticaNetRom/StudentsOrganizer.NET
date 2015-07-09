@@ -75,5 +75,78 @@ namespace StudentOrganizer.Model.DBOp
                 conn.Close();
             }
         }
+
+        public void InsertStudentEventUsingEventName(string eventName) 
+        {
+            string selectString = "SELECT * FROM EventTypes where description = @eventName";
+            int eventID = 0;
+            int eventTypesID = 0;
+            int studentID = 0;
+                
+            using (conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(selectString, conn);
+                command.Parameters.Add("@eventName", eventName);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        eventTypesID = reader.GetInt32(reader.GetOrdinal("id"));
+                    }
+                    reader.Close();
+                }
+
+                if (eventTypesID != 0)
+                {
+                    selectString = "SELECT * FROM Event where eventTypes_ID = @eventTypesID";
+                    command = new SqlCommand(selectString, conn);
+                    command.Parameters.Add("@eventTypesID", eventTypesID);
+
+                    reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            eventID = reader.GetInt32(reader.GetOrdinal("id"));
+                        }
+                        reader.Close();
+                    }
+                }
+                reader.Close();
+
+                selectString = "SELECT TOP 1 * FROM student ORDER BY id DESC;";
+                command = new SqlCommand(selectString, conn);
+
+                reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        studentID = reader.GetInt32(reader.GetOrdinal("id"));
+                    }
+                    reader.Close();
+                }
+                
+                string insertString = @"INSERT INTO StudentEVENT(
+                                                Id_Student,
+                                                Id_Event ) 
+                                                            values(
+                                                            @idStudent,@idEvent)";
+
+                command = new SqlCommand(insertString, conn);
+                command.Parameters.Add("@idStudent", studentID);
+                command.Parameters.Add("@idEvent", eventID);
+                command.CommandType = CommandType.Text;
+                command.ExecuteNonQuery();
+
+                conn.Close();
+            }
+        }
     }
 }

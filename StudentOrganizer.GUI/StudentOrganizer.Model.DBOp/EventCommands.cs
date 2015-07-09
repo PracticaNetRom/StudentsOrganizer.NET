@@ -21,7 +21,7 @@ namespace StudentOrganizer.Model.DBOp
 
         public void InsertEvent(Event ev)
         {
-            string insertString = @"INSERT INTO StudentEVENT(
+            string insertString = @"INSERT INTO Event(
                                                 Period,
                                                 Departament,Task,
                                                 Remarks,eventTypes_ID) 
@@ -49,7 +49,7 @@ namespace StudentOrganizer.Model.DBOp
 
         public void UpdateEvent(Event ev)
         {
-            string updateString = @"UPDATE StudentEVENT 
+            string updateString = @"UPDATE Event 
                                            SET 
                                                Period=@period, 
                                                Departament=@departament, 
@@ -113,6 +113,7 @@ namespace StudentOrganizer.Model.DBOp
                         ev.Departament = reader.GetString(reader.GetOrdinal("Departament"));
                         ev.EventTypes_ID = reader.GetInt32(reader.GetOrdinal("eventTypes_ID"));
                     }
+                    reader.Close();
                 }
 
                 conn.Close();

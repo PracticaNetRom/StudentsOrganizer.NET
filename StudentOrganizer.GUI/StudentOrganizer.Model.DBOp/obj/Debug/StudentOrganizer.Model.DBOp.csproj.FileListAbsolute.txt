@@ -12,3 +12,10 @@ C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrga
 C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\obj\Debug\StudentOrganizer.Model.DBOp.csprojResolveAssemblyReference.cache
 C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\obj\Debug\StudentOrganizer.Model.DBOp.dll
 C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\obj\Debug\StudentOrganizer.Model.DBOp.pdb
+E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\bin\Debug\StudentOrganizer.Model.DBOp.dll
+E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\bin\Debug\StudentOrganizer.Model.DBOp.pdb
+E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\bin\Debug\StudentOrganizer.Model.BO.dll
+E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\bin\Debug\StudentOrganizer.Model.BO.pdb
+E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\obj\Debug\StudentOrganizer.Model.DBOp.csprojResolveAssemblyReference.cache
+E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\obj\Debug\StudentOrganizer.Model.DBOp.dll
+E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.DBOp\obj\Debug\StudentOrganizer.Model.DBOp.pdb

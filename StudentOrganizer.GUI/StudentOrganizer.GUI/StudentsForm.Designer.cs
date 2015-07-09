@@ -42,6 +42,8 @@
             this.Faculty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.FacutyStartYear = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Action = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.createEventButton = new DevExpress.XtraEditors.SimpleButton();
+            this.EditStudentButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -53,7 +55,7 @@
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(94, 25);
             this.createButton.TabIndex = 1;
-            this.createButton.Text = "Create New";
+            this.createButton.Text = "Add Student";
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // pictureEdit1
@@ -77,6 +79,7 @@
             this.GridControl.TabIndex = 3;
             this.GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.GridControl.Click += new System.EventHandler(this.GridControl_Click);
             // 
             // gridView1
             // 
@@ -162,11 +165,31 @@
             this.Action.Caption = "Actions";
             this.Action.Name = "Action";
             // 
+            // createEventButton
+            // 
+            this.createEventButton.Location = new System.Drawing.Point(143, 126);
+            this.createEventButton.Name = "createEventButton";
+            this.createEventButton.Size = new System.Drawing.Size(94, 24);
+            this.createEventButton.TabIndex = 4;
+            this.createEventButton.Text = "Add Event";
+            this.createEventButton.Click += new System.EventHandler(this.createEventButton_Click);
+            // 
+            // EditStudentButton
+            // 
+            this.EditStudentButton.Location = new System.Drawing.Point(12, 156);
+            this.EditStudentButton.Name = "EditStudentButton";
+            this.EditStudentButton.Size = new System.Drawing.Size(94, 25);
+            this.EditStudentButton.TabIndex = 5;
+            this.EditStudentButton.Text = "Edit Student";
+            this.EditStudentButton.Click += new System.EventHandler(this.EditStudentButton_Click);
+            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 525);
+            this.Controls.Add(this.EditStudentButton);
+            this.Controls.Add(this.createEventButton);
             this.Controls.Add(this.GridControl);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.createButton);
@@ -194,6 +217,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn Faculty;
         private DevExpress.XtraGrid.Columns.GridColumn FacutyStartYear;
         private DevExpress.XtraGrid.Columns.GridColumn Action;
+        private DevExpress.XtraEditors.SimpleButton createEventButton;
+        private DevExpress.XtraEditors.SimpleButton EditStudentButton;
 
 
     }

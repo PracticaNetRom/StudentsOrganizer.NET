@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudentOrganizer.Model.BO;
 using StudentOrganizer.Model.DBOp;
+using DevExpress.XtraEditors.Controls;
+using System.Text.RegularExpressions;
 
 
 namespace StudentOrganizer.GUI
@@ -17,6 +19,11 @@ namespace StudentOrganizer.GUI
     {
         private Student student;
         private StudentCommands studComm;
+        private EventTypes evTypes;
+        private EventTypesCommands evTypesComm;
+        private StudentEvent studEvent;
+        private StudentEventCommands studEvCommands;
+        List<EventTypes> evTypesList;
 
         public AddStudentForm()
         {
@@ -30,11 +37,21 @@ namespace StudentOrganizer.GUI
             FacultyStartComboBox.Properties.Items.Add("2013");
             FacultyStartComboBox.Properties.Items.Add("2014");
 
-            eventListCheckBox.Properties.Items.Add("Practica");
-
             student = new Student();
+            evTypes = new EventTypes();
+            studEvent = new StudentEvent();
+
             studComm = new StudentCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
-           
+            studEvCommands = new StudentEventCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
+            evTypesComm = new EventTypesCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
+
+            evTypesList = evTypesComm.GetEventTypes();
+
+            for (int i = 0; i < evTypesList.Count; i++) 
+            {
+                eventListCheckBox.Properties.Items.Add(evTypesList[i].Description);
+            }        
+                       
         }
 
         private void BirthTextField_EditValueChanged(object sender, EventArgs e)
@@ -57,8 +74,25 @@ namespace StudentOrganizer.GUI
             student.FacultyStartYear = Convert.ToInt32(FacultyStartComboBox.SelectedText);
             student.Email = EmailTextField.Text;
 
+            List<string> checkedList = (eventListCheckBox.EditValue ?? "").ToString().Split(eventListCheckBox.Properties.SeparatorChar).Select(i => Convert.ToString(i)).ToList();
+
+
+            
             studComm.InsertStudent(student);
 
+            for (int i = 0; i < checkedList.Count; i++)
+            {
+                for (int j = 0; j < evTypesList.Count; j++) 
+                {
+                    String verifyString = Regex.Replace(checkedList[i],@" ","");
+
+                    if (verifyString.Equals(evTypesList[j].Description)) 
+                    {
+                        studEvCommands.InsertStudentEventUsingEventName(verifyString);
+                    }
+                }
+            }
+          
             FirstNameTextField.Text = null;
             LastNameTextField.Text = null;
             BirthTimeEdit.Text = null;
@@ -69,7 +103,7 @@ namespace StudentOrganizer.GUI
             FamaleButton.Checked = false;
             MaleButton.Checked = false;
 
-            this.Hide();
+            this.Close();
             StudentsForm studentForm = new StudentsForm();
             studentForm.Show();
          

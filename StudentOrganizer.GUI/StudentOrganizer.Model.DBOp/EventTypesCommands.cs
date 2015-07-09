@@ -69,7 +69,7 @@ namespace StudentOrganizer.Model.DBOp
 
         public List<EventTypes> GetEventTypes()
         {
-            EventTypes ev = new EventTypes();
+          
             List<EventTypes> eventList = new List<EventTypes>();
 
             string selectString = "SELECT * FROM EventTypes ";
@@ -84,10 +84,12 @@ namespace StudentOrganizer.Model.DBOp
                 {
                     while (reader.Read())
                     {
-                        ev.Description = reader.GetString(reader.GetOrdinal("Name"));
+                        EventTypes ev = new EventTypes();
+                        ev.Description = reader.GetString(reader.GetOrdinal("Description"));
                         ev.IdEvent = reader.GetInt32(reader.GetOrdinal("id"));
                         eventList.Add(ev);
                     }
+                  
                 }
 
                 conn.Close();
