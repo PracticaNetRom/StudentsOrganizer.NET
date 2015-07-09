@@ -9,70 +9,72 @@ using System.Threading.Tasks;
 
 namespace StudentOrganizer.DBOp
 {
+    
     public class StudentEventCommands
     {
+        private string connectionString;
         private SqlConnection conn;
 
-        public StudentEventCommands(SqlConnection conn)
+        public StudentEventCommands(string connectionString)
         {
-            this.conn = conn;
+            this.connectionString = connectionString;
         }
 
         public void InsertStudentEvent(StudentEvent studentEvent)
         {
-            string insertString = "INSERT INTO StudentEVENT(Id_Student,Id_Event) values(@id_Student,@id_Event)";
+            string insertString = @"INSERT INTO StudentEVENT(
+                                                Id_Student,
+                                                Id_Event ) 
+                                                            values(
+                                                            @Id_Student,@Id_Event)";
 
-            SqlCommand command = new SqlCommand(insertString, conn);
-            command.Parameters.Add("@id_Student", studentEvent.Id_Student);
-            command.Parameters.Add("@id_Event", studentEvent.Id_Event);
+            using (conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
 
-            command.CommandType = CommandType.Text;
-            command.ExecuteNonQuery();
+                SqlCommand command = new SqlCommand(insertString, conn);
+                command.Parameters.Add("@idStudent", studentEvent.Id_Student);
+                command.Parameters.Add("@idEvent", studentEvent.Id_Event);
+                command.CommandType = CommandType.Text;
+                command.ExecuteNonQuery();
+
+                conn.Close();
+            }
         }
 
         public void UpdateStudentEvent(StudentEvent studentEvent)
         {
-            string updateString = "UPDATE StudentEVENT SET set Id_Student = @id_Student, Id_Event = @id_Event  WHERE id = '" + studentEvent.Id_Event + "'";
+            string updateString = @"UPDATE StudentEVENT 
+                                           SET Id_Student = @Id_Student,
+                                               Id_Event = @Id_Event , 
+                                               WHERE id_Event = '" + studentEvent.Id_Event + "' and id_Student ='"+studentEvent.Id_Student+"'";
 
-            SqlCommand command = new SqlCommand(updateString, conn);
+            using (conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(updateString, conn);
 
-            command.Parameters.Add("@id_Student", studentEvent.Id_Student);
-            command.Parameters.Add("@id_Event", studentEvent.Id_Event);
-            
-            command.ExecuteNonQuery();
+                command.Parameters.Add("@Id_Student", studentEvent.Id_Student);
+                command.Parameters.Add("@Id_Event", studentEvent.Id_Event);
+                command.ExecuteNonQuery();
+
+                conn.Close();
+            }
 
         }
 
         public void DeleteStudentEvent(StudentEvent studentEvent)
         {
-            string deleteString = "DELETE FROM StudentEVENT WHERE id = '" + studentEvent.Id_Event + "'";
+            string deleteString = "DELETE FROM StudentEVENT WHERE id_Event = '" + studentEvent.Id_Event + "' and id_Student ='" + studentEvent.Id_Student + "'";
 
-            SqlCommand command = new SqlCommand(deleteString, conn);
-            command.ExecuteNonQuery();
-        }
-
-        public StudentEvent SearchStudentEvent(int studID)
-        {
-            StudentEvent studentEvent = new StudentEvent();
-            studentEvent.Id_Event = studID;
-
-            string searchString = "SELECT * FROM studentEVENT where id = " + studentEvent.Id_Event;
-
-            SqlCommand command = new SqlCommand(searchString, conn);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.HasRows)
+            using (conn = new SqlConnection(connectionString))
             {
-                while (reader.Read())
-                {
-                    studentEvent.Id_Student = reader.GetInt32(reader.GetOrdinal("Id_Student"));
-                    studentEvent.Id_Event = reader.GetInt32(reader.GetOrdinal("Id_Event"));
-                    
-                }
+                conn.Open();
+                SqlCommand command = new SqlCommand(deleteString, conn);
+                command.ExecuteNonQuery();
+
+                conn.Close();
             }
-
-            return studentEvent;
         }
-
     }
 }

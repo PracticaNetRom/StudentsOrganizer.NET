@@ -19,12 +19,13 @@ namespace StudentOrganizarFinalVersion
     {
         SqlConnection connection;
         Student student;
-        StudentCommands studComm;
+        StudentOrganizerDBOp.StudentCommands studComm;
 
         public LogIn()
         {
             InitializeComponent();
             student = new Student();
+            textEdit2.Properties.PasswordChar = '*';
             
         }
 
@@ -61,6 +62,16 @@ namespace StudentOrganizarFinalVersion
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textEdit2_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

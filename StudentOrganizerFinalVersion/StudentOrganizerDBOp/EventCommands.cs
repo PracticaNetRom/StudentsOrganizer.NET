@@ -1,6 +1,6 @@
 ﻿using StudentOrganizer.BO;
+using StudentOrganizer.BO;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,86 +8,86 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentOrganizerDBOp
+namespace StudentOrganizer.DBOp
 {
-    
     public class EventCommands
     {
-        private SqlConnection conn ;
+        private string connectionString;
+        private SqlConnection conn;
 
-        public EventCommands(SqlConnection connection) 
+        public EventCommands(string connectionString)
         {
-            conn = connection;
+            this.connectionString = connectionString;
         }
 
-        public void InsertEvent(Event ev) 
+        public void InsertEvent(Event ev)
         {
-            //string insertString = "INSERT INTO EVENT(NAME) values(@param1)";
-            string insertString = @"INSERT INTO EVENT (
-                                                 Period
-                                                 Department
-                                                 Task
-                                                 Remarks)
-                                               values(@period,@Department,@Task,@Remarks)";
+            string insertString = @"INSERT INTO StudentEVENT(
+                                                Period,
+                                                Departament,Task,
+                                                Remarks,eventTypes_ID) 
+                                                            values(
+                                                            @period,@departament,
+                                                            @task,@remarks,@event_Type_ID
+                                                                        )";
 
-            SqlCommand command = new SqlCommand(insertString,conn);
-
-            command.Parameters.Add("@period", ev.Period);
-            command.Parameters.Add("@Department", ev.Department);
-            command.Parameters.Add("@Task", ev.Task);
-            command.Parameters.Add("@Remarks", ev.Remarks);
-            command.CommandType = CommandType.Text;
-            command.ExecuteNonQuery();
-        }
-
-        public void UpdateEvent(Event ev) 
-        {
-            string updateString = "UPDATE EVENT SET Period = @Period, Department = @Department, Task = @Task WHERE event.id = '"+ev.IdEvent+"'";
-
-            SqlCommand command = new SqlCommand(updateString, conn);
-            command.Parameters.Add("@Period",ev.Period);
-            command.Parameters.Add("@Department", ev.Department);
-            command.Parameters.Add("@Task", ev.Task);
-            command.Parameters.Add("@Remarks", ev.Remarks);
-
-            command.ExecuteNonQuery();
-            
-        }
-
-        public void DeleteEvent(Event ev) 
-        {
-            string deleteString = "DELETE FROM EVENT WHERE id = '"+ev.IdEvent+"'";
-
-            SqlCommand command = new SqlCommand(deleteString, conn);
-            command.ExecuteNonQuery();
-        }
-
-        public List<Event> GetEvents() 
-        {
-            Event ev = new Event();
-            List<Event> eventList = new List<Event>();
-
-            string selectString = "SELECT * FROM EVENT ";
-
-            SqlCommand command = new SqlCommand(selectString, conn);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.HasRows) 
+            using (conn = new SqlConnection(connectionString))
             {
-                while (reader.Read())
-                {
-                    ev.IdEvent = reader.GetInt32(reader.GetOrdinal("id"));
-                    ev.Period = reader.GetString(reader.GetOrdinal("Period"));
-                    ev.Department = reader.GetString(reader.GetOrdinal("Department"));
-                    ev.Task = reader.GetString(reader.GetOrdinal("Task"));
-                    ev.Remarks = reader.GetString(reader.GetOrdinal("Remarks"));
-                    ev.Event_Type_ID = reader.GetInt32(reader.GetOrdinal("Event_Type_ID"));
-                    
-                    eventList.Add(ev);
-                }
-            }
+                conn.Open();
 
-            return eventList;
+                SqlCommand command = new SqlCommand(insertString, conn);
+                command.Parameters.Add("@period", ev.Period);
+                command.Parameters.Add("@departament", ev.Department);
+                command.Parameters.Add("@task", ev.Task);
+                command.Parameters.Add("@remarks", ev.Remarks);
+                command.Parameters.Add("@eventTypes_ID", ev.Event_Type_ID);
+                command.CommandType = CommandType.Text;
+                command.ExecuteNonQuery();
+
+                conn.Close();
+            }
+        }
+
+        public void UpdateEvent(Event ev)
+        {
+            string updateString = @"UPDATE StudentEVENT 
+                                           SET 
+                                               Period=@period, 
+                                               Departament=@departament, 
+                                               Task=@task, 
+                                               Remarks=@remarks ,
+                                               eventTypes_ID = @eventTypes_ID
+                                               WHERE id = '" + ev.IdEvent + "'";
+
+            using (conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(updateString, conn);
+
+                command.Parameters.Add("@period", ev.Period);
+                command.Parameters.Add("@departament", ev.Department);
+                command.Parameters.Add("@task", ev.Task);
+                command.Parameters.Add("@remarks", ev.Remarks);
+                command.Parameters.Add("@event_Types_ID", ev.Event_Type_ID);
+
+                command.ExecuteNonQuery();
+
+                conn.Close();
+            }
+        }
+
+        public void DeleteEvent(Event ev)
+        {
+            string deleteString = "DELETE FROM EVENT WHERE id = '" + ev.IdEvent + "'";
+
+            using (conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(deleteString, conn);
+                command.ExecuteNonQuery();
+
+                conn.Close();
+            }
         }
 
         public Event SearchEvent(int evID)
@@ -95,25 +95,31 @@ namespace StudentOrganizerDBOp
             Event ev = new Event();
             ev.IdEvent = evID;
 
-            string searchString = "SELECT * FROM EVENT where id = " +ev.IdEvent;
+            string searchString = "SELECT * FROM EVENT where id = " + ev.IdEvent;
 
-            SqlCommand command = new SqlCommand(searchString, conn);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.HasRows)
+            using (conn = new SqlConnection(connectionString))
             {
-                while (reader.Read())
+                conn.Open();
+
+                SqlCommand command = new SqlCommand(searchString, conn);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
                 {
-                    ev.Period = reader.GetString(reader.GetOrdinal("Period"));
-                    ev.Department = reader.GetString(reader.GetOrdinal("Department"));
-                    ev.Task = reader.GetString(reader.GetOrdinal("Task"));
-                    ev.Remarks = reader.GetString(reader.GetOrdinal("Remarks"));
-                    
+                    while (reader.Read())
+                    {
+                        ev.Period = reader.GetString(reader.GetOrdinal("Period"));
+                        ev.Remarks = reader.GetString(reader.GetOrdinal("Remarks"));
+                        ev.Task = reader.GetString(reader.GetOrdinal("Task"));
+                        ev.Department = reader.GetString(reader.GetOrdinal("Departament"));
+                        ev.Event_Type_ID = reader.GetInt32(reader.GetOrdinal("event_Types_ID"));
+                    }
                 }
+
+                conn.Close();
             }
 
             return ev;
         }
-
     }
 }

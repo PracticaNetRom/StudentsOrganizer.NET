@@ -16,7 +16,8 @@ namespace StudentOrganizer.BO
         public DateTime BirthDate { get; set; }
         public string PhoneNumber { get; set; }
         public string Faculty { get; set; }
-        public int FacultyStartYear { get; set; }
+        public string FacultyStartYear { get; set; }
+        public string Email { get; set; }
     }
 
 }

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentOrganizer.DBOp
+namespace StudentOrganizerDBOp
 {
     public class StudentCommands
     {
@@ -28,7 +28,7 @@ namespace StudentOrganizer.DBOp
                                         Email,
                                         BirthDate,
                                         PhoneNumber,
-            Faculty,FacultyStartYear) values(@firstName,@lastName,@gender,@email,@birthDate,@phoneNumber,@faculty,@facultyStart)";
+            Faculty,FacultyStartYear) values(@firstName,@lastName,@gender,@email,@birthDate,@phoneNumber,@faculty,@facultyStartYear)";
 
             using (conn = new SqlConnection(connectionString))
             {
@@ -39,11 +39,11 @@ namespace StudentOrganizer.DBOp
                 command.Parameters.Add("@firstName", stud.FirstName);
                 command.Parameters.Add("@lastName", stud.LastName);
                 command.Parameters.Add("@gender", stud.Gender);
-                command.Parameters.Add("@email", stud.Gender);
+                command.Parameters.Add("@email", stud.Email);
                 command.Parameters.Add("@birthDate", stud.BirthDate);
                 command.Parameters.Add("@phoneNumber", stud.PhoneNumber);
                 command.Parameters.Add("@faculty", stud.Faculty);
-                command.Parameters.Add("@facultyStart", stud.FacultyStartYear);
+                command.Parameters.Add("@facultyStartYear", stud.FacultyStartYear);
                 command.CommandType = CommandType.Text;
 
                 command.ExecuteNonQuery();
@@ -54,7 +54,7 @@ namespace StudentOrganizer.DBOp
 
         public void UpdateStudent(StudentOrganizer.BO.Student stud)
         {
-            string updateString = "UPDATE STUDENT SET FirstName = @firstName,LastName = @lastName, Gender=@gender,Email = @email, BirthDate=@birthDate, Email=@email, PhoneNumber = @phoneNumber, Faculty = @faculty, FacultyStartYear = @facultyStart WHERE student.id = '" + stud.IdStudent + "'";
+            string updateString = "UPDATE STUDENT SET FirstName = @firstName,LastName = @lastName, Gender=@gender,Email = @email, BirthDate=@birthDate, Email=@email, PhoneNumber = @phoneNumber, Faculty = @faculty, FacultyStartYear = @facultyStartYear WHERE student.id = '" + stud.IdStudent + "'";
 
             using (conn = new SqlConnection(connectionString))
             {
@@ -68,7 +68,7 @@ namespace StudentOrganizer.DBOp
                 command.Parameters.Add("@birthDate", stud.BirthDate);
                 command.Parameters.Add("@phoneNumber", stud.PhoneNumber);
                 command.Parameters.Add("@faculty", stud.Faculty);
-                command.Parameters.Add("@facultyStart", stud.FacultyStartYear);
+                command.Parameters.Add("@facultyStartYear", stud.FacultyStartYear);
                 command.ExecuteNonQuery();
 
                 conn.Close();
@@ -115,7 +115,7 @@ namespace StudentOrganizer.DBOp
                         student.BirthDate = reader.GetDateTime(reader.GetOrdinal("BirthDate"));
                         student.PhoneNumber = reader.GetString(reader.GetOrdinal("PhoneNumber"));
                         student.Faculty = reader.GetString(reader.GetOrdinal("Faculty"));
-                        student.FacultyStartYear = reader.GetInt32(reader.GetOrdinal("FacultyStartYear"));
+                        student.FacultyStartYear = reader.GetString(reader.GetOrdinal("FacultyStartYear"));
                     }
                     reader.Close();
                 }

@@ -12,3 +12,10 @@ D:\Work\StudentOrganizerFinalVersion\StudentOrganizerDBOp\bin\Debug\ClassLibrary
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizerDBOp\obj\Debug\StudentOrganizerDBOp.csprojResolveAssemblyReference.cache
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizerDBOp\obj\Debug\StudentOrganizerDBOp.dll
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizerDBOp\obj\Debug\StudentOrganizerDBOp.pdb
+D:\Practica\StudentOrganizerFinalVersion\StudentOrganizerDBOp\obj\Debug\StudentOrganizerDBOp.csprojResolveAssemblyReference.cache
+D:\Practica\StudentOrganizerFinalVersion\StudentOrganizerDBOp\obj\Debug\StudentOrganizerDBOp.dll
+D:\Practica\StudentOrganizerFinalVersion\StudentOrganizerDBOp\bin\Debug\StudentOrganizerDBOp.dll
+D:\Practica\StudentOrganizerFinalVersion\StudentOrganizerDBOp\bin\Debug\StudentOrganizerDBOp.pdb
+D:\Practica\StudentOrganizerFinalVersion\StudentOrganizerDBOp\bin\Debug\ClassLibrary1.dll
+D:\Practica\StudentOrganizerFinalVersion\StudentOrganizerDBOp\bin\Debug\ClassLibrary1.pdb
+D:\Practica\StudentOrganizerFinalVersion\StudentOrganizerDBOp\obj\Debug\StudentOrganizerDBOp.pdb
