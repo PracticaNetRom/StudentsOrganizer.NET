@@ -26,8 +26,8 @@ namespace MicaAplicatie.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NETSRV-DB01\\SQL2012;Initial Catalog=NetRom.Practica;User ID=PracticaU" +
-            "ser;Password=!khyVSJ2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NETSRV-DB01\\SQL2012;Initial Catalog=NetRom.Practica6;User ID=Practica" +
+            "User;Password=!khyVSJ2")]
         public string DBConnection {
             get {
                 return ((string)(this["DBConnection"]));

@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="eventParticipants.DBOp.cs" />
-    <Compile Include="events.DBOp.cs" />
-    <Compile Include="student.DBOp.cs" />
+    <Compile Include="userDBOP.cs" />
+    <Compile Include="studentEventDBOp.cs" />
+    <Compile Include="eventDBOp.cs" />
+    <Compile Include="eventTypesDBOp.cs" />
+    <Compile Include="studentDBOp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,137 +1,52 @@
-create table student (
-	studentID int not null,
-	firstName varchar(50),
-	lastName varchar(50),
-	gender varchar(10),
-	birthdate date,
-	phoneNo varchar(15),
-	faculty varchar(50),
-	facultyStartYear varchar(50),
-	
-	primary key(studentID)
+create table USER_Table(
+	userName varchar(100),
+	pass varchar(500),
+
+	primary key(userName)
 );
 
+insert into USER_Table values('andrei','parola123');
 
-create table event (
-	eventID int not null,
-	eventName varchar(50),
-	
-	primary key(eventID)
+CREATE TABLE [dbo].[student](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [varchar](100) NULL,
+	[LastName] [varchar](100) NULL,
+	[Gender] [varchar](50) NULL,
+	[BirthDate] [date] NULL,
+	[Email] [varchar](50) NULL,
+	[PhoneNumber] [varchar](50) NULL,
+	[Faculty] [varchar](50) NULL,
+	[FacultyStartYear] [int] NULL,
+ CONSTRAINT [PK_student] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+create table EventTypes(
+	id int IDENTITY(1,1) not null,
+	description varchar(200),
+	primary key(id)
 );
 
+create table Event(
+	id int IDENTITY(1,1) NOT NULL,
+	eventTypes_ID int not null,
+	perioada date,
+	Departament varchar(200),
+	Task varchar(200),
+	Remarks varchar(200),
 
-create table event_participants (
-	participantID int not null,
-	studentID int not null,
-	eventID int not null,
-	eventPeriod varchar(50),
-	eventDept varchar(50),
-	assignedTask varchar(50),
-	remarks varchar(200),
-	
-	primary key(participantID),
-	foreign key(studentID) references student(studentID),
-	foreign key(eventID) references event(eventID)
-)
+	primary key(id),
+	foreign key(eventTypes_ID) references eventTypes(id)
+);
 
+create table StudentEvent(
+	id_Student int not null,
+	id_Event int not null,
 
-
-insert into student values (
-	1,
-	'Andrei',
-	'Bolovan',
-	'Male',
-	'1994-09-27',
-	'0745757502',
-	'ACE',
-	'2013'
-)
-
-insert into student values (
-	2,
-	'Petre',
-	'Mazilu',
-	'Male',
-	'1993-07-21',
-	'0741234567',
-	'ACE',
-	'2012,
-)
-
-insert into student values (
-	3,
-	'Andrei',
-	'Tenea',
-	'Male',
-	'1993-02-17',
-	'0728123456',
-	'ACE',
-	'2012'
-)
-insert into student values (
-	4,
-	'Andreea',
-	'Popescu',
-	'Female',
-	'1992-01-08',
-	'0781234890',
-	'ACE',
-	'2011'
-)
-
-insert into event values (
-	101,
-	'Practica NETRom'
-)
-
-insert into event values (
-	102,
-	'Internship NETRom'
-)
-
-insert into event values (
-	103,
-	'NETRom Software Academy'
-)
-
-insert into event_participants values (
-	201501,
-	1,
-	101,
-	'01-07-2015 > 15-07-2015'
-	'DotNet'
-	'Student Organizer',
-	'-'
-)
-
-insert into event_participants values (
-	201502,
-	2,
-	101,
-	'01-07-2015 > 15-07-2015'
-	'DotNet'
-	'Student Organizer',
-	'-'
-)
-
-insert into event_participants values (
-	201503,
-	3,
-	101,
-	'01-07-2015 > 15-07-2015'
-	'DotNet'
-	'Student Organizer',
-	'-'
-)
-
-insert into event_participants values (
-	201504,
-	4,
-	102,
-	'01-08-2015 > 30-09-2015'
-	'Mobile'
-	'Management solution for small enterprise',
-	'Participant of Practica NETRom'
-)
-
-select student.firstName, student.lastName, event_participants.eventDept from student, event, event_participants where event_participants.studentID = student.studentID and event_participants.eventID = event.eventID;
+	primary key(id_Student,id_Event),
+	foreign key (id_Student) references Student(id),
+	foreign key (id_Event) references Event(id)
+);

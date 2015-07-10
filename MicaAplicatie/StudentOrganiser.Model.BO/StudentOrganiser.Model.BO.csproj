@@ -39,9 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="eventParticipants.BO.cs" />
-    <Compile Include="events.BO.cs" />
-    <Compile Include="student.BO.cs" />
+    <Compile Include="userBO.cs" />
+    <Compile Include="studentEventBO.cs" />
+    <Compile Include="eventBO.cs" />
+    <Compile Include="eventTypesBO.cs" />
+    <Compile Include="studentBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
