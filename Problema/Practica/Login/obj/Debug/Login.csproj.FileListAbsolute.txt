@@ -1,0 +1,9 @@
+C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Login\obj\Debug\Practica.Login.resources
+C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Login\obj\Debug\Login.exe.licenses
+C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Login\bin\Debug\Login.exe.config
+C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Login\bin\Debug\Login.exe
+C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Login\bin\Debug\Login.pdb
+C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Login\obj\Debug\Login.exe
+C:\Users\Costi\documents\visual studio 2013\Projects\Practica\Login\obj\Debug\Login.pdb

@@ -1,0 +1,75 @@
+CREATE TABLE [dbo].[Event_Types](
+	[ID] [int] NOT NULL,
+	[Description] [nchar](100) NOT NULL,
+ CONSTRAINT [PK_Event_Types] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+CREATE TABLE [dbo].[Events](
+	[ID] [int] NOT NULL,
+	[Perioada] [nchar](100) NOT NULL,
+	[Departament] [nchar](50) NOT NULL,
+	[Task] [nchar](100) NOT NULL,
+	[Remarks] [nchar](50) NOT NULL,
+	[EventTypeID] [int] NOT NULL,
+ CONSTRAINT [PK_Events] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Events]  WITH CHECK ADD  CONSTRAINT [FK_Events_Event_Types] FOREIGN KEY([EventTypeID])
+REFERENCES [dbo].[Event_Types] ([ID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[Events] CHECK CONSTRAINT [FK_Events_Event_Types]
+GO
+CREATE TABLE [dbo].[Student_Events](
+	[ID_Stud] [int] NOT NULL,
+	[ID_Event] [int] NOT NULL,
+ CONSTRAINT [PK_Student_Events] PRIMARY KEY CLUSTERED 
+(
+	[ID_Stud] ASC,
+	[ID_Event] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Student_Events]  WITH CHECK ADD  CONSTRAINT [FK_Student_Events_Events] FOREIGN KEY([ID_Event])
+REFERENCES [dbo].[Events] ([ID])
+GO
+
+ALTER TABLE [dbo].[Student_Events] CHECK CONSTRAINT [FK_Student_Events_Events]
+GO
+
+ALTER TABLE [dbo].[Student_Events]  WITH CHECK ADD  CONSTRAINT [FK_Student_Events_Students] FOREIGN KEY([ID_Stud])
+REFERENCES [dbo].[Students] ([ID])
+GO
+
+ALTER TABLE [dbo].[Student_Events] CHECK CONSTRAINT [FK_Student_Events_Students]
+GO
+
+CREATE TABLE [dbo].[Students](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [nchar](50) NOT NULL,
+	[LastName] [nchar](50) NOT NULL,
+	[Gender] [nchar](100) NOT NULL,
+	[BirthDate] [date] NOT NULL,
+	[Faculty] [nchar](100) NOT NULL,
+	[FacultyStartYear] [date] NOT NULL,
+ CONSTRAINT [PK_Students] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+

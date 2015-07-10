@@ -1,0 +1,15 @@
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.BO\bin\Debug\StudentOrg.Model.BO.dll
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.BO\bin\Debug\StudentOrg.Model.BO.pdb
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.BO\obj\Debug\StudentOrg.Model.BO.csprojResolveAssemblyReference.cache
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.BO\obj\Debug\StudentOrg.Model.BO.dll
+C:\Users\laboratory1\Documents\GitHub\StudentsOrganizer.NET\Practica\StudentOrg.Model.BO\obj\Debug\StudentOrg.Model.BO.pdb
+C:\Users\Costi\Desktop\StudentsOrganizer.NET-c.lzr\Practica\StudentOrg.Model.BO\bin\Debug\StudentOrg.Model.BO.dll
+C:\Users\Costi\Desktop\StudentsOrganizer.NET-c.lzr\Practica\StudentOrg.Model.BO\bin\Debug\StudentOrg.Model.BO.pdb
+C:\Users\Costi\Desktop\StudentsOrganizer.NET-c.lzr\Practica\StudentOrg.Model.BO\obj\Debug\StudentOrg.Model.BO.csprojResolveAssemblyReference.cache
+C:\Users\Costi\Desktop\StudentsOrganizer.NET-c.lzr\Practica\StudentOrg.Model.BO\obj\Debug\StudentOrg.Model.BO.dll
+C:\Users\Costi\Desktop\StudentsOrganizer.NET-c.lzr\Practica\StudentOrg.Model.BO\obj\Debug\StudentOrg.Model.BO.pdb
+C:\Users\laboratory1\Desktop\Problema\Practica\StudentOrg.Model.BO\bin\Debug\StudentOrg.Model.BO.dll
+C:\Users\laboratory1\Desktop\Problema\Practica\StudentOrg.Model.BO\bin\Debug\StudentOrg.Model.BO.pdb
+C:\Users\laboratory1\Desktop\Problema\Practica\StudentOrg.Model.BO\obj\Debug\StudentOrg.Model.BO.csprojResolveAssemblyReference.cache
+C:\Users\laboratory1\Desktop\Problema\Practica\StudentOrg.Model.BO\obj\Debug\StudentOrg.Model.BO.dll
+C:\Users\laboratory1\Desktop\Problema\Practica\StudentOrg.Model.BO\obj\Debug\StudentOrg.Model.BO.pdb
