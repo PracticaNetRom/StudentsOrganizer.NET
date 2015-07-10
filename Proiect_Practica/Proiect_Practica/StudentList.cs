@@ -62,7 +62,8 @@ namespace Proiect_Practica
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-
+            AddStudent form = new AddStudent();
+            form.ShowDialog();
         }
 
 

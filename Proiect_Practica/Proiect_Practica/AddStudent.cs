@@ -109,9 +109,7 @@ namespace Proiect_Practica
             checkEdit1.Text = null;
             checkEdit2.Text = null;
             
-            this.Hide();
-            StudentsForm studentForm = new StudentsForm();
-            studentForm.Show();
+            
         }
 
         public Students student { get; set; }
