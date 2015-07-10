@@ -22,10 +22,10 @@ namespace StudentOrganizer.DBOp
 
         public void InsertEvent(Event ev)
         {
-            string insertString = @"INSERT INTO StudentEVENT(
+            string insertString = @"INSERT INTO Events(
                                                 Period,
-                                                Departament,Task,
-                                                Remarks,eventTypes_ID) 
+                                                Department,Task,
+                                                Remarks,event_Type_ID) 
                                                             values(
                                                             @period,@departament,
                                                             @task,@remarks,@event_Type_ID
@@ -40,7 +40,7 @@ namespace StudentOrganizer.DBOp
                 command.Parameters.Add("@departament", ev.Department);
                 command.Parameters.Add("@task", ev.Task);
                 command.Parameters.Add("@remarks", ev.Remarks);
-                command.Parameters.Add("@eventTypes_ID", ev.Event_Type_ID);
+                command.Parameters.Add("@event_Type_ID", ev.Event_Type_ID);
                 command.CommandType = CommandType.Text;
                 command.ExecuteNonQuery();
 

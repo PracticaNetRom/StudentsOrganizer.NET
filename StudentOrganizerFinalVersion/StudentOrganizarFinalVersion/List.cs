@@ -48,5 +48,17 @@ namespace StudentOrganizarFinalVersion
 
             this.Hide();
         }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            scb = new SqlCommandBuilder(sda);
+            sda.Update(dt);
+            CreateDataTable();
+        }
+
+        private void xtraTabPage2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

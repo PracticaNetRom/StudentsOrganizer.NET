@@ -16,14 +16,16 @@ namespace StudentOrganizarFinalVersion
     {
         private Student student;
         private StudentOrganizerDBOp.StudentCommands studComm;
-
+        private Event eventToAdd;
+        private EventCommands eventComm;
         public Create()
         {
             InitializeComponent();
 
             student = new Student();
             studComm = new StudentOrganizerDBOp.StudentCommands(Properties.Settings.Default.connection);
-
+            eventToAdd = new Event();
+            eventComm = new EventCommands(Properties.Settings.Default.connection);
         }
 
         private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace StudentOrganizarFinalVersion
 
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SaveButtonCreateStudent_Click(object sender, EventArgs e)
         {
             student.FirstName = FirstNameTextEdit.Text;
             student.LastName = LastNameTextEdit.Text;
@@ -48,13 +50,13 @@ namespace StudentOrganizarFinalVersion
 
             studComm.InsertStudent(student);
 
-            FirstNameTextEdit.Text = null;
-            LastNameTextEdit.Text = null;
-            BirthDateTextEdit.Text = null;
-            PhoneNumberTextEdit.Text = null;
-            FacultyTextEdit.Text = null;
-            EmailTextEdit = null;
-            FacultyStartTextEdit.Text = null;
+            FirstNameTextEdit.Text = string.Empty;
+            LastNameTextEdit.Text = string.Empty;
+            BirthDateTextEdit.Text = string.Empty;
+            PhoneNumberTextEdit.Text = string.Empty;
+            FacultyTextEdit.Text = string.Empty;
+            EmailTextEdit.Text = string.Empty;
+            FacultyStartTextEdit.Text = string.Empty;
             FemaleButton.Checked = false;
             MaleButton.Checked = false;
             
@@ -84,6 +86,37 @@ namespace StudentOrganizarFinalVersion
             andrei.Show();
 
             this.Hide();
+        }
+
+        private void labelControl11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            MainPage andrei = new MainPage();
+            andrei.Show();
+
+            this.Hide();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            eventToAdd.Period = PeriodTextEdit.Text;
+            eventToAdd.Department= DepartmentTextEdit.Text;
+            eventToAdd.Task = TaskTextEdit.Text;
+            eventToAdd.Remarks = RemarksTextEdit.Text;
+            eventToAdd.Event_Type_ID = Convert.ToInt32(EventTypeTextEdit.Text);
+
+            eventComm.InsertEvent(eventToAdd);
+
+            PeriodTextEdit.Text = string.Empty;
+            DepartmentTextEdit.Text = string.Empty;
+            TaskTextEdit.Text = string.Empty;
+            RemarksTextEdit.Text = string.Empty;
+            EventTypeTextEdit.Text = string.Empty;
+            
         }
     }
 }
