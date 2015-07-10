@@ -92,7 +92,8 @@ namespace Proiect_Practica
             student.Male = checkEdit2.Text;
             student.Gender = labelControl4.Text;
 
-            StudentsOperations studComm = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
+            StudentsOperations studDbo = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
+            studDbo.InsertStudent(student);
 
 
 
