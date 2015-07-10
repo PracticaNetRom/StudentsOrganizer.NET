@@ -23,11 +23,7 @@ namespace ProiectPractica
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
-<<<<<<< HEAD
             SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login Where Username='" + labelControl1.Text + "'and Password='" + labelControl2.Text + "'", con);
-=======
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login Where Username='" + textBox2.Text + "'and Password='" + textBox1.Text + "'", con);
->>>>>>> origin/a.dia
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")

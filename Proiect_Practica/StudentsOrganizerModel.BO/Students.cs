@@ -24,10 +24,7 @@ namespace StudentsOrganizerModel.BO
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/a.dia
         public string id { get; set; }
     }
 }

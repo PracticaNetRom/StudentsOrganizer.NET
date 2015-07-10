@@ -92,7 +92,7 @@ namespace Proiect_Practica
             student.Male = checkEdit2.Text;
             student.Gender = labelControl4.Text;
 
-            StudentCommands studComm = new StudentCommands(Proiect_Practica.GUI.Properties.Settings.Default.Connection);
+            StudentCommands studComm = new StudentCommands(Proiect_Practica.Properties.Settings.Default.Setting);
 
 
 
@@ -114,7 +114,7 @@ namespace Proiect_Practica
             studentForm.Show();
         }
 
-        public object student { get; set; }
+        public Students student { get; set; }
 
         private void LastName_Click(object sender, EventArgs e)
         {

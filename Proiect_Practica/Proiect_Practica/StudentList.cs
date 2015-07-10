@@ -34,7 +34,6 @@ namespace Proiect_Practica
             DataTable dt = new DataTable();
             sda.Fill(dt);
             gridControl1.DataSource = dt;
-<<<<<<< HEAD
 
         }
 
@@ -48,10 +47,5 @@ namespace Proiect_Practica
 
         }
 
-=======
-
-        }
-
->>>>>>> origin/a.dia
     }
 }
