@@ -19,8 +19,10 @@ namespace StudentOrganizer.Model.DBOp
             this.connectionString = connectionString;
         }
 
-        public void InsertEvent(Event ev)
+        public void InsertEvent(Event ev,string evName)
         {
+            string selectString = "SELECT * FROM EventTypes where description = '" + evName + "'";
+
             string insertString = @"INSERT INTO Event(
                                                 Period,
                                                 Departament,Task,
@@ -34,7 +36,19 @@ namespace StudentOrganizer.Model.DBOp
             {
                 conn.Open();
 
-                SqlCommand command = new SqlCommand(insertString, conn);
+                SqlCommand command = new SqlCommand(selectString, conn);
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ev.EventTypes_ID = reader.GetInt32(reader.GetOrdinal("id"));
+                    }
+                }
+                reader.Close();
+
+                command = new SqlCommand(insertString, conn);
                 command.Parameters.Add("@period",ev.Period);
                 command.Parameters.Add("@departament", ev.Departament);
                 command.Parameters.Add("@task", ev.Task);
@@ -120,6 +134,38 @@ namespace StudentOrganizer.Model.DBOp
             }
 
             return ev;
+        }
+
+        public List<Event> GetEventList() 
+        {
+            List<Event> evList = new List<Event>();
+
+            string selectString = "SELECT * FROM Event";
+
+            using (conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                SqlCommand command = new SqlCommand(selectString, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Event ev = new Event();
+                        ev.Period = reader.GetDateTime(reader.GetOrdinal("Period"));
+                        ev.Remarks = reader.GetString(reader.GetOrdinal("Remarks"));
+                        ev.Task = reader.GetString(reader.GetOrdinal("Task"));
+                        ev.Departament = reader.GetString(reader.GetOrdinal("Departament"));
+                        ev.EventTypes_ID = reader.GetInt32(reader.GetOrdinal("eventTypes_ID"));
+                        evList.Add(ev);
+                    }
+                    reader.Close();
+                }
+                conn.Close();
+            }
+
+            return evList;
         }
     }
 }

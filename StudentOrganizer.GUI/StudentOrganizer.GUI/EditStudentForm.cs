@@ -74,7 +74,7 @@ namespace StudentOrganizer.GUI
 
             StudentsForm studForm = new StudentsForm();
             studForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void MaleButton_CheckedChanged(object sender, EventArgs e)
@@ -87,6 +87,26 @@ namespace StudentOrganizer.GUI
         {
             stud.Gender = "Famale";
             MaleButton.Checked = false;
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_NCLBUTTONDOWN = 0x00A1;
+            const int HTCLOSE = 20;
+
+            if (m.Msg == WM_NCLBUTTONDOWN)
+            {
+                switch ((int)m.WParam)
+                {
+                    case HTCLOSE:
+                        StudentsForm studentForm = new StudentsForm();
+                        studentForm.Show();
+                        this.Close();
+                        break;
+                }
+            }
+
+            base.WndProc(ref m);
         }
     }
 }

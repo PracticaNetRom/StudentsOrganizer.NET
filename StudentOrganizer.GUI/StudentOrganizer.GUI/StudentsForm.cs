@@ -18,25 +18,51 @@ namespace StudentOrganizer.GUI
 {
     public partial class StudentsForm : Form
     {
-        Student stud;
+        private Student stud;
+        private Event ev;
+        private EventCommands eventComm;
+        private DataTable eventTable;
+        private SqlDataAdapter sqlAdapter;
+        private SqlConnection connection;
+
         public StudentsForm()
         {
             InitializeComponent();
             CreateDataTable();
             stud = new Student();
+            ev = new Event();
+            eventComm = new EventCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
+
+            List<Event> evList = new List<Event>();
+            evList = eventComm.GetEventList();
+
+
+            for (int i = 0; i < evList.Count; i++) 
+            {
+                PeriodComboBox.Properties.Items.Add(evList[i].Period.Year);
+            }
+            
+
         }
 
         public void CreateDataTable() 
         {
-            DataTable dataTable = new DataTable();
-            SqlConnection connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
-            SqlDataAdapter sqlAdapter = new SqlDataAdapter(@"SELECT id,firstName,
+            DataTable studentTable = new DataTable();
+            connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
+            sqlAdapter = new SqlDataAdapter(@"SELECT id,firstName,
                                                             lastName,gender,birthDate,
                                                             email,phoneNumber,faculty,
                                                             facultyStartYear FROM Student", connection);
-            sqlAdapter.Fill(dataTable);
-            
-            GridControl.DataSource = dataTable;
+            sqlAdapter.Fill(studentTable);
+            GridControl.DataSource = studentTable;
+
+            eventTable = new DataTable();
+            sqlAdapter = new SqlDataAdapter(@"SELECT id,eventTypes_ID,
+                                                            period,departament,task,
+                                                            remarks FROM Event", connection);
+            sqlAdapter.Fill(eventTable);
+            EventListControl.DataSource = eventTable;
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -82,6 +108,17 @@ namespace StudentOrganizer.GUI
         private void GridControl_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void PeriodComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
+            eventTable = new DataTable();
+
+            //SELECT DATEPART ( yyyy , period ) FROM EVENT 
+            sqlAdapter = new SqlDataAdapter(@"SELECT DATEPART ( yyyy , period ) FROM EVENT where period = " + Convert.ToDateTime(PeriodComboBox.Text).Year, connection);
+            sqlAdapter.Fill(eventTable);
+            EventListControl.DataSource = eventTable;
         }
     }
 }

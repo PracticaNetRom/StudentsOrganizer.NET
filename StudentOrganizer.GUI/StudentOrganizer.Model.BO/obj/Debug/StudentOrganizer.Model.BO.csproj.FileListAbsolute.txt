@@ -7,3 +7,7 @@ C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrga
 C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.csprojResolveAssemblyReference.cache
 C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.dll
 C:\Users\Laboratory1\Documents\GitHub\P.Mazilu\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.pdb
+C:\Users\Laboratory1\Documents\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\bin\Debug\StudentOrganizer.Model.BO.dll
+C:\Users\Laboratory1\Documents\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\bin\Debug\StudentOrganizer.Model.BO.pdb
+C:\Users\Laboratory1\Documents\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.dll
+C:\Users\Laboratory1\Documents\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.pdb
