@@ -79,5 +79,26 @@ namespace ProiectPractica.Model.DBOp
                 con.Close();
             }
         }
+
+        public void GetStudent(int id) {
+
+            Student stud;
+            string GetString = "Select * From Student Where id_student= " + id;
+            using (con = new SqlConnection(connectionString)) {
+                con.Open();
+                SqlCommand command = new SqlCommand(GetString, con);
+                command.Parameters.Add("@FName", stud.FName);
+                command.Parameters.Add("@LName", stud.LName);
+                command.Parameters.Add("@Gender", stud.Gender);
+                command.Parameters.Add("@Birthdate", stud.Birthdate);
+                command.Parameters.Add("@Email", stud.Email);
+                command.Parameters.Add("@PhoneNumbers", stud.PhoneNumbers);
+                command.Parameters.Add("@Faculty", stud.Faculty);
+                command.Parameters.Add("@FStartYear", stud.FacultyStartYear);
+
+                command.ExecuteNonQuery();
+                con.Close();
+            }
+        }
     }
 }

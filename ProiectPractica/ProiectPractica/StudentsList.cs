@@ -82,7 +82,8 @@ namespace ProiectPractica
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            int id;
+            id = (int)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "id_student");
         }
     }
 }
