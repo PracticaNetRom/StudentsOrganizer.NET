@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentsOrganizer.DBO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,22 +21,16 @@ namespace Proiect_Practica
 
         private void StudentList_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
+            GetStudents();
+
+           /* SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
             SqlDataAdapter sda = new SqlDataAdapter("Select * From STUDENTS", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            gridControl1.DataSource = dt;
+            gridControl1.DataSource = dt;*/
             
         }
-        private void AddStudent_Load(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From STUDENTS", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            gridControl1.DataSource = dt;
-
-        }
+        
 
         private void buttonEdit1_EditValueChanged(object sender, EventArgs e)
         {
@@ -47,5 +42,30 @@ namespace Proiect_Practica
 
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int ID;
+            ID= (int)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID_Student");
+            StudentsOperations stdop = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
+            stdop.DeleteStudents(ID);
+            GetStudents();
+        }
+
+        private void GetStudents()
+        {
+            SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
+            SqlDataAdapter sda = new SqlDataAdapter("Select * From STUDENTS", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            gridControl1.DataSource = dt;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        
     }
 }

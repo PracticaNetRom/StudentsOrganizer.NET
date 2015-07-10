@@ -30,7 +30,7 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.Participan = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
@@ -79,16 +79,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(298, 22);
             this.dateTimePicker1.TabIndex = 12;
             // 
-            // labelControl1
+            // Participan
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelControl1.Location = new System.Drawing.Point(19, 7);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(160, 19);
-            this.labelControl1.TabIndex = 22;
-            this.labelControl1.Text = "Participants Events";
-            this.labelControl1.Click += new System.EventHandler(this.labelControl1_Click);
+            this.Participan.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Participan.Location = new System.Drawing.Point(19, 7);
+            this.Participan.Margin = new System.Windows.Forms.Padding(4);
+            this.Participan.Name = "Participan";
+            this.Participan.Size = new System.Drawing.Size(160, 19);
+            this.Participan.TabIndex = 22;
+            this.Participan.Text = "Participants Events";
+            this.Participan.Click += new System.EventHandler(this.labelControl1_Click);
             // 
             // textEdit1
             // 
@@ -256,7 +256,7 @@
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(525, 518);
+            this.simpleButton1.Location = new System.Drawing.Point(480, 527);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(84, 23);
             this.simpleButton1.TabIndex = 39;
@@ -285,7 +285,7 @@
             this.Controls.Add(this.textEdit3);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.Participan);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label5);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -312,7 +312,7 @@
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl Participan;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.TextEdit textEdit3;

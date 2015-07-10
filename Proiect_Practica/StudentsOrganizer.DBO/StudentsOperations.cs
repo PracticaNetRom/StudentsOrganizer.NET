@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace StudentsOrganizer.DBO
 {
-    public class StudentCommands
+    public class StudentsOperations
     {
         private SqlConnection Con;
         private string connectionString;
 
-        public StudentCommands(string connectionString)
+        public StudentsOperations(string connectionString)
         {
             this.connectionString = connectionString;
         }
@@ -73,9 +73,9 @@ namespace StudentsOrganizer.DBO
 
             }
         }
-        public void DeleteStudent(Students stud)
+        public void DeleteStudents(int  id)
         {
-            string deleteString = "DELETE FROM Student WHERE id = '" + stud.id + "'";
+            string deleteString = "DELETE FROM STUDENTS WHERE ID_Student = '" + id + "'";
 
             using (Con = new SqlConnection(connectionString))
             {

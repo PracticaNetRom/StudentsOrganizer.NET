@@ -51,7 +51,7 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelControl2.Location = new System.Drawing.Point(243, 158);
+            this.labelControl2.Location = new System.Drawing.Point(244, 153);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(66, 16);
             this.labelControl2.TabIndex = 7;
@@ -63,6 +63,7 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(117, 20);
             this.textEdit1.TabIndex = 8;
+            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // textEdit2
             // 
@@ -80,6 +81,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 10;
             this.simpleButton1.Text = "Login";
+            this.simpleButton1.Click += new System.EventHandler(this.button1_Click);
             // 
             // simpleButton2
             // 

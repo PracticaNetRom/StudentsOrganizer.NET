@@ -92,7 +92,7 @@ namespace Proiect_Practica
             student.Male = checkEdit2.Text;
             student.Gender = labelControl4.Text;
 
-            StudentCommands studComm = new StudentCommands(Proiect_Practica.Properties.Settings.Default.Setting);
+            StudentsOperations studComm = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
 
 
 

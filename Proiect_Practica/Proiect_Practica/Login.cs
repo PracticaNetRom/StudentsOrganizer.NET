@@ -23,7 +23,7 @@ namespace ProiectPractica
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login Where Username='" + labelControl1.Text + "'and Password='" + labelControl2.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login Where Username='" + textEdit1.Text + "'and Password='" + textEdit2.Text + "'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
@@ -31,7 +31,8 @@ namespace ProiectPractica
 
                 this.Hide();
                 StudentList sl = new StudentList();
-                sl.Show();
+                sl.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -61,6 +62,11 @@ namespace ProiectPractica
         }
 
         private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
         {
 
         }
