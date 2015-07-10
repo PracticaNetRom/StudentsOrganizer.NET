@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ProiectPractica
 {
-    public partial class StudentList : Form
+    public partial class StudentsList : Form
     {
-        public StudentList()
+        public StudentsList()
         {
             InitializeComponent();
         }
@@ -42,6 +42,11 @@ namespace ProiectPractica
         {
             AddStudent add = new AddStudent();
             add.Show();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

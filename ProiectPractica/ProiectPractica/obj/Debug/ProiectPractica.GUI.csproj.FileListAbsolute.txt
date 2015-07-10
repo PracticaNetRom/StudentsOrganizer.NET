@@ -22,3 +22,4 @@ D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectP
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.exe
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.pdb
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.exe.licenses
+C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.exe.licenses

@@ -16,33 +16,29 @@ namespace ProiectPractica
         public LogIn()
         {
             InitializeComponent();
-            this.textBox2.PasswordChar = '*';
+            this.textEdit2.Properties.PasswordChar = '*';
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void simpleButton1_Click(object sender, EventArgs e)
         {
             string username = "user";
             string password = "1234";
 
-            if ((textBox1.Text == username) && (textBox2.Text == password))
+            if ((textEdit1.Text == username) && (textEdit2.Text == password))
             {
-                StudentList sl = new StudentList();
+                StudentsList sl = new StudentsList();
                 sl.Show();
             }
-            else {
+            else
+            {
                 MessageBox.Show("Please check your username and password");
             }
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void simpleButton2_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
