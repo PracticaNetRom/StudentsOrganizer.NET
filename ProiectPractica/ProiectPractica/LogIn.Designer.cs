@@ -32,7 +32,7 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
@@ -72,14 +72,14 @@
             this.textEdit2.Size = new System.Drawing.Size(100, 20);
             this.textEdit2.TabIndex = 8;
             // 
-            // simpleButton1
+            // btnLogin
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(196, 196);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 9;
-            this.simpleButton1.Text = "LogIn";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnLogin.Location = new System.Drawing.Point(196, 196);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 9;
+            this.btnLogin.Text = "LogIn";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // simpleButton2
             // 
@@ -88,7 +88,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 10;
             this.simpleButton2.Text = "Cancel";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.simpleButton2.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // LogIn
             // 
@@ -97,7 +97,7 @@
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(564, 262);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textEdit1);
@@ -118,7 +118,7 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnLogin;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

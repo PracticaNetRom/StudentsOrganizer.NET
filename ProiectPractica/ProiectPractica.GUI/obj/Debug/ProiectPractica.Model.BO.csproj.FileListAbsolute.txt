@@ -1,8 +1,5 @@
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\bin\Debug\ProiectPractica.GUI.dll
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\bin\Debug\ProiectPractica.GUI.pdb
-D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\bin\Debug\ProiectPractica.exe
-D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\bin\Debug\ProiectPractica.pdb
-D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.Model.BO.csprojResolveAssemblyReference.cache
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.GUI.Properties.Resources.resources
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.Model.BO.csproj.GenerateResource.Cache
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.GUI.dll

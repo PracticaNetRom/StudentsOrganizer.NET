@@ -17,9 +17,14 @@ D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectP
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.AddStudent.resources
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.LogIn.resources
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.Properties.Resources.resources
-D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.StudentList.resources
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.GUI.csproj.GenerateResource.Cache
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.exe
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.pdb
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.exe.licenses
 C:\Users\Marina\Documents\GitHub\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.exe.licenses
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.GUI.dll
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.Model.DBOp.dll
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.GUI.pdb
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\bin\Debug\ProiectPractica.Model.DBOp.pdb
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.StudentsList.resources
+D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica\obj\Debug\ProiectPractica.DeleteStudent.resources

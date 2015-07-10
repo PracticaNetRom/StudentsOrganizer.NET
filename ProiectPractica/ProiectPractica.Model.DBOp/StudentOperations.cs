@@ -21,7 +21,7 @@ namespace ProiectPractica.Model.DBOp
         public void InsertStudent(Student stud)
         {
 
-            string InsertString = "Insert Into Student(FName, LName, Gender, Birthdate, Email, PhoneNumbers, Faculty, FacultyStartYear) values (@FName, @LName, @Gender, @Birthdate, @PhoneNumbers, @Faculty, @FacultyStartYear)";
+            string InsertString = "Insert Into Student(FName, LName, Gender, Birthdate, Email, PhoneNumbers, Faculty, FacultyStartYear) values (@FName, @LName, @Gender, @Birthdate, @Email, @PhoneNumbers, @Faculty, @FStartYear)";
 
             using (con = new SqlConnection(connectionString))
             {
@@ -44,10 +44,10 @@ namespace ProiectPractica.Model.DBOp
             }
         }
 
-        public void DeleteStudent(Student stud)
+        public void DeleteStudent(int id)
         {
 
-            string DeleteString = "Delete From Student Where id_student = " + stud.id_student;
+            string DeleteString = "Delete From Student Where id_student = " + id;
 
             using (con = new SqlConnection(connectionString))
             {

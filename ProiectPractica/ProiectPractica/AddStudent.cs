@@ -44,29 +44,7 @@ namespace ProiectPractica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            student.FName = textEdit1.Text;
-            student.LName = textEdit2.Text;
-            student.Birthdate = Convert.ToDateTime(comboBoxEdit3.Text);
-            student.PhoneNumbers = textEdit4.Text;
-            student.Email = textEdit3.Text;
-            student.Faculty = comboBoxEdit1.SelectedText;
-            student.FacultyStartYear = Convert.ToInt32(comboBoxEdit2.SelectedText);
-
-            studOp.InsertStudent(student);
-
-            textEdit1.Text = null;
-            textEdit2.Text = null;
-            comboBoxEdit3.Text = null;
-            textEdit4.Text = null;
-            comboBoxEdit1.Text = null;
-            comboBoxEdit2.Text = null;
-            textEdit3.Text = null;
-            FemaleCheck.Checked = false;
-            MaleCheck.Checked = false;
             
-            this.Hide();
-            StudentsList studentForm = new StudentsList();
-            studentForm.Show();
         }
 
         private void MaleCheck_CheckedChanged(object sender, EventArgs e)
@@ -81,6 +59,32 @@ namespace ProiectPractica
             student.Gender = "Female";
             MaleCheck.Checked = false;
 
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            student.FName = textEdit1.Text;
+            student.LName = textEdit2.Text;
+            student.Birthdate = Convert.ToDateTime(dateEdit1.Text);
+            student.PhoneNumbers = textEdit4.Text;
+            student.Email = textEdit3.Text;
+            student.Faculty = comboBoxEdit1.SelectedText;
+            student.FacultyStartYear = Convert.ToInt32(comboBoxEdit2.SelectedText);
+
+            studOp.InsertStudent(student);
+
+            textEdit1.Text = null;
+            textEdit2.Text = null;
+            dateEdit1.Text = null;
+            textEdit4.Text = null;
+            comboBoxEdit1.Text = null;
+            comboBoxEdit2.Text = null;
+            textEdit3.Text = null;
+            FemaleCheck.Checked = false;
+            MaleCheck.Checked = false;
+
+            this.Hide();
+            this.Close();
         }
     }
 }

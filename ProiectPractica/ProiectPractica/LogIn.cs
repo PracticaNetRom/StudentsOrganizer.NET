@@ -19,7 +19,7 @@ namespace ProiectPractica
             this.textEdit2.Properties.PasswordChar = '*';
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = "user";
             string password = "1234";
@@ -27,7 +27,8 @@ namespace ProiectPractica
             if ((textEdit1.Text == username) && (textEdit2.Text == password))
             {
                 StudentsList sl = new StudentsList();
-                sl.Show();
+                sl.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -36,7 +37,7 @@ namespace ProiectPractica
 
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }

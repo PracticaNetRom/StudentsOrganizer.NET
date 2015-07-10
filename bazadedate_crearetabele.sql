@@ -4,7 +4,7 @@ create table student (
 	id_student int NOT NULL,
 	Fname VARCHAR(15),
 	Lname VARCHAR(15),
-	Gender int,
+	Gender VARCHAR(50),
 	Birthdate DATE,
 	Email VARCHAR(10),
 	PhoneNumbers VARCHAR(22),
