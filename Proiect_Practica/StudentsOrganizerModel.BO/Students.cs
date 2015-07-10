@@ -11,6 +11,7 @@ namespace StudentsOrganizerModel.BO
        
         public int ID_Student { get; set; }
         public string First_Name { get; set; }
+        public string Participants_Events { get; set; }
         public string Last_Name { get; set; }
         public string Gender { get; set; }
         public DateTime Birth_date { get; set; }
@@ -18,9 +19,15 @@ namespace StudentsOrganizerModel.BO
         public string Phone_Numbers { get; set; }
         public string Faculty { get; set; }
         public string Faculty_start_year { get; set; }
+        public string Female { get; set; }
+        public string Male { get; set; }
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/a.dia
         public string id { get; set; }
     }
 }

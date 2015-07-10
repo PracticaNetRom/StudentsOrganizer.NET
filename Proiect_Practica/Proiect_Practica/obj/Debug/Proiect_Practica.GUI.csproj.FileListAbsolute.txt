@@ -19,3 +19,14 @@ D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Pra
 D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.exe
 D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.pdb
 D:\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.exe.licenses
+<<<<<<< HEAD
+C:\Users\Alina D\Desktop\Laborator1\StudentsOrganizer.NET-a.dia\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.GUI.csprojResolveAssemblyReference.cache
+C:\Users\Alina D\Desktop\Laborator1\StudentsOrganizer.NET-a.dia\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.AddStudent.resources
+C:\Users\Alina D\Desktop\Laborator1\StudentsOrganizer.NET-a.dia\Proiect_Practica\Proiect_Practica\obj\Debug\ProiectPractica.Login.resources
+C:\Users\Alina D\Desktop\Laborator1\StudentsOrganizer.NET-a.dia\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.Properties.Resources.resources
+C:\Users\Alina D\Desktop\Laborator1\StudentsOrganizer.NET-a.dia\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.StudentList.resources
+C:\Users\Alina D\Desktop\Laborator1\StudentsOrganizer.NET-a.dia\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.GUI.csproj.GenerateResource.Cache
+C:\Users\Alina D\Desktop\Laborator1\StudentsOrganizer.NET-a.dia\Proiect_Practica\Proiect_Practica\obj\Debug\Proiect_Practica.exe.licenses
+C:\Users\Alina D\Desktop\Laborator1\StudentsOrganizer.NET\Proiect_Practica\Proiect_Practica\bin\Debug\Proiect_Practica.exe.config
+=======
+>>>>>>> origin/a.dia

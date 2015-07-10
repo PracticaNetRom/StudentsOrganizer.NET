@@ -34,8 +34,24 @@ namespace Proiect_Practica
             DataTable dt = new DataTable();
             sda.Fill(dt);
             gridControl1.DataSource = dt;
+<<<<<<< HEAD
 
         }
 
+        private void buttonEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+=======
+
+        }
+
+>>>>>>> origin/a.dia
     }
 }

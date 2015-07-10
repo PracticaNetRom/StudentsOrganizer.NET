@@ -43,7 +43,7 @@ namespace StudentsOrganizer.DBO
                 command.Parameters.Add("@email", stud.Email);
                 command.Parameters.Add("@phoneNumber", stud.Phone_Numbers);
                 command.Parameters.Add("@faculty", stud.Faculty);
-                command.Parameters.Add("@facultyStart", stud.Faculty_start_year);
+                command.Parameters.Add("@facultyStart", stud.Male);
                 command.CommandType = CommandType.Text;
 
                 command.ExecuteNonQuery();
@@ -66,7 +66,7 @@ namespace StudentsOrganizer.DBO
                 command.Parameters.Add("@email", stud.Email);
                 command.Parameters.Add("@phoneNumber", stud.Phone_Numbers);
                 command.Parameters.Add("@faculty", stud.Faculty);
-                command.Parameters.Add("@facultyStart", stud.Faculty_start_year);
+                command.Parameters.Add("@facultyStart", stud.Male);
                 command.ExecuteNonQuery();
 
                 Con.Close();
