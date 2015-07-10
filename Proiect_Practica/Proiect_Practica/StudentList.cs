@@ -66,6 +66,11 @@ namespace Proiect_Practica
             form.ShowDialog();
         }
 
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         
     }
