@@ -54,6 +54,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(106, 23);
             this.simpleButton2.TabIndex = 1;
             this.simpleButton2.Text = "Close";
+            this.simpleButton2.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // labelControl1
             // 

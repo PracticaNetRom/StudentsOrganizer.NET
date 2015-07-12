@@ -12,3 +12,23 @@ C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaApl
 C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.pdb
 C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.LoginWindow.resources
 C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.exe.licenses
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.exe.config
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.exe
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.pdb
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\bin\Debug\StudentOrganiser.Model.BO.dll
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\bin\Debug\StudentORganiser.Model.DBOp.dll
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\bin\Debug\StudentOrganiser.Model.BO.pdb
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\bin\Debug\StudentORganiser.Model.DBOp.pdb
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\StudentsOrganiser.GUI.csprojResolveAssemblyReference.cache
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.LoginWindow.resources
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.Properties.Resources.resources
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\StudentsOrganiser.GUI.csproj.GenerateResource.Cache
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.exe.licenses
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.exe
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.pdb
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.AddEvent.resources
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.AddStudent.resources
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.CreateOptionsWindow.resources
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.DeleteStudent.resources
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.EditStudent.resources
+D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.AdminPanel.resources

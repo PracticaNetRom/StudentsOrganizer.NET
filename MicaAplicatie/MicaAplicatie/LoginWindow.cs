@@ -35,11 +35,19 @@ namespace MicaAplicatie
             if (userOP.LogIn(user) != 0) 
             {
                 this.Hide();
+                AdminPanel AdminPanel = new AdminPanel();
+                AdminPanel.Show();
             }
             else 
             {
                 MessageBox.Show("Wrong username or password!");
             }
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MessageBox.Show("Your session has ended!");
         }
 
       

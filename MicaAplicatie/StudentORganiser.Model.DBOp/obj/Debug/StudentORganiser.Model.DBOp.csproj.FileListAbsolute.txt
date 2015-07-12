@@ -5,3 +5,10 @@ C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\Student
 C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.csprojResolveAssemblyReference.cache
 C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.dll
 C:\Users\Laboratory1\Documents\Visual Studio 2013\Projects\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.pdb
+D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\bin\Debug\StudentORganiser.Model.DBOp.dll
+D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\bin\Debug\StudentORganiser.Model.DBOp.pdb
+D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\bin\Debug\StudentOrganiser.Model.BO.dll
+D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\bin\Debug\StudentOrganiser.Model.BO.pdb
+D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.csprojResolveAssemblyReference.cache
+D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.dll
+D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.pdb
