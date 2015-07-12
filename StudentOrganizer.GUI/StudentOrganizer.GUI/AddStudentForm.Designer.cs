@@ -36,8 +36,6 @@
             this.EmailTextField = new DevExpress.XtraEditors.TextEdit();
             this.lastNameLabel = new DevExpress.XtraEditors.LabelControl();
             this.LastNameTextField = new DevExpress.XtraEditors.TextEdit();
-            this.MaleButton = new DevExpress.XtraEditors.CheckEdit();
-            this.FamaleButton = new DevExpress.XtraEditors.CheckEdit();
             this.GenderLabel = new DevExpress.XtraEditors.LabelControl();
             this.FacultyLabel = new DevExpress.XtraEditors.LabelControl();
             this.BirthLabel = new DevExpress.XtraEditors.LabelControl();
@@ -49,18 +47,18 @@
             this.BirthTimeEdit = new DevExpress.XtraEditors.DateEdit();
             this.eventListCheckBox = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.eventListCheck = new DevExpress.XtraEditors.LabelControl();
+            this.GenderComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.FirstNameTextField.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextField.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextField.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastNameTextField.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaleButton.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FamaleButton.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyStartComboBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BirthTimeEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BirthTimeEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventListCheckBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // FirstNameTextField
@@ -90,6 +88,9 @@
             // 
             this.PhoneNumberTextField.Location = new System.Drawing.Point(220, 296);
             this.PhoneNumberTextField.Name = "PhoneNumberTextField";
+            this.PhoneNumberTextField.Properties.Mask.EditMask = "(+00)00-000-0000";
+            this.PhoneNumberTextField.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.PhoneNumberTextField.Properties.Mask.PlaceHolder = '0';
             this.PhoneNumberTextField.Size = new System.Drawing.Size(138, 20);
             this.PhoneNumberTextField.TabIndex = 11;
             // 
@@ -110,7 +111,7 @@
             // 
             // lastNameLabel
             // 
-            this.lastNameLabel.Location = new System.Drawing.Point(75, 159);
+            this.lastNameLabel.Location = new System.Drawing.Point(76, 155);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(50, 13);
             this.lastNameLabel.TabIndex = 3;
@@ -118,28 +119,10 @@
             // 
             // LastNameTextField
             // 
-            this.LastNameTextField.Location = new System.Drawing.Point(220, 156);
+            this.LastNameTextField.Location = new System.Drawing.Point(220, 152);
             this.LastNameTextField.Name = "LastNameTextField";
             this.LastNameTextField.Size = new System.Drawing.Size(138, 20);
             this.LastNameTextField.TabIndex = 2;
-            // 
-            // MaleButton
-            // 
-            this.MaleButton.Location = new System.Drawing.Point(220, 182);
-            this.MaleButton.Name = "MaleButton";
-            this.MaleButton.Properties.Caption = "Male";
-            this.MaleButton.Size = new System.Drawing.Size(113, 19);
-            this.MaleButton.TabIndex = 4;
-            this.MaleButton.CheckedChanged += new System.EventHandler(this.MaleButton_CheckedChanged);
-            // 
-            // FamaleButton
-            // 
-            this.FamaleButton.Location = new System.Drawing.Point(301, 182);
-            this.FamaleButton.Name = "FamaleButton";
-            this.FamaleButton.Properties.Caption = "Famale";
-            this.FamaleButton.Size = new System.Drawing.Size(113, 19);
-            this.FamaleButton.TabIndex = 5;
-            this.FamaleButton.CheckedChanged += new System.EventHandler(this.FamaleButton_CheckedChanged);
             // 
             // GenderLabel
             // 
@@ -238,11 +221,21 @@
             this.eventListCheck.TabIndex = 18;
             this.eventListCheck.Text = "Participates At";
             // 
+            // GenderComboBox
+            // 
+            this.GenderComboBox.Location = new System.Drawing.Point(220, 182);
+            this.GenderComboBox.Name = "GenderComboBox";
+            this.GenderComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.GenderComboBox.Size = new System.Drawing.Size(137, 20);
+            this.GenderComboBox.TabIndex = 5;
+            // 
             // AddStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 564);
+            this.Controls.Add(this.GenderComboBox);
             this.Controls.Add(this.eventListCheck);
             this.Controls.Add(this.eventListCheckBox);
             this.Controls.Add(this.BirthTimeEdit);
@@ -254,8 +247,6 @@
             this.Controls.Add(this.BirthLabel);
             this.Controls.Add(this.FacultyLabel);
             this.Controls.Add(this.GenderLabel);
-            this.Controls.Add(this.FamaleButton);
-            this.Controls.Add(this.MaleButton);
             this.Controls.Add(this.lastNameLabel);
             this.Controls.Add(this.LastNameTextField);
             this.Controls.Add(this.emailLabel);
@@ -270,14 +261,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextField.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextField.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastNameTextField.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaleButton.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FamaleButton.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyStartComboBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BirthTimeEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BirthTimeEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventListCheckBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,8 +283,6 @@
         private DevExpress.XtraEditors.TextEdit EmailTextField;
         private DevExpress.XtraEditors.LabelControl lastNameLabel;
         private DevExpress.XtraEditors.TextEdit LastNameTextField;
-        private DevExpress.XtraEditors.CheckEdit MaleButton;
-        private DevExpress.XtraEditors.CheckEdit FamaleButton;
         private DevExpress.XtraEditors.LabelControl GenderLabel;
         private DevExpress.XtraEditors.LabelControl FacultyLabel;
         private DevExpress.XtraEditors.LabelControl BirthLabel;
@@ -306,5 +294,6 @@
         private DevExpress.XtraEditors.DateEdit BirthTimeEdit;
         private DevExpress.XtraEditors.CheckedComboBoxEdit eventListCheckBox;
         private DevExpress.XtraEditors.LabelControl eventListCheck;
+        private DevExpress.XtraEditors.ComboBoxEdit GenderComboBox;
     }
 }

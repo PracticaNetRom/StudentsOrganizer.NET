@@ -72,7 +72,8 @@ namespace StudentOrganizer.Model.DBOp
           
             List<EventTypes> eventList = new List<EventTypes>();
 
-            string selectString = "SELECT * FROM EventTypes ";
+            string selectString = "SELECT EventTypes.Description,EventTypes.id,Event.Period FROM EventTypes,Event where  EventTypes.id=Event.eventTypes_ID ";
+            string period = null;
 
             using (conn = new SqlConnection(connectionString))
             {
@@ -87,9 +88,11 @@ namespace StudentOrganizer.Model.DBOp
                         EventTypes ev = new EventTypes();
                         ev.Description = reader.GetString(reader.GetOrdinal("Description"));
                         ev.IdEvent = reader.GetInt32(reader.GetOrdinal("id"));
+                        period = reader.GetDateTime(reader.GetOrdinal("Period")).ToString("dd/MM/yyy");
+                        ev.Description = ev.Description + " " + period;
                         eventList.Add(ev);
                     }
-                  
+                    reader.Close();
                 }
 
                 conn.Close();

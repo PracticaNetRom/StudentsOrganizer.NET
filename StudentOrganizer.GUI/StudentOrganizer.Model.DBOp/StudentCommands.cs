@@ -83,13 +83,18 @@ namespace StudentOrganizer.Model.DBOp
 
         public void DeleteStudent(Student stud)
         {
-            string deleteString = "DELETE FROM Student WHERE id = '" + stud.Id + "'";
+            string deleteString = "DELETE FROM StudentEvent WHERE ID_STUDENT = '" + stud.Id + "'";
 
             using (conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 SqlCommand command = new SqlCommand(deleteString, conn);
                 command.ExecuteNonQuery();
+
+                deleteString = "DELETE FROM Student WHERE id = '" + stud.Id + "'";
+                command = new SqlCommand(deleteString, conn);
+                command.ExecuteNonQuery();
+
                 conn.Close();
             }
         }

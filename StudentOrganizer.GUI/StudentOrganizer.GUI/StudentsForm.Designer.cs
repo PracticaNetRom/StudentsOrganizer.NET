@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsForm));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.createButton = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.GridControl = new DevExpress.XtraGrid.GridControl();
@@ -41,7 +43,8 @@
             this.PhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Faculty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.FacutyStartYear = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Action = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.delete_button = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ButtonDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.createEventButton = new DevExpress.XtraEditors.SimpleButton();
             this.EditStudentButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabControl = new DevExpress.XtraTab.XtraTabControl();
@@ -54,27 +57,31 @@
             this.Departament = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Task = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Remarks = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Delete = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.deleteEventButton = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.PeriodComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.ExportButton = new DevExpress.XtraEditors.SimpleButton();
+            this.PrintButton = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl)).BeginInit();
             this.TabControl.SuspendLayout();
             this.StudentList.SuspendLayout();
             this.EventList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EventListControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deleteEventButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeriodComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // createButton
             // 
-            this.createButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.createButton.Location = new System.Drawing.Point(12, 114);
             this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(94, 25);
+            this.createButton.Size = new System.Drawing.Size(132, 25);
             this.createButton.TabIndex = 1;
             this.createButton.Text = "Add Student";
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
@@ -96,7 +103,9 @@
             this.GridControl.Location = new System.Drawing.Point(4, 3);
             this.GridControl.MainView = this.gridView1;
             this.GridControl.Name = "GridControl";
-            this.GridControl.Size = new System.Drawing.Size(765, 305);
+            this.GridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.ButtonDelete});
+            this.GridControl.Size = new System.Drawing.Size(784, 305);
             this.GridControl.TabIndex = 3;
             this.GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -113,7 +122,7 @@
             this.PhoneNumber,
             this.Faculty,
             this.FacutyStartYear,
-            this.Action});
+            this.delete_button});
             this.gridView1.GridControl = this.GridControl;
             this.gridView1.Name = "gridView1";
             // 
@@ -124,6 +133,7 @@
             this.FirstName.Name = "FirstName";
             this.FirstName.Visible = true;
             this.FirstName.VisibleIndex = 0;
+            this.FirstName.Width = 85;
             // 
             // LastName
             // 
@@ -132,6 +142,7 @@
             this.LastName.Name = "LastName";
             this.LastName.Visible = true;
             this.LastName.VisibleIndex = 1;
+            this.LastName.Width = 85;
             // 
             // Gender
             // 
@@ -140,6 +151,7 @@
             this.Gender.Name = "Gender";
             this.Gender.Visible = true;
             this.Gender.VisibleIndex = 2;
+            this.Gender.Width = 85;
             // 
             // BirthDate
             // 
@@ -148,6 +160,7 @@
             this.BirthDate.Name = "BirthDate";
             this.BirthDate.Visible = true;
             this.BirthDate.VisibleIndex = 3;
+            this.BirthDate.Width = 85;
             // 
             // Email
             // 
@@ -156,6 +169,7 @@
             this.Email.Name = "Email";
             this.Email.Visible = true;
             this.Email.VisibleIndex = 4;
+            this.Email.Width = 85;
             // 
             // PhoneNumber
             // 
@@ -164,6 +178,7 @@
             this.PhoneNumber.Name = "PhoneNumber";
             this.PhoneNumber.Visible = true;
             this.PhoneNumber.VisibleIndex = 5;
+            this.PhoneNumber.Width = 85;
             // 
             // Faculty
             // 
@@ -172,6 +187,7 @@
             this.Faculty.Name = "Faculty";
             this.Faculty.Visible = true;
             this.Faculty.VisibleIndex = 6;
+            this.Faculty.Width = 85;
             // 
             // FacutyStartYear
             // 
@@ -180,30 +196,49 @@
             this.FacutyStartYear.Name = "FacutyStartYear";
             this.FacutyStartYear.Visible = true;
             this.FacutyStartYear.VisibleIndex = 7;
+            this.FacutyStartYear.Width = 117;
             // 
-            // Action
+            // delete_button
             // 
-            this.Action.Caption = "Actions";
-            this.Action.Name = "Action";
+            this.delete_button.Caption = "Delete";
+            this.delete_button.ColumnEdit = this.ButtonDelete;
+            this.delete_button.Name = "delete_button";
+            this.delete_button.Visible = true;
+            this.delete_button.VisibleIndex = 8;
+            this.delete_button.Width = 54;
+            // 
+            // ButtonDelete
+            // 
+            this.ButtonDelete.Appearance.Image = global::StudentOrganizer.GUI.Properties.Resources.delete;
+            this.ButtonDelete.Appearance.Options.UseImage = true;
+            this.ButtonDelete.AppearanceDisabled.Image = global::StudentOrganizer.GUI.Properties.Resources.delete;
+            this.ButtonDelete.AppearanceDisabled.Options.UseImage = true;
+            this.ButtonDelete.AppearanceFocused.Image = global::StudentOrganizer.GUI.Properties.Resources.delete;
+            this.ButtonDelete.AppearanceFocused.Options.UseImage = true;
+            this.ButtonDelete.AppearanceReadOnly.Image = global::StudentOrganizer.GUI.Properties.Resources.delete;
+            this.ButtonDelete.AppearanceReadOnly.Options.UseImage = true;
+            this.ButtonDelete.AutoHeight = false;
+            this.ButtonDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("ButtonDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.ButtonDelete.ContextImage = ((System.Drawing.Image)(resources.GetObject("ButtonDelete.ContextImage")));
+            this.ButtonDelete.Name = "ButtonDelete";
+            this.ButtonDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.ButtonDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.ButtonDelete_ButtonClick);
             // 
             // createEventButton
             // 
-            this.createEventButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.createEventButton.Location = new System.Drawing.Point(143, 115);
+            this.createEventButton.Location = new System.Drawing.Point(173, 115);
             this.createEventButton.Name = "createEventButton";
-            this.createEventButton.Size = new System.Drawing.Size(94, 24);
+            this.createEventButton.Size = new System.Drawing.Size(124, 24);
             this.createEventButton.TabIndex = 4;
             this.createEventButton.Text = "Add Event";
             this.createEventButton.Click += new System.EventHandler(this.createEventButton_Click);
             // 
             // EditStudentButton
             // 
-            this.EditStudentButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.EditStudentButton.Location = new System.Drawing.Point(12, 145);
             this.EditStudentButton.Name = "EditStudentButton";
-            this.EditStudentButton.Size = new System.Drawing.Size(94, 25);
+            this.EditStudentButton.Size = new System.Drawing.Size(132, 25);
             this.EditStudentButton.TabIndex = 5;
             this.EditStudentButton.Text = "Edit Student";
             this.EditStudentButton.Click += new System.EventHandler(this.EditStudentButton_Click);
@@ -212,10 +247,10 @@
             // 
             this.TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TabControl.Location = new System.Drawing.Point(12, 176);
+            this.TabControl.Location = new System.Drawing.Point(12, 213);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedTabPage = this.StudentList;
-            this.TabControl.Size = new System.Drawing.Size(770, 339);
+            this.TabControl.Size = new System.Drawing.Size(801, 339);
             this.TabControl.TabIndex = 6;
             this.TabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.StudentList,
@@ -225,22 +260,27 @@
             // 
             this.StudentList.Controls.Add(this.GridControl);
             this.StudentList.Name = "StudentList";
-            this.StudentList.Size = new System.Drawing.Size(764, 311);
+            this.StudentList.Size = new System.Drawing.Size(783, 311);
             this.StudentList.Text = "Studens List";
             // 
             // EventList
             // 
             this.EventList.Controls.Add(this.EventListControl);
             this.EventList.Name = "EventList";
-            this.EventList.Size = new System.Drawing.Size(764, 311);
+            this.EventList.Size = new System.Drawing.Size(795, 311);
             this.EventList.Text = "Events List";
             // 
             // EventListControl
             // 
+            this.EventListControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EventListControl.Location = new System.Drawing.Point(3, 3);
             this.EventListControl.MainView = this.gridView2;
             this.EventListControl.Name = "EventListControl";
-            this.EventListControl.Size = new System.Drawing.Size(755, 305);
+            this.EventListControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.deleteEventButton});
+            this.EventListControl.Size = new System.Drawing.Size(789, 305);
             this.EventListControl.TabIndex = 7;
             this.EventListControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -252,7 +292,8 @@
             this.Period,
             this.Departament,
             this.Task,
-            this.Remarks});
+            this.Remarks,
+            this.Delete});
             this.gridView2.GridControl = this.EventListControl;
             this.gridView2.Name = "gridView2";
             // 
@@ -263,6 +304,7 @@
             this.EventTypeID.Name = "EventTypeID";
             this.EventTypeID.Visible = true;
             this.EventTypeID.VisibleIndex = 0;
+            this.EventTypeID.Width = 125;
             // 
             // Period
             // 
@@ -271,6 +313,7 @@
             this.Period.Name = "Period";
             this.Period.Visible = true;
             this.Period.VisibleIndex = 1;
+            this.Period.Width = 125;
             // 
             // Departament
             // 
@@ -279,6 +322,7 @@
             this.Departament.Name = "Departament";
             this.Departament.Visible = true;
             this.Departament.VisibleIndex = 2;
+            this.Departament.Width = 125;
             // 
             // Task
             // 
@@ -287,6 +331,7 @@
             this.Task.Name = "Task";
             this.Task.Visible = true;
             this.Task.VisibleIndex = 3;
+            this.Task.Width = 125;
             // 
             // Remarks
             // 
@@ -295,32 +340,70 @@
             this.Remarks.Name = "Remarks";
             this.Remarks.Visible = true;
             this.Remarks.VisibleIndex = 4;
+            this.Remarks.Width = 186;
+            // 
+            // Delete
+            // 
+            this.Delete.Caption = "Delete Event";
+            this.Delete.ColumnEdit = this.deleteEventButton;
+            this.Delete.FieldName = "deleteEvent";
+            this.Delete.Name = "Delete";
+            this.Delete.Visible = true;
+            this.Delete.VisibleIndex = 5;
+            this.Delete.Width = 73;
+            // 
+            // deleteEventButton
+            // 
+            this.deleteEventButton.AutoHeight = false;
+            this.deleteEventButton.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("deleteEventButton.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.deleteEventButton.Name = "deleteEventButton";
+            this.deleteEventButton.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.deleteEventButton.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.deleteEventButton_ButtonClick);
             // 
             // PeriodComboBox
             // 
-            this.PeriodComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PeriodComboBox.Location = new System.Drawing.Point(434, 119);
+            this.PeriodComboBox.Location = new System.Drawing.Point(434, 141);
             this.PeriodComboBox.Name = "PeriodComboBox";
             this.PeriodComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.PeriodComboBox.Size = new System.Drawing.Size(94, 20);
+            this.PeriodComboBox.Size = new System.Drawing.Size(113, 20);
             this.PeriodComboBox.TabIndex = 7;
             this.PeriodComboBox.SelectedIndexChanged += new System.EventHandler(this.PeriodComboBox_SelectedIndexChanged);
             // 
             // labelControl1
             // 
-            this.labelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl1.Location = new System.Drawing.Point(352, 122);
+            this.labelControl1.Location = new System.Drawing.Point(352, 144);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(62, 13);
             this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "Select Period";
             // 
+            // ExportButton
+            // 
+            this.ExportButton.Location = new System.Drawing.Point(173, 144);
+            this.ExportButton.Name = "ExportButton";
+            this.ExportButton.Size = new System.Drawing.Size(124, 25);
+            this.ExportButton.TabIndex = 10;
+            this.ExportButton.Text = "Export to Excel";
+            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
+            // 
+            // PrintButton
+            // 
+            this.PrintButton.Location = new System.Drawing.Point(13, 176);
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.Size = new System.Drawing.Size(131, 25);
+            this.PrintButton.TabIndex = 11;
+            this.PrintButton.Text = "Print Student List";
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
+            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 525);
+            this.ClientSize = new System.Drawing.Size(814, 562);
+            this.Controls.Add(this.PrintButton);
+            this.Controls.Add(this.ExportButton);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.PeriodComboBox);
             this.Controls.Add(this.TabControl);
@@ -333,12 +416,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl)).EndInit();
             this.TabControl.ResumeLayout(false);
             this.StudentList.ResumeLayout(false);
             this.EventList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EventListControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deleteEventButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeriodComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -359,7 +444,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn PhoneNumber;
         private DevExpress.XtraGrid.Columns.GridColumn Faculty;
         private DevExpress.XtraGrid.Columns.GridColumn FacutyStartYear;
-        private DevExpress.XtraGrid.Columns.GridColumn Action;
         private DevExpress.XtraEditors.SimpleButton createEventButton;
         private DevExpress.XtraEditors.SimpleButton EditStudentButton;
         private DevExpress.XtraTab.XtraTabControl TabControl;
@@ -374,6 +458,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn Remarks;
         private DevExpress.XtraEditors.ComboBoxEdit PeriodComboBox;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton ExportButton;
+        private DevExpress.XtraEditors.SimpleButton PrintButton;
+        private DevExpress.XtraGrid.Columns.GridColumn delete_button;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonDelete;
+        private DevExpress.XtraGrid.Columns.GridColumn Delete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit deleteEventButton;
 
 
     }

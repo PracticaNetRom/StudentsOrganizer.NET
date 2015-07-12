@@ -36,6 +36,8 @@ namespace StudentOrganizer.GUI
             FacultyStartComboBox.Properties.Items.Add("2012");
             FacultyStartComboBox.Properties.Items.Add("2013");
             FacultyStartComboBox.Properties.Items.Add("2014");
+            GenderComboBox.Properties.Items.Add("Male");
+            GenderComboBox.Properties.Items.Add("Female");
 
             student = new Student();
             evTypes = new EventTypes();
@@ -73,6 +75,7 @@ namespace StudentOrganizer.GUI
             student.Faculty = FacultyComboBox.SelectedText;
             student.FacultyStartYear = Convert.ToInt32(FacultyStartComboBox.SelectedText);
             student.Email = EmailTextField.Text;
+            student.Gender = GenderComboBox.Text;
 
             List<string> checkedList = (eventListCheckBox.EditValue ?? "").ToString().Split(eventListCheckBox.Properties.SeparatorChar).Select(i => Convert.ToString(i)).ToList();
 
@@ -85,8 +88,9 @@ namespace StudentOrganizer.GUI
                 for (int j = 0; j < evTypesList.Count; j++) 
                 {
                     String verifyString = Regex.Replace(checkedList[i],@" ","");
+                    String baseString = Regex.Replace(evTypesList[j].Description, @" ", "");
 
-                    if (verifyString.Equals(evTypesList[j].Description)) 
+                    if (verifyString.Equals(baseString)) 
                     {
                         studEvCommands.InsertStudentEventUsingEventName(verifyString);
                     }
@@ -100,8 +104,7 @@ namespace StudentOrganizer.GUI
             FacultyComboBox.Text = null;
             FacultyStartComboBox.Text = null;
             EmailTextField.Text = null;
-            FamaleButton.Checked = false;
-            MaleButton.Checked = false;
+            GenderComboBox.Text = null;
 
             this.Close();
             StudentsForm studentForm = new StudentsForm();
@@ -111,14 +114,12 @@ namespace StudentOrganizer.GUI
 
         private void MaleButton_CheckedChanged(object sender, EventArgs e)
         {
-            student.Gender = "Male";
-            FamaleButton.Checked = false;
+            
         }
 
         private void FamaleButton_CheckedChanged(object sender, EventArgs e)
         {
-            student.Gender = "Famale";
-            MaleButton.Checked = false;
+            
         }
 
         protected override void WndProc(ref Message m)

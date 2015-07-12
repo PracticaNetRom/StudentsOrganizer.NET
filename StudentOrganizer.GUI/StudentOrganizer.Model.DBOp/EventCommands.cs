@@ -21,8 +21,9 @@ namespace StudentOrganizer.Model.DBOp
 
         public void InsertEvent(Event ev,string evName)
         {
-            string selectString = "SELECT * FROM EventTypes where description = '" + evName + "'";
+            int count = 0;
 
+            string selectString = "SELECT COUNT(*) FROM EventTypes where description = '" + evName + "'";
             string insertString = @"INSERT INTO Event(
                                                 Period,
                                                 Departament,Task,
@@ -31,31 +32,43 @@ namespace StudentOrganizer.Model.DBOp
                                                             @period,@departament,
                                                             @task,@remarks,@eventTypes_ID
                                                                         )";
-
             using (conn = new SqlConnection(connectionString))
             {
                 conn.Open();
 
                 SqlCommand command = new SqlCommand(selectString, conn);
+                count = Convert.ToInt32(command.ExecuteScalar());
+
+                if (count == 0)
+                {
+                    string EventTypesInsertString = "Insert INTO EventTypes(Description) values('" + evName + "')";
+                    command = new SqlCommand(EventTypesInsertString, conn);
+                    command.ExecuteNonQuery();
+                }
+            
+                selectString = "SELECT * FROM EventTypes where description = '" + evName + "'";
+                command = new SqlCommand(selectString, conn);
                 SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.HasRows)
+                if(reader.HasRows)
                 {
-                    while (reader.Read())
+                     while (reader.Read())
                     {
                         ev.EventTypes_ID = reader.GetInt32(reader.GetOrdinal("id"));
+                        count++;
                     }
                 }
                 reader.Close();
 
                 command = new SqlCommand(insertString, conn);
-                command.Parameters.Add("@period",ev.Period);
+                command.Parameters.Add("@period", ev.Period);
                 command.Parameters.Add("@departament", ev.Departament);
                 command.Parameters.Add("@task", ev.Task);
                 command.Parameters.Add("@remarks", ev.Remarks);
                 command.Parameters.Add("@eventTypes_ID", ev.EventTypes_ID);
                 command.CommandType = CommandType.Text;
                 command.ExecuteNonQuery();
+                
 
                 conn.Close();
             }
@@ -91,12 +104,17 @@ namespace StudentOrganizer.Model.DBOp
 
         public void DeleteEvent(Event ev)
         {
-            string deleteString = "DELETE FROM EVENT WHERE id = '" + ev.ID + "'";
+            string deleteString = "DELETE FROM StudentEvent WHERE id_event = '" + ev.ID + "'";
+            
 
             using (conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 SqlCommand command = new SqlCommand(deleteString, conn);
+                command.ExecuteNonQuery();
+
+                deleteString = "DELETE FROM EVENT WHERE id = '" + ev.ID + "'";
+                command = new SqlCommand(deleteString, conn);
                 command.ExecuteNonQuery();
 
                 conn.Close();
@@ -140,7 +158,7 @@ namespace StudentOrganizer.Model.DBOp
         {
             List<Event> evList = new List<Event>();
 
-            string selectString = "SELECT * FROM Event";
+            string selectString = "SELECT DISTINCT * FROM Event";
 
             using (conn = new SqlConnection(connectionString))
             {
@@ -167,5 +185,34 @@ namespace StudentOrganizer.Model.DBOp
 
             return evList;
         }
+
+        public List<int> GetEventYearsList()
+        {
+            List<int> yearsList = new List<int>();
+
+            string selectString = "SELECT DISTINCT year(period)AS yearPeriod FROM Event";
+
+            using (conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                SqlCommand command = new SqlCommand(selectString, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        int year = reader.GetInt32(reader.GetOrdinal("yearPeriod"));
+                        
+                        yearsList.Add(year);
+                    }
+                    reader.Close();
+                }
+                conn.Close();
+            }
+
+            return yearsList;
+        }
+
     }
 }

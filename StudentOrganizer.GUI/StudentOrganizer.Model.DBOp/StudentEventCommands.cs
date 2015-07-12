@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using StudentOrganizer.Model.BO;
+using System.Text.RegularExpressions;
 
 namespace StudentOrganizer.Model.DBOp
 {
@@ -76,20 +77,50 @@ namespace StudentOrganizer.Model.DBOp
             }
         }
 
-        public void InsertStudentEventUsingEventName(string eventName) 
+        public void InsertStudentEventUsingEventName(string text) 
         {
-            string selectString = "SELECT * FROM EventTypes where description = @eventName";
+            string selectString = "SELECT EventTypes.Description,EventTypes.id,Event.Period FROM EventTypes,Event where  EventTypes.id=Event.eventTypes_ID ";
+            string period = null;
+            string nameAndPeriod = null;
+
             int eventID = 0;
             int eventTypesID = 0;
             int studentID = 0;
-                
+            string eventName = null;
+            
             using (conn = new SqlConnection(connectionString))
             {
                 conn.Open();
+
                 SqlCommand command = new SqlCommand(selectString, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                EventTypes ev = new EventTypes();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ev.Description = reader.GetString(reader.GetOrdinal("Description"));
+                        ev.IdEvent = reader.GetInt32(reader.GetOrdinal("id"));
+                        period = reader.GetDateTime(reader.GetOrdinal("Period")).ToString("dd/MM/yyyy");
+                        nameAndPeriod = ev.Description + " " + period;
+
+                        String baseString = Regex.Replace(nameAndPeriod, @" ", "");
+
+                        if (baseString.Equals(text))
+                        {
+                            eventName = ev.Description;
+                            break;
+                        }
+                    }
+                    reader.Close();
+                }
+
+                selectString = "SELECT * FROM EventTypes where description = @eventName";
+                command = new SqlCommand(selectString, conn);
                 command.Parameters.Add("@eventName", eventName);
 
-                SqlDataReader reader = command.ExecuteReader();
+                reader = command.ExecuteReader();
 
                 if (reader.HasRows)
                 {
@@ -102,9 +133,10 @@ namespace StudentOrganizer.Model.DBOp
 
                 if (eventTypesID != 0)
                 {
-                    selectString = "SELECT * FROM Event where eventTypes_ID = @eventTypesID";
+                    selectString = "SELECT * FROM Event where eventTypes_ID = @eventTypesID AND convert(varchar,period,104) = @period";
                     command = new SqlCommand(selectString, conn);
                     command.Parameters.Add("@eventTypesID", eventTypesID);
+                    command.Parameters.Add("@period", period);
 
                     reader = command.ExecuteReader();
 
