@@ -1,7 +1,0 @@
-D:\Work\Student_Organizer\Student_Organizer.Model.DBOp\bin\Debug\Student_Organizer.Model.DBOp.dll
-D:\Work\Student_Organizer\Student_Organizer.Model.DBOp\bin\Debug\Student_Organizer.Model.DBOp.pdb
-D:\Work\Student_Organizer\Student_Organizer.Model.DBOp\bin\Debug\MODEL.BO.dll
-D:\Work\Student_Organizer\Student_Organizer.Model.DBOp\bin\Debug\MODEL.BO.pdb
-D:\Work\Student_Organizer\Student_Organizer.Model.DBOp\obj\Debug\Student_Organizer.Model.DBOp.csprojResolveAssemblyReference.cache
-D:\Work\Student_Organizer\Student_Organizer.Model.DBOp\obj\Debug\Student_Organizer.Model.DBOp.dll
-D:\Work\Student_Organizer\Student_Organizer.Model.DBOp\obj\Debug\Student_Organizer.Model.DBOp.pdb
