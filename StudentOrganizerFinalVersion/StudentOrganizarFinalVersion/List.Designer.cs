@@ -38,6 +38,8 @@
             this.DeleteButton = new DevExpress.XtraEditors.SimpleButton();
             this.EditStudentButton = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.DeleteButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.EditButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -139,6 +141,8 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.DeleteButton2);
+            this.xtraTabPage2.Controls.Add(this.EditButton2);
             this.xtraTabPage2.Controls.Add(this.simpleButton3);
             this.xtraTabPage2.Controls.Add(this.simpleButton2);
             this.xtraTabPage2.Controls.Add(this.gridControl1);
@@ -146,6 +150,23 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(661, 402);
             this.xtraTabPage2.Text = "xtraTabPage2";
             this.xtraTabPage2.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage2_Paint);
+            // 
+            // DeleteButton2
+            // 
+            this.DeleteButton2.Location = new System.Drawing.Point(248, 14);
+            this.DeleteButton2.Name = "DeleteButton2";
+            this.DeleteButton2.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton2.TabIndex = 6;
+            this.DeleteButton2.Text = "Delete";
+            // 
+            // EditButton2
+            // 
+            this.EditButton2.Location = new System.Drawing.Point(166, 15);
+            this.EditButton2.Name = "EditButton2";
+            this.EditButton2.Size = new System.Drawing.Size(75, 23);
+            this.EditButton2.TabIndex = 5;
+            this.EditButton2.Text = "Edit";
+            this.EditButton2.Click += new System.EventHandler(this.EditButton2_Click);
             // 
             // simpleButton3
             // 
@@ -219,5 +240,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton EditStudentButton;
         private DevExpress.XtraEditors.SimpleButton DeleteButton;
+        private DevExpress.XtraEditors.SimpleButton DeleteButton2;
+        private DevExpress.XtraEditors.SimpleButton EditButton2;
     }
 }

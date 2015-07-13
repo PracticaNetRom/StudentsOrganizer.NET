@@ -21,6 +21,7 @@ namespace StudentOrganizarFinalVersion
 {
     public partial class List : Form
     {
+        Event event1;
         Student stud;
         SqlDataAdapter sda;
         SqlCommandBuilder scb;
@@ -31,6 +32,7 @@ namespace StudentOrganizarFinalVersion
             CreateDataTable();
             CreateEventTable();
             stud = new Student();
+            event1 = new Event();
             
         }
 
@@ -39,10 +41,10 @@ namespace StudentOrganizarFinalVersion
             DataTable dataTable = new DataTable();
             SqlConnection connection = new SqlConnection(StudentOrganizarFinalVersion.Properties.Settings.Default.connection);
             connection.Open();
-            SqlDataAdapter sqlAdapter = new SqlDataAdapter(@"SELECT id,firstName,
-                                                            lastName,gender,birthDate,
-                                                            email,phoneNumber,faculty,
-                                                            facultyStartYear FROM Student", connection);
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter(@"SELECT ID,FirstName,
+                                                            LastName,Gender,BirthDate,
+                                                            Email,PhoneNumber,Faculty,
+                                                            FacultyStartYear FROM Student", connection);
             sqlAdapter.Fill(dataTable);
             
             GridControl.DataSource = dataTable;
@@ -73,9 +75,9 @@ namespace StudentOrganizarFinalVersion
             DataTable dataTable = new DataTable();
             SqlConnection connection = new SqlConnection(StudentOrganizarFinalVersion.Properties.Settings.Default.connection);
             connection.Open();
-            SqlDataAdapter sqlAdapter = new SqlDataAdapter(@"SELECT ID,period,
-                                                            department,task,remarks,
-                                                            event_type_id FROM Events", connection);
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter(@"SELECT ID,Period,
+                                                            Department,Task,Remarks,
+                                                            Event_type_id FROM Events", connection);
             sqlAdapter.Fill(dataTable);
 
             gridControl1.DataSource = dataTable;
@@ -101,25 +103,22 @@ namespace StudentOrganizarFinalVersion
 
       
 
-        private void EditStudentButton_Click(object sender, EventArgs e)
+        public void EditStudentButton_Click(object sender, EventArgs e)
         {
             
-            //var rowHandler = GridControl.FocusedRowHandle;
-            ColumnView cv = GridControl.MainView as ColumnView;
-            cv.FocusedRowHandle = 0;
+            var rowHandler = gridView3.FocusedRowHandle;
+            
+            //stud.IdStudent = Convert.ToInt32(gridView3.GetRowCellValue(rowHandler, "id"));
+            stud.FirstName = gridView3.GetRowCellValue(rowHandler, "FirstName").ToString();
+            stud.LastName = gridView3.GetRowCellValue(rowHandler, "LastName").ToString();
+            stud.Gender = gridView3.GetRowCellValue(rowHandler, "Gender").ToString();
+            stud.BirthDate = Convert.ToDateTime(gridView3.GetRowCellValue(rowHandler, "BirthDate").ToString());
+            stud.Email = gridView3.GetRowCellValue(rowHandler, "Email").ToString();
+            stud.PhoneNumber = gridView3.GetRowCellValue(rowHandler, "PhoneNumber").ToString();
+            stud.Faculty = gridView3.GetRowCellValue(rowHandler, "Faculty").ToString();
+            stud.FacultyStartYear = Convert.ToInt32(gridView3.GetRowCellValue(rowHandler, "FacultyStartYear")).ToString();
 
-
-            //stud.IdStudent = Convert.ToInt32(gridView1.GetRowCellValue(rowHandler, "id"));
-            //stud.FirstName = gridView1.GetRowCellValue(rowHandler, "FirstName").ToString();
-            //stud.LastName = gridView1.GetRowCellValue(rowHandler, "LastName").ToString();
-            //stud.Gender = gridView1.GetRowCellValue(rowHandler, "Gender").ToString();
-            //stud.BirthDate = Convert.ToDateTime(gridView1.GetRowCellValue(rowHandler, "BirthDate").ToString());
-           // stud.Email = gridView1.GetRowCellValue(rowHandler, "Email").ToString();
-            //stud.PhoneNumber = gridView1.GetRowCellValue(rowHandler, "PhoneNumber").ToString();
-           // stud.Faculty = gridView1.GetRowCellValue(rowHandler, "Faculty").ToString();
-           // stud.FacultyStartYear = Convert.ToInt32(gridView1.GetRowCellValue(rowHandler, "FacultyStartYear").ToString());
-
-            EditStudent andrei = new EditStudent();
+            EditStudent andrei = new EditStudent(stud);
             andrei.Show();
 
             this.Hide();
@@ -128,6 +127,25 @@ namespace StudentOrganizarFinalVersion
         private void DeleteButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void EditButton2_Click(object sender, EventArgs e)
+        {
+            var rowHandler = gridView2.FocusedRowHandle;
+
+            //stud.IdStudent = Convert.ToInt32(gridView3.GetRowCellValue(rowHandler, "id"));
+            event1.Period = gridView2.GetRowCellValue(rowHandler, "Period").ToString();
+            event1.Department = gridView2.GetRowCellValue(rowHandler, "Department").ToString();
+            event1.Task = gridView2.GetRowCellValue(rowHandler, "Task").ToString();
+            event1.Remarks = gridView2.GetRowCellValue(rowHandler, "Remarks").ToString();
+            event1.Event_Type_ID = Convert.ToInt32(gridView2.GetRowCellValue(rowHandler, "Event_Type_ID"));
+            
+            
+
+            EditEvent andrei = new EditEvent(event1);
+            andrei.Show();
+
+            this.Hide();
         }
 
         

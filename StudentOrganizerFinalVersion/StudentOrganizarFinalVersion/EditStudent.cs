@@ -17,19 +17,20 @@ namespace StudentOrganizarFinalVersion
         Student stud;
         StudentCommands studComm;
 
-        public EditStudent()
+        public EditStudent(Student stud)
         {
             InitializeComponent();
             
             this.stud = stud;
             studComm = new StudentCommands(Properties.Settings.Default.connection);
 
+            
             FirstNameTextEdit.Text = stud.FirstName;
             LastNameTextEdit.Text = stud.LastName;
             PhoneNumberTextEdit.Text = stud.PhoneNumber;
             BirthDateTextEdit.Text = "" + stud.BirthDate;
-            FacultyTextEdit.SelectedText = stud.Faculty;
-            FacultyStartTextEdit.SelectedText = stud.FacultyStartYear;
+            FacultyTextEdit.Text = stud.Faculty;
+            FacultyStartTextEdit.Text = stud.FacultyStartYear;
             EmailTextEdit.Text = stud.Email;
 
 
@@ -83,6 +84,13 @@ namespace StudentOrganizarFinalVersion
         {
             stud.Gender = "Female";
             MaleButton.Checked = false;
+        }
+
+        private void BackButton_CheckedChanged(object sender, EventArgs e)
+        {
+            List andrei = new List();
+            andrei.Show();
+            this.Hide();
         }
 
         

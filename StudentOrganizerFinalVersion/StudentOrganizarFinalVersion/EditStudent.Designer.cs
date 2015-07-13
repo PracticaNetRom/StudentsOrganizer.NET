@@ -68,6 +68,7 @@
             this.BackButton.Size = new System.Drawing.Size(75, 23);
             this.BackButton.TabIndex = 64;
             this.BackButton.Text = "Back";
+            this.BackButton.CheckedChanged += new System.EventHandler(this.BackButton_CheckedChanged);
             // 
             // labelControl1
             // 

@@ -54,7 +54,7 @@ namespace StudentOrganizerDBOp
 
         public void UpdateStudent(StudentOrganizer.BO.Student stud)
         {
-            string updateString = "UPDATE STUDENT SET FirstName = @firstName,LastName = @lastName, Gender=@gender,Email = @email, BirthDate=@birthDate, Email=@email, PhoneNumber = @phoneNumber, Faculty = @faculty, FacultyStartYear = @facultyStartYear WHERE student.id = '" + stud.IdStudent + "'";
+            string updateString = "UPDATE STUDENT SET FirstName = @firstName,LastName = @lastName, Gender=@gender,Email = @email, BirthDate=@birthDate, PhoneNumber = @phoneNumber, Faculty = @faculty, FacultyStartYear = @facultyStartYear WHERE student.id = '" + stud.IdStudent + "'";
 
             using (conn = new SqlConnection(connectionString))
             {

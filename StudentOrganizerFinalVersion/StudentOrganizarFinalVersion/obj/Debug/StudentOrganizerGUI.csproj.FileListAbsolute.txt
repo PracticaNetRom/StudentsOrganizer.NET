@@ -49,18 +49,8 @@ D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\Stud
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\StudentOrganizarFinalVersion.pdb
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\ClassLibrary1.dll
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\StudentOrganizerDBOp.dll
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.DXCore.Controls.XtraLayout.v6.3.dll
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.DXCore.AssemblyResolver.dll
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.DXCore.Mvvm.dll
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.DXCore.Mvvm.UI.dll
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\ClassLibrary1.pdb
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\StudentOrganizerDBOp.pdb
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.CodeRush.Common.xml
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.CodeRush.Core.xml
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.CodeRush.StructuralParser.xml
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.CodeRush.VSCore.xml
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.DXCore.MetaData.xml
-D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\bin\Debug\DevExpress.DXCore.Parser.xml
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\obj\Debug\StudentOrganizerGUI.csprojResolveAssemblyReference.cache
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\obj\Debug\StudentOrganizarFinalVersion.Create.resources
 D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\obj\Debug\StudentOrganizarFinalVersion.List.resources
@@ -114,3 +104,5 @@ D:\Practica\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\obj\Debug\
 D:\Practica\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\obj\Debug\StudentOrganizerGUI.csproj.GenerateResource.Cache
 D:\Practica\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\obj\Debug\StudentOrganizarFinalVersion.exe.licenses
 D:\Practica\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\obj\Debug\StudentOrganizarFinalVersion.EditStudent.resources
+D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\obj\Debug\StudentOrganizarFinalVersion.EditStudent.resources
+D:\Work\StudentOrganizerFinalVersion\StudentOrganizarFinalVersion\obj\Debug\StudentOrganizarFinalVersion.EditEvent.resources
