@@ -215,7 +215,7 @@
             this.SaveButton.Size = new System.Drawing.Size(93, 32);
             this.SaveButton.TabIndex = 42;
             this.SaveButton.Text = "SAVE";
-            this.SaveButton.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.SaveButton.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // AddStudent
             // 
@@ -244,6 +244,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "AddStudent";
             this.Text = "AddStudent";
+            this.Load += new System.EventHandler(this.AddStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();

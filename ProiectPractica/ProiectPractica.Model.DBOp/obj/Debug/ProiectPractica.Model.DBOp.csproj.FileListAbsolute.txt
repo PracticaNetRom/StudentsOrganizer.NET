@@ -7,3 +7,12 @@ D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\obj\Deb
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.csproj.GenerateResource.Cache
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.dll
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.pdb
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.Model.DBOp\bin\Debug\ProiectPractica.Model.DBOp.dll
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.Model.DBOp\bin\Debug\ProiectPractica.Model.DBOp.pdb
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.Model.DBOp\bin\Debug\ProiectPractica.GUI.dll
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.Model.DBOp\bin\Debug\ProiectPractica.GUI.pdb
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.csprojResolveAssemblyReference.cache
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.Properties.Resources.resources
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.csproj.GenerateResource.Cache
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.dll
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.Model.DBOp\obj\Debug\ProiectPractica.Model.DBOp.pdb

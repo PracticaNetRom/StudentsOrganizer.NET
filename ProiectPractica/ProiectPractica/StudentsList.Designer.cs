@@ -35,8 +35,21 @@
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.FilterBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.StudentControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.StudentPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.EventsPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FilterBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentControl1)).BeginInit();
+            this.StudentControl1.SuspendLayout();
+            this.StudentPage1.SuspendLayout();
+            this.EventsPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,13 +73,14 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 250);
+            this.gridControl1.Location = new System.Drawing.Point(12, 25);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(668, 319);
+            this.gridControl1.Size = new System.Drawing.Size(654, 319);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
@@ -100,15 +114,66 @@
             this.simpleButton1.Text = "Edit";
             this.simpleButton1.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // FilterBox
+            // 
+            this.FilterBox.Location = new System.Drawing.Point(537, 109);
+            this.FilterBox.Name = "FilterBox";
+            this.FilterBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.FilterBox.Size = new System.Drawing.Size(100, 20);
+            this.FilterBox.TabIndex = 7;
+            this.FilterBox.SelectedIndexChanged += new System.EventHandler(this.FilterBox_SelectedIndexChanged);
+            // 
+            // StudentControl1
+            // 
+            this.StudentControl1.Location = new System.Drawing.Point(26, 207);
+            this.StudentControl1.Name = "StudentControl1";
+            this.StudentControl1.SelectedTabPage = this.StudentPage1;
+            this.StudentControl1.Size = new System.Drawing.Size(885, 391);
+            this.StudentControl1.TabIndex = 8;
+            this.StudentControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.StudentPage1,
+            this.EventsPage2});
+            // 
+            // StudentPage1
+            // 
+            this.StudentPage1.Controls.Add(this.gridControl1);
+            this.StudentPage1.Name = "StudentPage1";
+            this.StudentPage1.Size = new System.Drawing.Size(879, 363);
+            this.StudentPage1.Text = "Students";
+            // 
+            // EventsPage2
+            // 
+            this.EventsPage2.Controls.Add(this.gridControl2);
+            this.EventsPage2.Name = "EventsPage2";
+            this.EventsPage2.Size = new System.Drawing.Size(879, 363);
+            this.EventsPage2.Text = "Events";
+            // 
+            // gridControl2
+            // 
+            this.gridControl2.Location = new System.Drawing.Point(69, 103);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(400, 200);
+            this.gridControl2.TabIndex = 0;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
+            // 
             // StudentsList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1276, 750);
+            this.Controls.Add(this.StudentControl1);
+            this.Controls.Add(this.FilterBox);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.btnCreateNew);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -118,6 +183,13 @@
             this.Load += new System.EventHandler(this.StudentList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FilterBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentControl1)).EndInit();
+            this.StudentControl1.ResumeLayout(false);
+            this.StudentPage1.ResumeLayout(false);
+            this.EventsPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +204,11 @@
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.ComboBoxEdit FilterBox;
+        private DevExpress.XtraTab.XtraTabControl StudentControl1;
+        private DevExpress.XtraTab.XtraTabPage StudentPage1;
+        private DevExpress.XtraTab.XtraTabPage EventsPage2;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }

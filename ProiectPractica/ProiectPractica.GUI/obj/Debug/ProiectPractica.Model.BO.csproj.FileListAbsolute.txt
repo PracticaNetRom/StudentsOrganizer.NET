@@ -4,3 +4,10 @@ D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\obj\Debug\Proi
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.Model.BO.csproj.GenerateResource.Cache
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.GUI.dll
 D:\work\StudentsOrganizer.NET\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.GUI.pdb
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.GUI\bin\Debug\ProiectPractica.GUI.dll
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.GUI\bin\Debug\ProiectPractica.GUI.pdb
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.Model.BO.csprojResolveAssemblyReference.cache
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.GUI.Properties.Resources.resources
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.Model.BO.csproj.GenerateResource.Cache
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.GUI.dll
+C:\Users\laboratory1\Desktop\StudentsOrganizer.NET-f2e52a82d49aa83634043a3ec9788d5bf9952101\ProiectPractica\ProiectPractica.GUI\obj\Debug\ProiectPractica.GUI.pdb
