@@ -32,3 +32,24 @@ D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplica
 D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.DeleteStudent.resources
 D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.EditStudent.resources
 D:\Facultate\AN 2\practica\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.AdminPanel.resources
+D:\work\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.exe
+D:\work\MicaAplicatie\MicaAplicatie\bin\Debug\StudentOrganiser.Model.BO.dll
+D:\work\MicaAplicatie\MicaAplicatie\bin\Debug\StudentORganiser.Model.DBOp.dll
+D:\work\MicaAplicatie\MicaAplicatie\bin\Debug\StudentOrganiser.Model.BO.pdb
+D:\work\MicaAplicatie\MicaAplicatie\bin\Debug\StudentORganiser.Model.DBOp.pdb
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\StudentsOrganiser.GUI.csprojResolveAssemblyReference.cache
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.AddEvent.resources
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.AddStudent.resources
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.CreateOptionsWindow.resources
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.DeleteStudent.resources
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.EditStudent.resources
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.LoginWindow.resources
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.Properties.Resources.resources
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.AdminPanel.resources
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.StudentListWindow.resources
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\StudentsOrganiser.GUI.csproj.GenerateResource.Cache
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.exe.licenses
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.exe
+D:\work\MicaAplicatie\MicaAplicatie\obj\Debug\MicaAplicatie.pdb
+D:\work\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.exe.config
+D:\work\MicaAplicatie\MicaAplicatie\bin\Debug\MicaAplicatie.pdb

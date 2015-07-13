@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 using System.Configuration;
 using StudentOrganiser.Model.BO;
 using System.Data;
-
 namespace StudentORganiser.Model.DBOp
 {
     public class StudentDBOP
     {
         private SqlConnection conn;
         private string connectionString;
+       
 
         public StudentDBOP(string connectionString)
         {
@@ -166,5 +166,7 @@ namespace StudentORganiser.Model.DBOp
 
             return studentsList;
         }
+
+        
     }
 }

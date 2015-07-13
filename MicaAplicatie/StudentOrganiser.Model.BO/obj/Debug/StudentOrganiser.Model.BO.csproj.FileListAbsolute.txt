@@ -8,3 +8,7 @@ D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentOrganiser.Model.BO\bin\Debu
 D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentOrganiser.Model.BO\obj\Debug\StudentOrganiser.Model.BO.csprojResolveAssemblyReference.cache
 D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentOrganiser.Model.BO\obj\Debug\StudentOrganiser.Model.BO.dll
 D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentOrganiser.Model.BO\obj\Debug\StudentOrganiser.Model.BO.pdb
+D:\work\MicaAplicatie\StudentOrganiser.Model.BO\bin\Debug\StudentOrganiser.Model.BO.dll
+D:\work\MicaAplicatie\StudentOrganiser.Model.BO\bin\Debug\StudentOrganiser.Model.BO.pdb
+D:\work\MicaAplicatie\StudentOrganiser.Model.BO\obj\Debug\StudentOrganiser.Model.BO.dll
+D:\work\MicaAplicatie\StudentOrganiser.Model.BO\obj\Debug\StudentOrganiser.Model.BO.pdb

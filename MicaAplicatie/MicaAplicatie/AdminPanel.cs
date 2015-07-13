@@ -44,5 +44,12 @@ namespace MicaAplicatie
             LoginWindow StartWindow = new LoginWindow();
             StartWindow.Show();
         }
+
+        private void DisplayStudentListButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentListWindow StudentListDisplay = new StudentListWindow();
+            StudentListDisplay.Show();
+        }
     }
 }

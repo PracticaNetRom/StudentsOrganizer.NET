@@ -37,14 +37,14 @@
             this.EventRemarksLabel = new DevExpress.XtraEditors.LabelControl();
             this.EventTaskLabel = new DevExpress.XtraEditors.LabelControl();
             this.StartDateTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.DeptTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.TaskTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.RemarksTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.DepartmentComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.EventDescTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StartDateTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DeptTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TaskTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemarksTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // SaveEventButton
@@ -119,13 +119,6 @@
             this.StartDateTextEdit.Size = new System.Drawing.Size(100, 20);
             this.StartDateTextEdit.TabIndex = 9;
             // 
-            // DeptTextEdit
-            // 
-            this.DeptTextEdit.Location = new System.Drawing.Point(156, 127);
-            this.DeptTextEdit.Name = "DeptTextEdit";
-            this.DeptTextEdit.Size = new System.Drawing.Size(100, 20);
-            this.DeptTextEdit.TabIndex = 10;
-            // 
             // TaskTextEdit
             // 
             this.TaskTextEdit.Location = new System.Drawing.Point(156, 154);
@@ -140,14 +133,28 @@
             this.RemarksTextEdit.Size = new System.Drawing.Size(248, 20);
             this.RemarksTextEdit.TabIndex = 12;
             // 
+            // DepartmentComboBox
+            // 
+            this.DepartmentComboBox.EditValue = "...";
+            this.DepartmentComboBox.Location = new System.Drawing.Point(156, 127);
+            this.DepartmentComboBox.Name = "DepartmentComboBox";
+            this.DepartmentComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DepartmentComboBox.Properties.Items.AddRange(new object[] {
+            "DotNet",
+            "PHP",
+            "Mobile"});
+            this.DepartmentComboBox.Size = new System.Drawing.Size(100, 20);
+            this.DepartmentComboBox.TabIndex = 13;
+            // 
             // AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 359);
+            this.Controls.Add(this.DepartmentComboBox);
             this.Controls.Add(this.RemarksTextEdit);
             this.Controls.Add(this.TaskTextEdit);
-            this.Controls.Add(this.DeptTextEdit);
             this.Controls.Add(this.StartDateTextEdit);
             this.Controls.Add(this.EventTaskLabel);
             this.Controls.Add(this.EventRemarksLabel);
@@ -161,9 +168,9 @@
             this.Text = "New Event Entry";
             ((System.ComponentModel.ISupportInitialize)(this.EventDescTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StartDateTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DeptTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TaskTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemarksTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,8 +187,8 @@
         private DevExpress.XtraEditors.LabelControl EventRemarksLabel;
         private DevExpress.XtraEditors.LabelControl EventTaskLabel;
         private DevExpress.XtraEditors.TextEdit StartDateTextEdit;
-        private DevExpress.XtraEditors.TextEdit DeptTextEdit;
         private DevExpress.XtraEditors.TextEdit TaskTextEdit;
         private DevExpress.XtraEditors.TextEdit RemarksTextEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit DepartmentComboBox;
     }
 }

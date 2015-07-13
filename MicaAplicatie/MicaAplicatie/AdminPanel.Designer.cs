@@ -32,6 +32,7 @@
             this.EditButton = new DevExpress.XtraEditors.SimpleButton();
             this.DeleteButton = new DevExpress.XtraEditors.SimpleButton();
             this.ReturnButton = new DevExpress.XtraEditors.SimpleButton();
+            this.DisplayStudentListButton = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // CreateButton
@@ -64,23 +65,33 @@
             // 
             // ReturnButton
             // 
-            this.ReturnButton.Location = new System.Drawing.Point(94, 188);
+            this.ReturnButton.Location = new System.Drawing.Point(94, 230);
             this.ReturnButton.Name = "ReturnButton";
             this.ReturnButton.Size = new System.Drawing.Size(102, 24);
             this.ReturnButton.TabIndex = 3;
             this.ReturnButton.Text = "Return";
             this.ReturnButton.Click += new System.EventHandler(this.ReturnButton_Click);
             // 
-            // SelectOptionWindow
+            // DisplayStudentListButton
+            // 
+            this.DisplayStudentListButton.Location = new System.Drawing.Point(94, 186);
+            this.DisplayStudentListButton.Name = "DisplayStudentListButton";
+            this.DisplayStudentListButton.Size = new System.Drawing.Size(102, 26);
+            this.DisplayStudentListButton.TabIndex = 4;
+            this.DisplayStudentListButton.Text = "Student List";
+            this.DisplayStudentListButton.Click += new System.EventHandler(this.DisplayStudentListButton_Click);
+            // 
+            // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(284, 304);
+            this.Controls.Add(this.DisplayStudentListButton);
             this.Controls.Add(this.ReturnButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.CreateButton);
-            this.Name = "SelectOptionWindow";
+            this.Name = "AdminPanel";
             this.Text = "Admin Panel";
             this.ResumeLayout(false);
 
@@ -92,5 +103,6 @@
         private DevExpress.XtraEditors.SimpleButton EditButton;
         private DevExpress.XtraEditors.SimpleButton DeleteButton;
         private DevExpress.XtraEditors.SimpleButton ReturnButton;
+        private DevExpress.XtraEditors.SimpleButton DisplayStudentListButton;
     }
 }

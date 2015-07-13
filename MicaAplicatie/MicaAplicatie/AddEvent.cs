@@ -25,7 +25,7 @@ namespace MicaAplicatie
         private void ReturnToAdminPannelButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CreateOptionsWindow AdminPanel = new CreateOptionsWindow();
+            AdminPanel AdminPanel = new AdminPanel();
             AdminPanel.Show();
         }
 

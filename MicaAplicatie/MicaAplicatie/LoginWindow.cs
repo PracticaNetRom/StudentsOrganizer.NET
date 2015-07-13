@@ -47,7 +47,6 @@ namespace MicaAplicatie
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            MessageBox.Show("Your session has ended!");
         }
 
       

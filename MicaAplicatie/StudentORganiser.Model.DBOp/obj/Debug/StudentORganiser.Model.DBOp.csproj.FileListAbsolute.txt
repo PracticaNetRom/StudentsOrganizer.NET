@@ -12,3 +12,10 @@ D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\bin\De
 D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.csprojResolveAssemblyReference.cache
 D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.dll
 D:\Facultate\AN 2\practica\work\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.pdb
+D:\work\MicaAplicatie\StudentORganiser.Model.DBOp\bin\Debug\StudentORganiser.Model.DBOp.dll
+D:\work\MicaAplicatie\StudentORganiser.Model.DBOp\bin\Debug\StudentORganiser.Model.DBOp.pdb
+D:\work\MicaAplicatie\StudentORganiser.Model.DBOp\bin\Debug\StudentOrganiser.Model.BO.dll
+D:\work\MicaAplicatie\StudentORganiser.Model.DBOp\bin\Debug\StudentOrganiser.Model.BO.pdb
+D:\work\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.csprojResolveAssemblyReference.cache
+D:\work\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.dll
+D:\work\MicaAplicatie\StudentORganiser.Model.DBOp\obj\Debug\StudentORganiser.Model.DBOp.pdb

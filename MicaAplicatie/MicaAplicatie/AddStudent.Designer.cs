@@ -36,7 +36,6 @@
             this.LstNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.GenderLabel = new DevExpress.XtraEditors.LabelControl();
             this.LastNameLabel = new DevExpress.XtraEditors.LabelControl();
-            this.GenderDropDownButton = new DevExpress.XtraEditors.DropDownButton();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -55,7 +54,9 @@
             this.FacultyLabel = new DevExpress.XtraEditors.LabelControl();
             this.FacultyStartYearLabel = new DevExpress.XtraEditors.LabelControl();
             this.EventTypeLabel = new DevExpress.XtraEditors.LabelControl();
-            this.EventTypeDropDownButton = new DevExpress.XtraEditors.DropDownButton();
+            this.MaleCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.FemaleCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.EventTypeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.FstNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LstNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -65,6 +66,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyStartYearTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaleCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FemaleCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EventTypeComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // SaveStudentButton
@@ -122,14 +126,6 @@
             this.LastNameLabel.Size = new System.Drawing.Size(50, 13);
             this.LastNameLabel.TabIndex = 9;
             this.LastNameLabel.Text = "Last Name";
-            // 
-            // GenderDropDownButton
-            // 
-            this.GenderDropDownButton.Location = new System.Drawing.Point(153, 115);
-            this.GenderDropDownButton.Name = "GenderDropDownButton";
-            this.GenderDropDownButton.Size = new System.Drawing.Size(123, 22);
-            this.GenderDropDownButton.TabIndex = 10;
-            this.GenderDropDownButton.Text = "choose gender...";
             // 
             // barManager1
             // 
@@ -275,22 +271,47 @@
             this.EventTypeLabel.TabIndex = 25;
             this.EventTypeLabel.Text = "Event";
             // 
-            // EventTypeDropDownButton
+            // MaleCheckEdit
             // 
-            this.EventTypeDropDownButton.AllowDrop = true;
-            this.EventTypeDropDownButton.Location = new System.Drawing.Point(153, 282);
-            this.EventTypeDropDownButton.MenuManager = this.barManager1;
-            this.EventTypeDropDownButton.Name = "EventTypeDropDownButton";
-            this.EventTypeDropDownButton.Size = new System.Drawing.Size(135, 20);
-            this.EventTypeDropDownButton.TabIndex = 26;
-            this.EventTypeDropDownButton.Text = "choose event...";
+            this.MaleCheckEdit.Location = new System.Drawing.Point(153, 117);
+            this.MaleCheckEdit.MenuManager = this.barManager1;
+            this.MaleCheckEdit.Name = "MaleCheckEdit";
+            this.MaleCheckEdit.Properties.Caption = "Male";
+            this.MaleCheckEdit.Size = new System.Drawing.Size(75, 19);
+            this.MaleCheckEdit.TabIndex = 31;
+            // 
+            // FemaleCheckEdit
+            // 
+            this.FemaleCheckEdit.Location = new System.Drawing.Point(256, 118);
+            this.FemaleCheckEdit.MenuManager = this.barManager1;
+            this.FemaleCheckEdit.Name = "FemaleCheckEdit";
+            this.FemaleCheckEdit.Properties.Caption = "Female";
+            this.FemaleCheckEdit.Size = new System.Drawing.Size(75, 19);
+            this.FemaleCheckEdit.TabIndex = 32;
+            // 
+            // EventTypeComboBox
+            // 
+            this.EventTypeComboBox.EditValue = "...";
+            this.EventTypeComboBox.Location = new System.Drawing.Point(153, 281);
+            this.EventTypeComboBox.MenuManager = this.barManager1;
+            this.EventTypeComboBox.Name = "EventTypeComboBox";
+            this.EventTypeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EventTypeComboBox.Properties.Items.AddRange(new object[] {
+            "Practice",
+            "Internship",
+            "NSA"});
+            this.EventTypeComboBox.Size = new System.Drawing.Size(100, 20);
+            this.EventTypeComboBox.TabIndex = 33;
             // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 427);
-            this.Controls.Add(this.EventTypeDropDownButton);
+            this.Controls.Add(this.EventTypeComboBox);
+            this.Controls.Add(this.FemaleCheckEdit);
+            this.Controls.Add(this.MaleCheckEdit);
             this.Controls.Add(this.EventTypeLabel);
             this.Controls.Add(this.FacultyStartYearLabel);
             this.Controls.Add(this.FacultyLabel);
@@ -302,7 +323,6 @@
             this.Controls.Add(this.EmailTextEdit);
             this.Controls.Add(this.BirthDateTextEdit);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.GenderDropDownButton);
             this.Controls.Add(this.LastNameLabel);
             this.Controls.Add(this.GenderLabel);
             this.Controls.Add(this.LstNameTextEdit);
@@ -325,6 +345,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyStartYearTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaleCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FemaleCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EventTypeComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +362,6 @@
         private DevExpress.XtraEditors.TextEdit LstNameTextEdit;
         private DevExpress.XtraEditors.LabelControl GenderLabel;
         private DevExpress.XtraEditors.LabelControl LastNameLabel;
-        private DevExpress.XtraEditors.DropDownButton GenderDropDownButton;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -357,7 +379,9 @@
         private DevExpress.XtraEditors.LabelControl FacultyStartYearLabel;
         private DevExpress.XtraEditors.LabelControl FacultyLabel;
         private DevExpress.XtraEditors.LabelControl PhoneNumberLabel;
-        private DevExpress.XtraEditors.DropDownButton EventTypeDropDownButton;
         private DevExpress.XtraEditors.LabelControl EventTypeLabel;
+        private DevExpress.XtraEditors.CheckEdit FemaleCheckEdit;
+        private DevExpress.XtraEditors.CheckEdit MaleCheckEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit EventTypeComboBox;
     }
 }
