@@ -86,5 +86,10 @@ namespace StudentsOrganizer.DBO
 
             }
         }
+
+        public void EditStudents(int ID)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

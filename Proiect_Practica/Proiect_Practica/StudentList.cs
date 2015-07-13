@@ -71,7 +71,29 @@ namespace Proiect_Practica
 
         }
 
+        /*Students stud;
+            StudentsOperations studDbo;
+            // public   EditStudentForm(Student stud)
+            {
+                InitializeComponent();
+                this.stud = stud;
 
-        
+                StudentsOperations studDboo = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
+                studDboo.InsertStudent(student);
+
+                student.First_Name = FirstName.Text;
+                student.Last_Name = LastName.Text;
+                student.Email = Email.Text;
+
+                if (stud.Gender.Equals("Male"))
+                {
+                    Male.Checked = true;
+                    Female.Checked = false;
+                }
+                else
+                {
+                    Male.Checked = false;
+                    Female.Checked = true;
+                }*/
     }
 }

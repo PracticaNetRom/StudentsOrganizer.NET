@@ -12,21 +12,20 @@ using StudentsOrganizer.DBO;
 
 
 namespace Proiect_Practica
-
-
 {
     public partial class AddStudent : Form
-
     {
+
+        public Students stud { get; set; }
         public AddStudent()
         {
-            
+
             InitializeComponent();
-      
 
 
-          //  student = new Student();
-          //  studCom = new StudentCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
+
+            //  student = new Student();
+            //  studCom = new StudentCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
         }
 
         private void AddStudent_Load(object sender, EventArgs e)
@@ -75,42 +74,41 @@ namespace Proiect_Practica
         }
 
         private void Save_Click(object sender, EventArgs e)
-
         {
             Students student = new Students();
-            
-            
-            student.Participants_Events  = textEdit1.Text;
-            student.First_Name  = textEdit2.Text;
-            student.Last_Name   = textEdit3 .Text;
-            student.Phone_Numbers = textEdit5.Text;
-            student.Faculty = textEdit6.Text;
+
+
+            student.Participants_Events = ParticipantsEvents.Text;
+            student.First_Name = FirstName.Text;
+            student.Last_Name = LastName.Text;
+            student.Phone_Numbers = PhoneNumber.Text;
+            student.Faculty = Faculty.Text;
             student.Male = dateNavigator1.Text;
-            student.Email = textEdit4.Text;
-            student.Birth_date = Convert.ToDateTime(dateTimePicker1.Text);
-            student.Male = checkEdit1.Text;
-            student.Male = checkEdit2.Text;
-            student.Gender = labelControl4.Text;
+            student.Email = Email.Text;
+            student.Birth_date = Convert.ToDateTime(BirthDate.Text);
+            student.Male = Female.Text;
+            student.Male = Male.Text;
+            student.Gender = Gender.Text;
 
             StudentsOperations studDbo = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
             studDbo.InsertStudent(student);
 
 
 
-            labelControl4.Text=null;
-            textEdit1.Text = null;
-            textEdit2.Text = null;
-            textEdit3.Text = null;
-            textEdit4.Text = null;
-            textEdit5.Text = null;
-            textEdit6.Text = null;
-            textEdit2.Text = null;
+            Gender.Text = null;
+            ParticipantsEvents.Text = null;
+            FirstName.Text = null;
+            LastName.Text = null;
+            Email.Text = null;
+            PhoneNumber.Text = null;
+            Faculty.Text = null;
+            FirstName.Text = null;
             dateNavigator1.Text = null;
-            dateTimePicker1.Text = null;
-            checkEdit1.Text = null;
-            checkEdit2.Text = null;
-            
-            
+            BirthDate.Text = null;
+            Female.Text = null;
+            Male.Text = null;
+
+
         }
 
         public Students student { get; set; }
@@ -128,13 +126,13 @@ namespace Proiect_Practica
         private void Female_CheckedChanged(object sender, EventArgs e)
         {
             student.Gender = "Famale";
-            checkEdit1.Checked = false;
+            Female.Checked = false;
         }
 
         private void Male_CheckedChanged(object sender, EventArgs e)
         {
             student.Gender = "Male";
-            checkEdit2.Checked = false;
+            Male.Checked = false;
         }
 
         private void BirthDate_Click(object sender, EventArgs e)
@@ -163,5 +161,37 @@ namespace Proiect_Practica
         }
 
         public string year { get; set; }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Students stud;
+            StudentsOperations studDbo;
+            // public   EditStudentForm(Student stud)
+            {
+                InitializeComponent();
+                this.stud = stud;
+
+                StudentsOperations studDboo = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
+                studDboo.InsertStudent(student);
+
+                student.First_Name = FirstName.Text;
+                student.Last_Name = LastName.Text;
+                student.Email = Email.Text;
+
+                if (stud.Gender.Equals("Male"))
+                {
+                    Male.Checked = true;
+                    Female.Checked = false;
+                }
+                else
+                {
+                    Male.Checked = false;
+                    Female.Checked = true;
+                }
+            }
+        }
     }
 }
+    
+
+
