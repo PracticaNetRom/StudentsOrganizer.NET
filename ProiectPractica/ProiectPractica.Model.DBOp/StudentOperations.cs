@@ -73,48 +73,32 @@ namespace ProiectPractica.Model.DBOp
                 command.Parameters.Add("@Email", stud.Email);
                 command.Parameters.Add("@PhoneNumbers", stud.PhoneNumbers);
                 command.Parameters.Add("@Faculty", stud.Faculty);
-                command.Parameters.Add("@FacultyStartYear", stud.FacultyStartYear);
+                command.Parameters.Add("@FStartYear", stud.FacultyStartYear);
 
                 command.ExecuteNonQuery();
                 con.Close();
             }
         }
 
-        public Student GetStudent(int id) {
+        public void GetStudent(int id) {
 
-            Student stud =  null;
+            Student stud;
             string GetString = "Select * From Student Where id_student= " + id;
             using (con = new SqlConnection(connectionString)) {
                 con.Open();
                 SqlCommand command = new SqlCommand(GetString, con);
-                //command.Parameters.Add("@FName", stud.FName);
-                //command.Parameters.Add("@LName", stud.LName);
-                //command.Parameters.Add("@Gender", stud.Gender);
-                //command.Parameters.Add("@Birthdate", stud.Birthdate);
-                //command.Parameters.Add("@Email", stud.Email);
-                //command.Parameters.Add("@PhoneNumbers", stud.PhoneNumbers);
-                //command.Parameters.Add("@Faculty", stud.Faculty);
-                //command.Parameters.Add("@FStartYear", stud.FacultyStartYear);
-                SqlDataReader reader = command.ExecuteReader();
+                command.Parameters.Add("@FName", stud.FName);
+                command.Parameters.Add("@LName", stud.LName);
+                command.Parameters.Add("@Gender", stud.Gender);
+                command.Parameters.Add("@Birthdate", stud.Birthdate);
+                command.Parameters.Add("@Email", stud.Email);
+                command.Parameters.Add("@PhoneNumbers", stud.PhoneNumbers);
+                command.Parameters.Add("@Faculty", stud.Faculty);
+                command.Parameters.Add("@FStartYear", stud.FacultyStartYear);
 
-                if(reader.Read())
-                {
-                    stud = new Student();
-                    stud.id_student = reader.GetInt32(reader.GetOrdinal("id_student"));
-                    stud.FName = reader.GetString(reader.GetOrdinal("Fname"));
-                    stud.LName = reader.GetString(reader.GetOrdinal("Lname")); ;
-                    stud.Gender = reader.GetString(reader.GetOrdinal("Gender")); ;
-                    stud.Birthdate = reader.GetDateTime(reader.GetOrdinal("Birthdate"));
-                    stud.Email = reader.GetString(reader.GetOrdinal("Email"));
-                    stud.PhoneNumbers = reader.GetString(reader.GetOrdinal("PhoneNumbers"));
-                    stud.Faculty = reader.GetString(reader.GetOrdinal("Faculty"));
-                    stud.FacultyStartYear = reader.GetString(reader.GetOrdinal("FacultyStartYear")); 
-                }
-
-                
+                command.ExecuteNonQuery();
                 con.Close();
             }
-            return stud;
         }
     }
 }

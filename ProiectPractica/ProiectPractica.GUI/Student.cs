@@ -16,6 +16,6 @@ namespace ProiectPractica
         public string Email { get; set; }
         public string PhoneNumbers { get; set; }
         public string Faculty { get; set; }
-        public string FacultyStartYear { get; set; }
+        public int FacultyStartYear { get; set; }
     }
 }

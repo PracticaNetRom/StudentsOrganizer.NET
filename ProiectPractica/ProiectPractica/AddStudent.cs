@@ -14,10 +14,9 @@ namespace ProiectPractica
 {
     public partial class AddStudent : Form
     {
-        private Student _student;
+        private Student student;
         private StudentOperations studOp;
-        
-        public AddStudent(Student student)
+        public AddStudent()
         {
             InitializeComponent();
 
@@ -29,7 +28,7 @@ namespace ProiectPractica
             comboBoxEdit2.Properties.Items.Add("2013");
             comboBoxEdit2.Properties.Items.Add("2014");
 
-            _student = student;
+            student = new Student();
             studOp = new StudentOperations(ProiectPractica.Properties.Settings.Default.DBConnection);
         }
 
@@ -50,49 +49,29 @@ namespace ProiectPractica
 
         private void MaleCheck_CheckedChanged(object sender, EventArgs e)
         {
-            
+            student.Gender = "Male";
             FemaleCheck.Checked = false;
 
         }
 
         private void FemaleCheck_CheckedChanged(object sender, EventArgs e)
         {
-           
+            student.Gender = "Female";
             MaleCheck.Checked = false;
 
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
+        private void simpleButton2_Click(object sender, EventArgs e)
         {
-            bool add = _student == null;
+            student.FName = textEdit1.Text;
+            student.LName = textEdit2.Text;
+            student.Birthdate = Convert.ToDateTime(dateEdit1.Text);
+            student.PhoneNumbers = textEdit4.Text;
+            student.Email = textEdit3.Text;
+            student.Faculty = comboBoxEdit1.SelectedText;
+            student.FacultyStartYear = Convert.ToInt32(comboBoxEdit2.SelectedText);
 
-            if (add)
-            {
-                _student = new Student();
-            }
-            if (MaleCheck.Checked)
-            {
-                _student.Gender = "Male";
-            }
-            else {
-                _student.Gender = "Female";
-            }
-            _student.FName = textEdit1.Text;
-            _student.LName = textEdit2.Text;
-            _student.Birthdate = Convert.ToDateTime(dateEdit1.Text);
-            _student.PhoneNumbers = textEdit4.Text;
-            _student.Email = textEdit3.Text;
-            _student.Faculty = comboBoxEdit1.SelectedText;
-            _student.FacultyStartYear = comboBoxEdit2.SelectedText;
-            if (add) {
-                studOp.InsertStudent(_student);
-            }
-            else
-            {
-                studOp.UpdateStudent(_student);
-
-            }
-            
+            studOp.InsertStudent(student);
 
             textEdit1.Text = null;
             textEdit2.Text = null;
@@ -106,19 +85,6 @@ namespace ProiectPractica
 
             this.Hide();
             this.Close();
-        }
-
-        private void AddStudent_Load(object sender, EventArgs e)
-        {
-            if (_student != null) {
-                textEdit1.Text = _student.FName ;
-                textEdit2.Text = _student.LName;
-                dateEdit1.DateTime = _student.Birthdate;
-                textEdit4.Text = _student.PhoneNumbers;
-                textEdit3.Text = _student.Email;
-                comboBoxEdit1.SelectedText = _student.Faculty;
-                comboBoxEdit2.SelectedText = _student.FacultyStartYear;
-            }
         }
     }
 }

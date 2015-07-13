@@ -17,7 +17,6 @@ namespace ProiectPractica
         public StudentsList()
         {
             InitializeComponent();
-            FilterBox.Properties.Items.Add("2015");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -39,7 +38,7 @@ namespace ProiectPractica
 
         private void btnCreateNew_click(object sender, EventArgs e)
         {
-            AddStudent add = new AddStudent(null);
+            AddStudent add = new AddStudent();
             add.ShowDialog();
         }
 
@@ -83,31 +82,8 @@ namespace ProiectPractica
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            
             int id;
-            Student student;
             id = (int)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "id_student");
-
-            StudentOperations studop = new StudentOperations(ProiectPractica.Properties.Settings.Default.DBConnection);
-
-            student = studop.GetStudent(id);
-            AddStudent addstud = new AddStudent(student);
-            addstud.ShowDialog();
-            LoadData();
-        }
-
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FilterBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection(ProiectPractica.Properties.Settings.Default.DBConnection);
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Student join student_event on (student.id_student=student_event.id_student) join event on (student_event.id_event=event.id_event) Where event.Period='2015'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            gridControl1.DataSource = dt;
         }
     }
 }
