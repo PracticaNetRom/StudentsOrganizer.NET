@@ -79,7 +79,7 @@
             // 
             // createButton
             // 
-            this.createButton.Location = new System.Drawing.Point(12, 114);
+            this.createButton.Location = new System.Drawing.Point(119, 12);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(132, 25);
             this.createButton.TabIndex = 1;
@@ -105,7 +105,7 @@
             this.GridControl.Name = "GridControl";
             this.GridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.ButtonDelete});
-            this.GridControl.Size = new System.Drawing.Size(784, 305);
+            this.GridControl.Size = new System.Drawing.Size(784, 365);
             this.GridControl.TabIndex = 3;
             this.GridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -227,16 +227,16 @@
             // 
             // createEventButton
             // 
-            this.createEventButton.Location = new System.Drawing.Point(173, 115);
+            this.createEventButton.Location = new System.Drawing.Point(288, 12);
             this.createEventButton.Name = "createEventButton";
-            this.createEventButton.Size = new System.Drawing.Size(124, 24);
+            this.createEventButton.Size = new System.Drawing.Size(132, 24);
             this.createEventButton.TabIndex = 4;
             this.createEventButton.Text = "Add Event";
             this.createEventButton.Click += new System.EventHandler(this.createEventButton_Click);
             // 
             // EditStudentButton
             // 
-            this.EditStudentButton.Location = new System.Drawing.Point(12, 145);
+            this.EditStudentButton.Location = new System.Drawing.Point(119, 43);
             this.EditStudentButton.Name = "EditStudentButton";
             this.EditStudentButton.Size = new System.Drawing.Size(132, 25);
             this.EditStudentButton.TabIndex = 5;
@@ -247,10 +247,10 @@
             // 
             this.TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TabControl.Location = new System.Drawing.Point(12, 213);
+            this.TabControl.Location = new System.Drawing.Point(12, 114);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedTabPage = this.StudentList;
-            this.TabControl.Size = new System.Drawing.Size(801, 339);
+            this.TabControl.Size = new System.Drawing.Size(801, 391);
             this.TabControl.TabIndex = 6;
             this.TabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.StudentList,
@@ -260,14 +260,14 @@
             // 
             this.StudentList.Controls.Add(this.GridControl);
             this.StudentList.Name = "StudentList";
-            this.StudentList.Size = new System.Drawing.Size(783, 311);
+            this.StudentList.Size = new System.Drawing.Size(795, 363);
             this.StudentList.Text = "Studens List";
             // 
             // EventList
             // 
             this.EventList.Controls.Add(this.EventListControl);
             this.EventList.Name = "EventList";
-            this.EventList.Size = new System.Drawing.Size(795, 311);
+            this.EventList.Size = new System.Drawing.Size(795, 410);
             this.EventList.Text = "Events List";
             // 
             // EventListControl
@@ -280,7 +280,7 @@
             this.EventListControl.Name = "EventListControl";
             this.EventListControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.deleteEventButton});
-            this.EventListControl.Size = new System.Drawing.Size(789, 305);
+            this.EventListControl.Size = new System.Drawing.Size(789, 404);
             this.EventListControl.TabIndex = 7;
             this.EventListControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -363,7 +363,7 @@
             // 
             // PeriodComboBox
             // 
-            this.PeriodComboBox.Location = new System.Drawing.Point(434, 141);
+            this.PeriodComboBox.Location = new System.Drawing.Point(688, 88);
             this.PeriodComboBox.Name = "PeriodComboBox";
             this.PeriodComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -373,7 +373,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(352, 144);
+            this.labelControl1.Location = new System.Drawing.Point(587, 91);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(62, 13);
             this.labelControl1.TabIndex = 8;
@@ -381,18 +381,18 @@
             // 
             // ExportButton
             // 
-            this.ExportButton.Location = new System.Drawing.Point(173, 144);
+            this.ExportButton.Location = new System.Drawing.Point(288, 41);
             this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(124, 25);
+            this.ExportButton.Size = new System.Drawing.Size(132, 25);
             this.ExportButton.TabIndex = 10;
             this.ExportButton.Text = "Export to Excel";
             this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
             // 
             // PrintButton
             // 
-            this.PrintButton.Location = new System.Drawing.Point(13, 176);
+            this.PrintButton.Location = new System.Drawing.Point(119, 74);
             this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(131, 25);
+            this.PrintButton.Size = new System.Drawing.Size(132, 25);
             this.PrintButton.TabIndex = 11;
             this.PrintButton.Text = "Print Student List";
             this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);

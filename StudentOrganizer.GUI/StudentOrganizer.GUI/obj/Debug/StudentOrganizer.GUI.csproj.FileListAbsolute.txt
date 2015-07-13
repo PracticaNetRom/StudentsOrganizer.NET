@@ -66,3 +66,4 @@ C:\Users\Laboratory1\Documents\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI
 C:\Users\Laboratory1\Documents\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.GUI\obj\Debug\StudentOrganizer.GUI.StudentsForm.resources
 C:\Users\Laboratory1\Documents\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.GUI\obj\Debug\StudentOrganizer.GUI.csproj.GenerateResource.Cache
 C:\Users\Laboratory1\Documents\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.GUI\obj\Debug\StudentOrganizer.GUI.exe.licenses
+C:\Users\Laboratory1\Documents\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.GUI\obj\Debug\StudentOrganizer.GUI.PagingToolBar.resources

@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudentOrganizer.Model.BO;
 using StudentOrganizer.Model.DBOp;
+using DevExpress.XtraEditors;
 
 namespace StudentOrganizer.GUI
 {
-    public partial class EditStudentForm : Form
+    public partial class EditStudentForm : XtraForm
     {
         Student stud;
         StudentCommands studComm;

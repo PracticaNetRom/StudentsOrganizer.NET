@@ -133,7 +133,7 @@ namespace StudentOrganizer.Model.DBOp
 
                 if (eventTypesID != 0)
                 {
-                    selectString = "SELECT * FROM Event where eventTypes_ID = @eventTypesID AND convert(varchar,period,104) = @period";
+                    selectString = "SELECT * FROM Event where eventTypes_ID = @eventTypesID AND convert(varchar,period,103) = @period";
                     command = new SqlCommand(selectString, conn);
                     command.Parameters.Add("@eventTypesID", eventTypesID);
                     command.Parameters.Add("@period", period);

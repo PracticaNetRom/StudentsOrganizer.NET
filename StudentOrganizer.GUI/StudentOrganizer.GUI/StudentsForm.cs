@@ -15,11 +15,12 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraPrintingLinks;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraEditors;
 
 
 namespace StudentOrganizer.GUI
 {
-    public partial class StudentsForm : Form
+    public partial class StudentsForm : XtraForm
     {
         private Student stud;
         private StudentCommands studComm;

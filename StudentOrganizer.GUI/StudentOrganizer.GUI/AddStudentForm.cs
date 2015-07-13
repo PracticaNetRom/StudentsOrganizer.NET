@@ -11,11 +11,12 @@ using StudentOrganizer.Model.BO;
 using StudentOrganizer.Model.DBOp;
 using DevExpress.XtraEditors.Controls;
 using System.Text.RegularExpressions;
+using DevExpress.XtraEditors;
 
 
 namespace StudentOrganizer.GUI
 {
-    public partial class AddStudentForm : Form
+    public partial class AddStudentForm : XtraForm
     {
         private Student student;
         private StudentCommands studComm;
