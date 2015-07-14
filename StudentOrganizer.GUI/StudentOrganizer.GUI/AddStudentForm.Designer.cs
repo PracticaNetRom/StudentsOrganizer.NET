@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStudentForm));
             this.FirstNameTextField = new DevExpress.XtraEditors.TextEdit();
             this.FistNameLabel = new DevExpress.XtraEditors.LabelControl();
             this.phoneNumberLabel = new DevExpress.XtraEditors.LabelControl();
@@ -176,7 +177,7 @@
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.EditValue = global::StudentOrganizer.GUI.Properties.Resources._9551269341017sigla3;
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
             this.pictureEdit1.Location = new System.Drawing.Point(26, 2);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;

@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Data;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudentOrganizer.Model.BO;
@@ -31,6 +30,11 @@ namespace StudentOrganizer.GUI
         private SqlConnection connection;
         private DataTable eventTable;
 
+        private static int StudentListPageNR ;
+        private static int EventListPageNR;
+        private int maxPageNR;
+        private int minPageNR;
+
         public StudentsForm()
         {
             InitializeComponent();
@@ -40,37 +44,233 @@ namespace StudentOrganizer.GUI
             ev = new Event();
             eventComm = new EventCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
 
+            
+            maxPageNR = 1;
+
+            minPageNR = 0;
+
+            StudentListPageNR = minPageNR;
+            EventListPageNR = minPageNR;
+
             List<int> yearsList = new List<int>();
 
             yearsList = eventComm.GetEventYearsList();
 
             PeriodComboBox.Properties.Items.Add("All");
+            PeriodComboBox.Text = "2015";
 
             for (int i = 0; i < yearsList.Count; i++) 
             {
                 PeriodComboBox.Properties.Items.Add(yearsList[i]);
             }
-            
+
+            List<string> eventList = new List<string>();
+
+            EventListComboBox.Properties.Items.Add("All");
+            eventList = eventComm.GetEventNames();
+            for (int i = 0; i < eventList.Count; i++) 
+            {
+                EventListComboBox.Properties.Items.Add(eventList[i]);
+            }
+
+
+
+            pagingToolBar1.BackButtonClicked += pagingToolBar1_BackButtonClicked;
+            pagingToolBar1.NextButtonClicked += pagingToolBar1_NextButtonClicked;
+
+            pagingToolBar2.BackButtonClicked += pagingToolBar2_BackButtonClicked;
+            pagingToolBar2.NextButtonClicked += pagingToolBar2_NextButtonClicked;
+        }
+
+       
+
+        void pagingToolBar1_NextButtonClicked()
+        {
+            try
+            {
+                using (connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection))
+                {
+                    connection.Open();
+
+                    SqlCommand sqlCommands = new SqlCommand("SELECT COUNT(*) FROM STUDENT", connection);
+                    int totalElements = Convert.ToInt32(sqlCommands.ExecuteScalar());
+                    maxPageNR = (totalElements/20);
+                    int rest = totalElements % 10;
+
+                   if (maxPageNR <= 0)
+                        maxPageNR = 0;
+
+                   StudentListPageNR++;
+
+                   if (StudentListPageNR >= maxPageNR && rest != 0)
+                       StudentListPageNR = maxPageNR;
+                   else
+                       StudentListPageNR--;
+                   
+
+                    studentTable = new System.Data.DataTable();
+                    sqlAdapter = new SqlDataAdapter(@"SELECT id,firstName,
+                                                            lastName,gender,birthDate,
+                                                            email,phoneNumber,faculty,
+                                                            facultyStartYear FROM Student ORDER BY id  OFFSET " + (20 * StudentListPageNR) + " ROWS  FETCH NEXT 20 ROWS ONLY", connection);
+
+                    sqlAdapter.Fill(studentTable);
+                    GridControl.DataSource = studentTable;
+
+                    connection.Close();
+                    PeriodComboBox.Text = "All";
+                    EventListComboBox.Text = "All";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Can't find the specified Data Base");
+            }
 
         }
 
-        public void CreateDataTable() 
+        void pagingToolBar1_BackButtonClicked()
         {
-            studentTable = new System.Data.DataTable();
-            connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
-            sqlAdapter = new SqlDataAdapter(@"SELECT id,firstName,
+            try
+            {
+                using (connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection))
+                {
+                    connection.Open();
+
+                    StudentListPageNR--;
+
+                    if (StudentListPageNR <= 0)
+                        StudentListPageNR = 0;
+
+                    studentTable = new System.Data.DataTable();
+                    sqlAdapter = new SqlDataAdapter(@"SELECT id,firstName,
                                                             lastName,gender,birthDate,
                                                             email,phoneNumber,faculty,
-                                                            facultyStartYear FROM Student", connection);
-            sqlAdapter.Fill(studentTable);
-            GridControl.DataSource = studentTable;
+                                                            facultyStartYear FROM Student ORDER BY id  OFFSET " + (20 * StudentListPageNR) + " ROWS  FETCH NEXT 20 ROWS ONLY", connection);
 
-            eventTable = new System.Data.DataTable();
-            sqlAdapter = new SqlDataAdapter(@"SELECT id,eventTypes_ID,
+                    sqlAdapter.Fill(studentTable);
+                    GridControl.DataSource = studentTable;
+
+                    connection.Close();
+                    PeriodComboBox.Text = "All";
+                    EventListComboBox.Text = "All";
+                }
+            }catch {
+                MessageBox.Show("Can not go back to last page!");
+            }
+
+        }
+
+        void pagingToolBar2_NextButtonClicked()
+        {
+            try
+            {
+                using (connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection))
+                {
+                    connection.Open();
+
+                    SqlCommand sqlCommands = new SqlCommand("SELECT COUNT(*) FROM EVENT", connection);
+                    int totalElements = Convert.ToInt32(sqlCommands.ExecuteScalar());
+                    maxPageNR = (totalElements / 10);
+                    int rest = totalElements % 10;
+
+                    if (maxPageNR <= 0)
+                        maxPageNR = 0;
+
+                    EventListPageNR++;
+
+                    if (EventListPageNR >= maxPageNR && rest != 0)
+                        EventListPageNR = maxPageNR;
+                    else
+                        EventListPageNR--;
+
+
+                    eventTable = new System.Data.DataTable();
+                    sqlAdapter = new SqlDataAdapter(@"SELECT id,eventTypes_ID,
+                                                           period,departament,task,
+                                                            remarks FROM Event ORDER BY id  OFFSET " + (10 * EventListPageNR) + " ROWS  FETCH NEXT 10 ROWS ONLY", connection);
+
+                    sqlAdapter.Fill(eventTable);
+                    EventListControl.DataSource = eventTable;
+
+                    connection.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Can't find the specified Data Base");
+            }
+        }
+
+        void pagingToolBar2_BackButtonClicked()
+        {
+            try
+            {
+                using (connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection))
+                {
+                    connection.Open();
+
+                    EventListPageNR--;
+
+                    if (EventListPageNR <= 0)
+                        EventListPageNR = 0;
+
+                    eventTable = new System.Data.DataTable();
+                    sqlAdapter = new SqlDataAdapter(@"SELECT id,eventTypes_ID,
+                                                           period,departament,task,
+                                                            remarks FROM Event ORDER BY id  OFFSET " + (10 * EventListPageNR) + " ROWS  FETCH NEXT 10 ROWS ONLY", connection);
+
+                    sqlAdapter.Fill(eventTable);
+                    EventListControl.DataSource = eventTable;
+
+                    connection.Close();
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Can not go back to last page!");
+            }
+
+        }
+
+
+        public void CreateDataTable() 
+        {
+            try
+            {
+                using (connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection))
+                {
+                    connection.Open();
+
+                    studentTable = new System.Data.DataTable();
+                    sqlAdapter = new SqlDataAdapter(@"SELECT DISTINCT student.id,student.firstName,
+                                                            student.lastName,student.gender,student.birthDate,
+                                                            student.email,student.phoneNumber,student.faculty,
+                                                            student.facultyStartYear FROM Student,Event,StudentEvent 
+                                                            WHERE student.id = StudentEvent.id_Student 
+                                                            AND event.id = StudentEvent.id_Event
+                                                            AND year(event.period) = 2015", connection);
+                    sqlAdapter.Fill(studentTable);
+                    GridControl.DataSource = studentTable;
+
+                    eventTable = new System.Data.DataTable();
+                    sqlAdapter = new SqlDataAdapter(@"SELECT id,eventTypes_ID,
                                                             period,departament,task,
-                                                            remarks FROM Event", connection);
-            sqlAdapter.Fill(eventTable);
-            EventListControl.DataSource = eventTable;
+                                                           remarks FROM Event ORDER BY id  OFFSET 0 ROWS  FETCH NEXT 10 ROWS ONLY", connection);
+                     
+                    
+                    sqlAdapter.Fill(eventTable);
+                    EventListControl.DataSource = eventTable;
+
+                    connection.Close();
+                }
+            }
+            catch 
+            {
+                MessageBox.Show("Could not open connection to database !");
+            }
+            
            
         }
 
@@ -146,6 +346,7 @@ namespace StudentOrganizer.GUI
                                                             AND year(event.period) = '" + PeriodComboBox.Text + "'", connection);
                 sqlAdapter.Fill(studentTable);
                 GridControl.DataSource = studentTable;
+                EventListComboBox.Text = "All";
             }
         }
 
@@ -204,16 +405,23 @@ namespace StudentOrganizer.GUI
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the student : " + student.FirstName + " " + student.LastName, "Delete Student?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                studComm.DeleteStudent(student);
-               
-                studentTable = new System.Data.DataTable();
-                connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
-                sqlAdapter = new SqlDataAdapter(@"SELECT id,firstName,
+                using (connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection))
+                {
+                    connection.Open();
+
+                    studComm.DeleteStudent(student);
+
+                    studentTable = new System.Data.DataTable();
+                    connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
+                    sqlAdapter = new SqlDataAdapter(@"SELECT id,firstName,
                                                             lastName,gender,birthDate,
                                                             email,phoneNumber,faculty,
                                                             facultyStartYear FROM Student", connection);
-                sqlAdapter.Fill(studentTable);
-                GridControl.DataSource = studentTable;
+                    sqlAdapter.Fill(studentTable);
+                    GridControl.DataSource = studentTable;
+
+                    connection.Close();
+                }
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -234,18 +442,56 @@ namespace StudentOrganizer.GUI
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the event ","Delete Event", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                eventComm.DeleteEvent(ev);
+                using (connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection))
+                {
+                    connection.Open();
+                    eventComm.DeleteEvent(ev);
 
-                eventTable = new System.Data.DataTable();
-                sqlAdapter = new SqlDataAdapter(@"SELECT id,eventTypes_ID,
+                    eventTable = new System.Data.DataTable();
+                    sqlAdapter = new SqlDataAdapter(@"SELECT id,eventTypes_ID,
                                                                 period,departament,task,
                                                                 remarks FROM Event", connection);
-                sqlAdapter.Fill(eventTable);
-                EventListControl.DataSource = eventTable;
+                    sqlAdapter.Fill(eventTable);
+                    EventListControl.DataSource = eventTable;
+
+                    connection.Close();
+                }
             }
             else if (dialogResult == DialogResult.No)
             {
 
+            }
+        }
+
+        private void EventListComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (EventListComboBox.Text.Equals("All"))
+            {
+                studentTable = new System.Data.DataTable();
+                connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
+                sqlAdapter = new SqlDataAdapter(@"SELECT id,firstName,
+                                                            lastName,gender,birthDate,
+                                                            email,phoneNumber,faculty,
+                                                            facultyStartYear FROM Student", connection);
+                sqlAdapter.Fill(studentTable);
+                GridControl.RefreshDataSource();
+                GridControl.DataSource = studentTable;
+            }
+            else
+            {
+                studentTable = new System.Data.DataTable();
+                connection = new SqlConnection(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
+                sqlAdapter = new SqlDataAdapter(@"SELECT DISTINCT student.id,student.firstName,
+                                                            student.lastName,student.gender,student.birthDate,
+                                                            student.email,student.phoneNumber,student.faculty,
+                                                            student.facultyStartYear FROM Student,Event,StudentEvent,EventTypes 
+                                                            WHERE student.id = StudentEvent.id_Student 
+                                                            AND event.id = StudentEvent.id_Event
+                                                            AND EventTypes.id = event.eventTypes_id
+                                                            AND EventTypes.Description = '" + EventListComboBox.Text + "'", connection);
+                sqlAdapter.Fill(studentTable);
+                GridControl.DataSource = studentTable;
+                PeriodComboBox.Text = "All";
             }
         }
 

@@ -26,6 +26,8 @@ namespace StudentOrganizer.GUI
             userComm = new UserCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
 
             passwordTextField.Properties.PasswordChar = '*';
+
+            this.passwordTextField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckEnterKeyPress);
         }
 
         private void logInButton_Click(object sender, EventArgs e)
@@ -42,6 +44,27 @@ namespace StudentOrganizer.GUI
             else 
             {
                 MessageBox.Show("Wrong UserName or Password !");
+            }
+        }
+
+
+        private void CheckEnterKeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                user.UserName = userNameTextField.Text;
+                user.Password = userComm.Sha256Encrypt(passwordTextField.Text);
+
+                if (userComm.LogIn(user) != 0)
+                {
+                    this.Hide();
+                    StudentsForm studentForm = new StudentsForm();
+                    studentForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong UserName or Password !");
+                }
             }
         }
     }

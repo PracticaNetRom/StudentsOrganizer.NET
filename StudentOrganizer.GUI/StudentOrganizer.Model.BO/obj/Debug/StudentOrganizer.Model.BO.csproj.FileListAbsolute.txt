@@ -15,3 +15,4 @@ E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.M
 E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\bin\Debug\StudentOrganizer.Model.BO.pdb
 E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.dll
 E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.pdb
+E:\Practica\GitHub\StudentsOrganizer.NET\StudentOrganizer.GUI\StudentOrganizer.Model.BO\obj\Debug\StudentOrganizer.Model.BO.csprojResolveAssemblyReference.cache

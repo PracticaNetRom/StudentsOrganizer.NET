@@ -14,8 +14,11 @@ namespace StudentOrganizer.GUI
     public partial class PagingToolBar : XtraUserControl
     {
 
-        public int step = 20;
-        private int pageNR = 0;
+        public delegate void ClickHandler();
+        public event ClickHandler BackButtonClicked;
+        public event ClickHandler NextButtonClicked;
+   
+
 
         public PagingToolBar()
         {
@@ -24,12 +27,21 @@ namespace StudentOrganizer.GUI
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-
+            if (BackButtonClicked != null) 
+            {
+                BackButtonClicked();
+            }
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-
+            if (NextButtonClicked != null)
+            {
+                NextButtonClicked();
+            }
         }
+
+       
+
     }
 }

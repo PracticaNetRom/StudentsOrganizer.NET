@@ -49,7 +49,9 @@
             this.EditStudentButton = new DevExpress.XtraEditors.SimpleButton();
             this.TabControl = new DevExpress.XtraTab.XtraTabControl();
             this.StudentList = new DevExpress.XtraTab.XtraTabPage();
+            this.pagingToolBar1 = new StudentOrganizer.GUI.PagingToolBar();
             this.EventList = new DevExpress.XtraTab.XtraTabPage();
+            this.pagingToolBar2 = new StudentOrganizer.GUI.PagingToolBar();
             this.EventListControl = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.EventTypeID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,6 +65,8 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.ExportButton = new DevExpress.XtraEditors.SimpleButton();
             this.PrintButton = new DevExpress.XtraEditors.SimpleButton();
+            this.ParticipateLabel = new DevExpress.XtraEditors.LabelControl();
+            this.EventListComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -75,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteEventButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeriodComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EventListComboBox.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // createButton
@@ -97,8 +102,7 @@
             // 
             // GridControl
             // 
-            this.GridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.GridControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GridControl.Location = new System.Drawing.Point(4, 3);
             this.GridControl.MainView = this.gridView1;
@@ -250,7 +254,7 @@
             this.TabControl.Location = new System.Drawing.Point(12, 114);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedTabPage = this.StudentList;
-            this.TabControl.Size = new System.Drawing.Size(801, 391);
+            this.TabControl.Size = new System.Drawing.Size(801, 449);
             this.TabControl.TabIndex = 6;
             this.TabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.StudentList,
@@ -258,29 +262,44 @@
             // 
             // StudentList
             // 
+            this.StudentList.Controls.Add(this.pagingToolBar1);
             this.StudentList.Controls.Add(this.GridControl);
             this.StudentList.Name = "StudentList";
-            this.StudentList.Size = new System.Drawing.Size(795, 363);
+            this.StudentList.Size = new System.Drawing.Size(795, 421);
             this.StudentList.Text = "Studens List";
+            // 
+            // pagingToolBar1
+            // 
+            this.pagingToolBar1.Location = new System.Drawing.Point(574, 374);
+            this.pagingToolBar1.Name = "pagingToolBar1";
+            this.pagingToolBar1.Size = new System.Drawing.Size(214, 48);
+            this.pagingToolBar1.TabIndex = 12;
             // 
             // EventList
             // 
+            this.EventList.Controls.Add(this.pagingToolBar2);
             this.EventList.Controls.Add(this.EventListControl);
             this.EventList.Name = "EventList";
-            this.EventList.Size = new System.Drawing.Size(795, 410);
+            this.EventList.Size = new System.Drawing.Size(795, 421);
             this.EventList.Text = "Events List";
+            // 
+            // pagingToolBar2
+            // 
+            this.pagingToolBar2.Location = new System.Drawing.Point(573, 375);
+            this.pagingToolBar2.Name = "pagingToolBar2";
+            this.pagingToolBar2.Size = new System.Drawing.Size(215, 46);
+            this.pagingToolBar2.TabIndex = 8;
             // 
             // EventListControl
             // 
-            this.EventListControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.EventListControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EventListControl.Location = new System.Drawing.Point(3, 3);
+            this.EventListControl.Location = new System.Drawing.Point(-1, 0);
             this.EventListControl.MainView = this.gridView2;
             this.EventListControl.Name = "EventListControl";
             this.EventListControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.deleteEventButton});
-            this.EventListControl.Size = new System.Drawing.Size(789, 404);
+            this.EventListControl.Size = new System.Drawing.Size(789, 369);
             this.EventListControl.TabIndex = 7;
             this.EventListControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -397,11 +416,31 @@
             this.PrintButton.Text = "Print Student List";
             this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
+            // ParticipateLabel
+            // 
+            this.ParticipateLabel.Location = new System.Drawing.Point(587, 55);
+            this.ParticipateLabel.Name = "ParticipateLabel";
+            this.ParticipateLabel.Size = new System.Drawing.Size(70, 13);
+            this.ParticipateLabel.TabIndex = 12;
+            this.ParticipateLabel.Text = "Participates At";
+            // 
+            // EventListComboBox
+            // 
+            this.EventListComboBox.Location = new System.Drawing.Point(688, 52);
+            this.EventListComboBox.Name = "EventListComboBox";
+            this.EventListComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.EventListComboBox.Size = new System.Drawing.Size(113, 20);
+            this.EventListComboBox.TabIndex = 13;
+            this.EventListComboBox.SelectedIndexChanged += new System.EventHandler(this.EventListComboBox_SelectedIndexChanged);
+            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 562);
+            this.Controls.Add(this.EventListComboBox);
+            this.Controls.Add(this.ParticipateLabel);
             this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.ExportButton);
             this.Controls.Add(this.labelControl1);
@@ -425,6 +464,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deleteEventButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PeriodComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EventListComboBox.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,6 +504,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ButtonDelete;
         private DevExpress.XtraGrid.Columns.GridColumn Delete;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit deleteEventButton;
+        private PagingToolBar pagingToolBar1;
+        private PagingToolBar pagingToolBar2;
+        private DevExpress.XtraEditors.LabelControl ParticipateLabel;
+        private DevExpress.XtraEditors.ComboBoxEdit EventListComboBox;
 
 
     }

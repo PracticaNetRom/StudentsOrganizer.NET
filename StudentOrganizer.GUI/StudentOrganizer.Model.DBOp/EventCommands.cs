@@ -214,5 +214,33 @@ namespace StudentOrganizer.Model.DBOp
             return yearsList;
         }
 
+        public List<string> GetEventNames() 
+        {
+            List<string> namesList = new List<string>();
+
+            string selectString = "SELECT Description FROM EventTypes";
+
+            using (conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                SqlCommand command = new SqlCommand(selectString, conn);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string eventName = reader.GetString(reader.GetOrdinal("Description"));
+
+                        namesList.Add(eventName);
+                    }
+                    reader.Close();
+                }
+                conn.Close();
+            }
+
+            return namesList;
+        }
+
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DevExpress.XtraEditors.LabelControl eventTypeIDLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEventForm));
             this.SaveEventButton = new DevExpress.XtraEditors.SimpleButton();
             this.eventTypeName = new DevExpress.XtraEditors.TextEdit();
             this.DepartamentComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -141,7 +142,7 @@
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.EditValue = global::StudentOrganizer.GUI.Properties.Resources._9551269341017sigla3;
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
             this.pictureEdit1.Location = new System.Drawing.Point(20, 12);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
