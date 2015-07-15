@@ -11,7 +11,6 @@ namespace StudentsOrganizer.DBO
 {
     public class StudentsOperations
     {
-        private SqlConnection Con;
         private string connectionString;
 
         public StudentsOperations(string connectionString)
@@ -30,7 +29,7 @@ namespace StudentsOrganizer.DBO
                                         PhoneNumber,
             Faculty,FacultyStartYear) values(@firstName,@lastName,@gender,@birthDate,@email,@phoneNumber,@faculty,@facultyStart)";
 
-            using (Con = new SqlConnection(connectionString))
+            using (SqlConnection Con = new SqlConnection(connectionString))
             {
                 Con.Open();
 
@@ -50,11 +49,12 @@ namespace StudentsOrganizer.DBO
                 Con.Close();
             }
         }
+
         public void UpdateStudent(Students stud)
         {
-            string updateString = "UPDATE STUDENT SET FirstName = @firstName,LastName = @lastName, Gender=@gender, BirthDate=@birthDate, Email=@email, PhoneNumber = @phoneNumber, Faculty = @faculty, FacultyStartYear = @facultyStart WHERE student.id = '" + stud.id + "'";
+            string updateString = "UPDATE STUDENTS SET First_Name = @firstName,Last_Name = @lastName, Gender=@gender, Birth_date=@birthDate, Email=@email, Phone_Numbers = @phoneNumber, Faculty = @faculty, Faculty_start_year = @facultyStart WHERE ID_Student = '" + stud.id + "'";
 
-            using (Con = new SqlConnection(connectionString))
+            using (SqlConnection Con = new SqlConnection(connectionString))
             {
                 Con.Open();
                 SqlCommand command = new SqlCommand(updateString, Con);
@@ -67,6 +67,9 @@ namespace StudentsOrganizer.DBO
                 command.Parameters.Add("@phoneNumber", stud.Phone_Numbers);
                 command.Parameters.Add("@faculty", stud.Faculty);
                 command.Parameters.Add("@facultyStart", stud.Male);
+
+
+                command.CommandType = CommandType.Text;
                 command.ExecuteNonQuery();
 
                 Con.Close();
@@ -77,7 +80,7 @@ namespace StudentsOrganizer.DBO
         {
             string deleteString = "DELETE FROM STUDENTS WHERE ID_Student = '" + id + "'";
 
-            using (Con = new SqlConnection(connectionString))
+            using (SqlConnection Con = new SqlConnection(connectionString))
             {
                 Con.Open();
                 SqlCommand command = new SqlCommand(deleteString, Con);
@@ -90,6 +93,73 @@ namespace StudentsOrganizer.DBO
         public void EditStudents(int ID)
         {
             throw new NotImplementedException();
+        }
+
+        public Students GetStudent(int id)
+        {
+            using (SqlConnection Con = new SqlConnection(connectionString))
+            {
+                Con.Open();
+                Students stud = null;
+                SqlCommand command = new SqlCommand("Select * from Students  where ID_Student=" + id, Con);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    stud = new Students();
+
+                    stud.ID_Student = reader.GetInt32(reader.GetOrdinal("ID_Student"));
+                   // stud.First_Name = reader.GetString(reader.GetOrdinal("First_Name"));
+                    if (!reader.IsDBNull(reader.GetOrdinal("First_Name")))
+                    {
+                        stud.First_Name = reader.GetString(reader.GetOrdinal("First_Name"));
+                    }
+
+                  //  stud.Last_Name = reader.GetString(reader.GetOrdinal("Last_Name"));
+                    if (!reader.IsDBNull(reader.GetOrdinal("Last_Name")))
+                    {
+                        stud.Last_Name = reader.GetString(reader.GetOrdinal("Last_Name"));
+                    }
+
+
+                  //  stud.Gender = reader.GetString(reader.GetOrdinal("Gender"));
+                    if (!reader.IsDBNull(reader.GetOrdinal("Gender")))
+                    {
+                        stud.Gender = reader.GetString(reader.GetOrdinal("Gender"));
+                    }
+
+                    if (!reader.IsDBNull(reader.GetOrdinal("Birth_date")))
+                    {
+                        stud.Birth_date = reader.GetDateTime(reader.GetOrdinal("Birth_date"));
+                    }
+                  
+                    if (!reader.IsDBNull(reader.GetOrdinal("Email")))
+                    {
+                        stud.Email = reader.GetString(reader.GetOrdinal("Email"));
+                    }
+
+                
+                    if (!reader.IsDBNull(reader.GetOrdinal("Phone_Numbers")))
+                    {
+                        stud.Phone_Numbers = reader.GetString(reader.GetOrdinal("Phone_Numbers"));
+                    }
+
+
+                   // stud.Faculty = reader.GetString(reader.GetOrdinal("Faculty"));
+                    if (!reader.IsDBNull(reader.GetOrdinal("Faculty")))
+                    {
+                        stud.Faculty = reader.GetString(reader.GetOrdinal("Faculty"));
+                    }
+
+                   // stud.Faculty_start_year = reader.GetString(reader.GetOrdinal("Faculty_start_year"));
+                    if (!reader.IsDBNull(reader.GetOrdinal("Faculty_start_year")))
+
+                    {
+                        stud.Faculty_start_year = reader.GetString(reader.GetOrdinal("Faculty_start_year"));
+                    }
+                }
+                Con.Close();
+                return stud;
+            }
         }
     }
 }

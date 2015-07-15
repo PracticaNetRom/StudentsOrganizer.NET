@@ -48,7 +48,6 @@
             this.Faultystartyear = new DevExpress.XtraEditors.LabelControl();
             this.dateNavigator1 = new DevExpress.XtraScheduler.DateNavigator();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ParticipantsEvents.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LastName.Properties)).BeginInit();
@@ -96,7 +95,7 @@
             this.ParticipantsEvents.Location = new System.Drawing.Point(18, 38);
             this.ParticipantsEvents.Margin = new System.Windows.Forms.Padding(4);
             this.ParticipantsEvents.Name = "ParticipantsEvents";
-            this.ParticipantsEvents.Size = new System.Drawing.Size(467, 20);
+            this.ParticipantsEvents.Size = new System.Drawing.Size(407, 20);
             this.ParticipantsEvents.TabIndex = 23;
             this.ParticipantsEvents.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
@@ -257,30 +256,18 @@
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(480, 527);
+            this.simpleButton1.Location = new System.Drawing.Point(462, 35);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(84, 23);
             this.simpleButton1.TabIndex = 39;
             this.simpleButton1.Text = "Save";
             this.simpleButton1.Click += new System.EventHandler(this.Save_Click);
             // 
-            // btnEdit
-            // 
-            this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnEdit.Appearance.Options.UseFont = true;
-            this.btnEdit.Location = new System.Drawing.Point(584, 527);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 40;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 613);
-            this.Controls.Add(this.btnEdit);
+            this.ClientSize = new System.Drawing.Size(572, 613);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.dateNavigator1);
             this.Controls.Add(this.Faultystartyear);
@@ -343,7 +330,6 @@
         private DevExpress.XtraEditors.LabelControl Faultystartyear;
         private DevExpress.XtraScheduler.DateNavigator dateNavigator1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton btnEdit;
 
     }
 }

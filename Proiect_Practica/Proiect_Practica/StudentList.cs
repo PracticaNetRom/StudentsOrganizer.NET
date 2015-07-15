@@ -1,4 +1,5 @@
 ﻿using StudentsOrganizer.DBO;
+using StudentsOrganizerModel.BO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,8 +45,7 @@ namespace Proiect_Practica
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int ID;
-            ID= (int)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID_Student");
+            int ID = GetSelectedID();
             StudentsOperations stdop = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
             stdop.DeleteStudents(ID);
             GetStudents();
@@ -53,16 +53,16 @@ namespace Proiect_Practica
 
         private void GetStudents()
         {
-            SqlConnection con = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From STUDENTS", con);
+            SqlConnection conn = new SqlConnection(Proiect_Practica.Properties.Settings.Default.Setting);
+            SqlDataAdapter sda = new SqlDataAdapter("Select * From STUDENTS", conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             gridControl1.DataSource = dt;
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
-            AddStudent form = new AddStudent();
+            AddStudent form = new AddStudent(null);
             form.ShowDialog();
         }
 
@@ -71,29 +71,33 @@ namespace Proiect_Practica
 
         }
 
-        /*Students stud;
-            StudentsOperations studDbo;
-            // public   EditStudentForm(Student stud)
-            {
-                InitializeComponent();
-                this.stud = stud;
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            Students stud = GetSelectedStudent();
+            AddStudent form = new AddStudent(stud);
+            form.ShowDialog();
+        }
 
-                StudentsOperations studDboo = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
-                studDboo.InsertStudent(student);
 
-                student.First_Name = FirstName.Text;
-                student.Last_Name = LastName.Text;
-                student.Email = Email.Text;
+        private int GetSelectedID()
+        {
+            int ID;
+            ID = (int)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID_Student");
+            return ID;
+        }
+        private  Students GetSelectedStudent()
+        {
+            int ID_Student = GetSelectedID();
 
-                if (stud.Gender.Equals("Male"))
-                {
-                    Male.Checked = true;
-                    Female.Checked = false;
-                }
-                else
-                {
-                    Male.Checked = false;
-                    Female.Checked = true;
-                }*/
+            StudentsOperations stdop = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
+            Students stud = stdop.GetStudent(ID_Student);
+            
+
+            return stud;
+        }
+
+
+        public SqlDataReader command { get; set; }
+
     }
 }

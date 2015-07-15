@@ -12,3 +12,10 @@ D:\StudentsOrganizer.NET\Proiect_Practica\StudentsOrganizer.DBO\bin\Debug\Studen
 D:\StudentsOrganizer.NET\Proiect_Practica\StudentsOrganizer.DBO\bin\Debug\StudentsOrganizer.DBO.pdb
 D:\StudentsOrganizer.NET\Proiect_Practica\StudentsOrganizer.DBO\bin\Debug\StudentsOrganizerModel.BO.dll
 D:\StudentsOrganizer.NET\Proiect_Practica\StudentsOrganizer.DBO\bin\Debug\StudentsOrganizerModel.BO.pdb
+C:\Users\Laboratory1\Desktop\StudentsOrganizer.NET-a.dia\Proiect_Practica\StudentsOrganizer.DBO\bin\Debug\StudentsOrganizer.DBO.dll
+C:\Users\Laboratory1\Desktop\StudentsOrganizer.NET-a.dia\Proiect_Practica\StudentsOrganizer.DBO\bin\Debug\StudentsOrganizer.DBO.pdb
+C:\Users\Laboratory1\Desktop\StudentsOrganizer.NET-a.dia\Proiect_Practica\StudentsOrganizer.DBO\bin\Debug\StudentsOrganizerModel.BO.dll
+C:\Users\Laboratory1\Desktop\StudentsOrganizer.NET-a.dia\Proiect_Practica\StudentsOrganizer.DBO\bin\Debug\StudentsOrganizerModel.BO.pdb
+C:\Users\Laboratory1\Desktop\StudentsOrganizer.NET-a.dia\Proiect_Practica\StudentsOrganizer.DBO\obj\Debug\StudentsOrganizer.DBO.csprojResolveAssemblyReference.cache
+C:\Users\Laboratory1\Desktop\StudentsOrganizer.NET-a.dia\Proiect_Practica\StudentsOrganizer.DBO\obj\Debug\StudentsOrganizer.DBO.dll
+C:\Users\Laboratory1\Desktop\StudentsOrganizer.NET-a.dia\Proiect_Practica\StudentsOrganizer.DBO\obj\Debug\StudentsOrganizer.DBO.pdb

@@ -15,15 +15,12 @@ namespace Proiect_Practica
 {
     public partial class AddStudent : Form
     {
+        public Students _stud { get; set; }
 
-        public Students stud { get; set; }
-        public AddStudent()
+        public AddStudent(Students stud)
         {
-
             InitializeComponent();
-
-
-
+            _stud = stud;
             //  student = new Student();
             //  studCom = new StudentCommands(StudentOrganizer.GUI.Properties.Settings.Default.Connection);
         }
@@ -75,23 +72,42 @@ namespace Proiect_Practica
 
         private void Save_Click(object sender, EventArgs e)
         {
-            Students student = new Students();
+
+            bool add = _stud == null;
+            if(add)
+            {
+                _stud = new Students();
+            }
+            _stud.Participants_Events = ParticipantsEvents.Text;
+            _stud.First_Name = FirstName.Text;
+            _stud.Last_Name = LastName.Text;
+            _stud.Phone_Numbers = PhoneNumber.Text;
+            _stud.Faculty = Faculty.Text;
+            _stud.Male = dateNavigator1.Text;
+            _stud.Email = Email.Text;
+            _stud.Birth_date = Convert.ToDateTime(BirthDate.Text);
+            _stud.Male = Female.Text;
+            _stud.Male = Male.Text;
+         //   _stud.Gender = Gender.Text;
+
+            if (Male.Checked)
+                _stud.Gender = "Male";
+            else
+                _stud.Gender = "Female";
 
 
-            student.Participants_Events = ParticipantsEvents.Text;
-            student.First_Name = FirstName.Text;
-            student.Last_Name = LastName.Text;
-            student.Phone_Numbers = PhoneNumber.Text;
-            student.Faculty = Faculty.Text;
-            student.Male = dateNavigator1.Text;
-            student.Email = Email.Text;
-            student.Birth_date = Convert.ToDateTime(BirthDate.Text);
-            student.Male = Female.Text;
-            student.Male = Male.Text;
-            student.Gender = Gender.Text;
+
 
             StudentsOperations studDbo = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
-            studDbo.InsertStudent(student);
+            if (add)
+            {
+                studDbo.InsertStudent(_stud);
+            }
+            else
+            {
+                studDbo.UpdateStudent(_stud);
+            }
+                    
 
 
 
@@ -111,7 +127,10 @@ namespace Proiect_Practica
 
         }
 
-        public Students student { get; set; }
+private bool Gender_Click()
+{
+ 	throw new NotImplementedException();
+}
 
         private void LastName_Click(object sender, EventArgs e)
         {
@@ -125,14 +144,13 @@ namespace Proiect_Practica
 
         private void Female_CheckedChanged(object sender, EventArgs e)
         {
-            student.Gender = "Famale";
-            Female.Checked = false;
+            Male.Checked = false;
         }
 
         private void Male_CheckedChanged(object sender, EventArgs e)
         {
-            student.Gender = "Male";
-            Male.Checked = false;
+            
+            Female.Checked = false;
         }
 
         private void BirthDate_Click(object sender, EventArgs e)
@@ -162,23 +180,18 @@ namespace Proiect_Practica
 
         public string year { get; set; }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+       /* private void btnEdit_Click(object sender, EventArgs e)
         {
-            Students stud;
             StudentsOperations studDbo;
-            // public   EditStudentForm(Student stud)
             {
-                InitializeComponent();
-                this.stud = stud;
-
                 StudentsOperations studDboo = new StudentsOperations(Proiect_Practica.Properties.Settings.Default.Setting);
-                studDboo.InsertStudent(student);
+                studDboo.UpdateStudent(_stud);
 
-                student.First_Name = FirstName.Text;
-                student.Last_Name = LastName.Text;
-                student.Email = Email.Text;
+                _stud.First_Name = FirstName.Text;
+                _stud.Last_Name = LastName.Text;
+                _stud.Email = Email.Text;
 
-                if (stud.Gender.Equals("Male"))
+                if (_stud.Gender.Equals("Male"))
                 {
                     Male.Checked = true;
                     Female.Checked = false;
@@ -188,10 +201,10 @@ namespace Proiect_Practica
                     Male.Checked = false;
                     Female.Checked = true;
                 }
-            }
+            }*/
         }
     }
-}
+
     
 
 

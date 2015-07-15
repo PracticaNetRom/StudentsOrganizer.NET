@@ -33,6 +33,7 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "Create";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.simpleButton1.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // labelControl1
             // 
@@ -79,12 +80,25 @@
             // 
             this.btnDelete.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Appearance.Options.UseFont = true;
-            this.btnDelete.Location = new System.Drawing.Point(145, 83);
+            this.btnDelete.Location = new System.Drawing.Point(246, 83);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnEdit.Appearance.ForeColor = System.Drawing.Color.Navy;
+            this.btnEdit.Appearance.Options.UseFont = true;
+            this.btnEdit.Appearance.Options.UseForeColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(142, 83);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 4;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // StudentList
             // 
@@ -93,6 +107,7 @@
             this.ClientSize = new System.Drawing.Size(702, 434);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.gridControl1);
             this.ForeColor = System.Drawing.Color.Navy;
@@ -113,5 +128,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnEdit;
     }
 }
