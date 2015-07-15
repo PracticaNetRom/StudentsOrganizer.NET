@@ -67,6 +67,7 @@
             this.PrintButton = new DevExpress.XtraEditors.SimpleButton();
             this.ParticipateLabel = new DevExpress.XtraEditors.LabelControl();
             this.EventListComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.PageLabel = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -262,6 +263,7 @@
             // 
             // StudentList
             // 
+            this.StudentList.Controls.Add(this.PageLabel);
             this.StudentList.Controls.Add(this.pagingToolBar1);
             this.StudentList.Controls.Add(this.GridControl);
             this.StudentList.Name = "StudentList";
@@ -270,7 +272,7 @@
             // 
             // pagingToolBar1
             // 
-            this.pagingToolBar1.Location = new System.Drawing.Point(574, 374);
+            this.pagingToolBar1.Location = new System.Drawing.Point(498, 370);
             this.pagingToolBar1.Name = "pagingToolBar1";
             this.pagingToolBar1.Size = new System.Drawing.Size(214, 48);
             this.pagingToolBar1.TabIndex = 12;
@@ -285,7 +287,7 @@
             // 
             // pagingToolBar2
             // 
-            this.pagingToolBar2.Location = new System.Drawing.Point(573, 375);
+            this.pagingToolBar2.Location = new System.Drawing.Point(498, 372);
             this.pagingToolBar2.Name = "pagingToolBar2";
             this.pagingToolBar2.Size = new System.Drawing.Size(215, 46);
             this.pagingToolBar2.TabIndex = 8;
@@ -434,6 +436,14 @@
             this.EventListComboBox.TabIndex = 13;
             this.EventListComboBox.SelectedIndexChanged += new System.EventHandler(this.EventListComboBox_SelectedIndexChanged);
             // 
+            // PageLabel
+            // 
+            this.PageLabel.Location = new System.Drawing.Point(707, 387);
+            this.PageLabel.Name = "PageLabel";
+            this.PageLabel.Size = new System.Drawing.Size(27, 13);
+            this.PageLabel.TabIndex = 13;
+            this.PageLabel.Text = "Page ";
+            // 
             // StudentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,6 +469,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TabControl)).EndInit();
             this.TabControl.ResumeLayout(false);
             this.StudentList.ResumeLayout(false);
+            this.StudentList.PerformLayout();
             this.EventList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EventListControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
@@ -508,6 +519,7 @@
         private PagingToolBar pagingToolBar2;
         private DevExpress.XtraEditors.LabelControl ParticipateLabel;
         private DevExpress.XtraEditors.ComboBoxEdit EventListComboBox;
+        private DevExpress.XtraEditors.LabelControl PageLabel;
 
 
     }

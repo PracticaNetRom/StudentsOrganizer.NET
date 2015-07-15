@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using StudentOrganizer.Model.BO;
 using StudentOrganizer.Model.DBOp;
 using DevExpress.XtraEditors;
+using System.Text.RegularExpressions;
 
 namespace StudentOrganizer.GUI
 {
@@ -48,29 +49,35 @@ namespace StudentOrganizer.GUI
 
         private void SaveEditButton_Click(object sender, EventArgs e)
         {
+            bool mailOK = false;
+
             stud.FirstName = FirstNameTextField.Text;
             stud.LastName = LastNameTextField.Text;
             stud.PhoneNumber = PhoneNumberTextField.Text;
-            stud.Email = EmailTextField.Text;
+           
             stud.BirthDate = Convert.ToDateTime(BirthTimeEdit.Text);
             stud.Faculty = FacultyComboBox.Text;
             stud.FacultyStartYear = Convert.ToInt32(FacultyStartComboBox.Text);
             stud.Gender = GenderComboBox.Text;
 
-            studComm.UpdateStudent(stud);
+            mailOK = Regex.IsMatch(EmailTextField.Text,
+                      @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                      @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
+                      RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
 
-            FirstNameTextField.Text = null;
-            LastNameTextField.Text = null;
-            PhoneNumberTextField.Text = null;
-            BirthTimeEdit.Text = null;
-            FacultyStartComboBox.Text = null;
-            FacultyComboBox.Text = null;
-            EmailTextField.Text = null;
-            GenderComboBox.Text = null;
-
-            StudentsForm studForm = new StudentsForm();
-            studForm.Show();
-            this.Close();
+            if (mailOK.Equals(true))
+            {
+                stud.Email = EmailTextField.Text;
+                studComm.UpdateStudent(stud);
+                StudentsForm studForm = new StudentsForm();
+                studForm.Show();
+                this.Close();
+            }
+            else 
+            {
+                MessageBox.Show("Invalid email ! ");
+            }
+            
         }
 
         private void MaleButton_CheckedChanged(object sender, EventArgs e)

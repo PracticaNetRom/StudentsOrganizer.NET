@@ -69,47 +69,53 @@ namespace StudentOrganizer.GUI
 
         private void SaveStudentButton_Click(object sender, EventArgs e)
         {
+            bool mailOK = false;
             student.FirstName = FirstNameTextField.Text;
             student.LastName = LastNameTextField.Text;
             student.BirthDate = Convert.ToDateTime(BirthTimeEdit.Text);
             student.PhoneNumber = PhoneNumberTextField.Text;
             student.Faculty = FacultyComboBox.SelectedText;
             student.FacultyStartYear = Convert.ToInt32(FacultyStartComboBox.SelectedText);
-            student.Email = EmailTextField.Text;
-            student.Gender = GenderComboBox.Text;
 
-            List<string> checkedList = (eventListCheckBox.EditValue ?? "").ToString().Split(eventListCheckBox.Properties.SeparatorChar).Select(i => Convert.ToString(i)).ToList();
+            mailOK = Regex.IsMatch(EmailTextField.Text,
+                      @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                      @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
+                      RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+
+            if (mailOK.Equals(true))
+            {
+                student.Email = EmailTextField.Text;
+ 
+                student.Gender = GenderComboBox.Text;
+
+                List<string> checkedList = (eventListCheckBox.EditValue ?? "").ToString().Split(eventListCheckBox.Properties.SeparatorChar).Select(i => Convert.ToString(i)).ToList();
 
 
             
-            studComm.InsertStudent(student);
+                studComm.InsertStudent(student);
 
-            for (int i = 0; i < checkedList.Count; i++)
-            {
-                for (int j = 0; j < evTypesList.Count; j++) 
+                for (int i = 0; i < checkedList.Count; i++)
                 {
-                    String verifyString = Regex.Replace(checkedList[i],@" ","");
-                    String baseString = Regex.Replace(evTypesList[j].Description, @" ", "");
-
-                    if (verifyString.Equals(baseString)) 
+                    for (int j = 0; j < evTypesList.Count; j++) 
                     {
-                        studEvCommands.InsertStudentEventUsingEventName(verifyString);
+                        String verifyString = Regex.Replace(checkedList[i],@" ","");
+                        String baseString = Regex.Replace(evTypesList[j].Description, @" ", "");
+
+                        if (verifyString.Equals(baseString)) 
+                        {
+                            studEvCommands.InsertStudentEventUsingEventName(verifyString);
+                        }
                     }
                 }
-            }
-          
-            FirstNameTextField.Text = null;
-            LastNameTextField.Text = null;
-            BirthTimeEdit.Text = null;
-            PhoneNumberTextField.Text = null;
-            FacultyComboBox.Text = null;
-            FacultyStartComboBox.Text = null;
-            EmailTextField.Text = null;
-            GenderComboBox.Text = null;
 
-            this.Close();
-            StudentsForm studentForm = new StudentsForm();
-            studentForm.Show();
+                this.Close();
+                StudentsForm studentForm = new StudentsForm();
+                studentForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invelid email !");
+            }
          
         }
 
