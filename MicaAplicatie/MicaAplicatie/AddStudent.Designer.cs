@@ -44,7 +44,6 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemColorEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.BirthDateTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.EmailTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.PhoneNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.FacultyTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -53,26 +52,24 @@
             this.PhoneNumberLabel = new DevExpress.XtraEditors.LabelControl();
             this.FacultyLabel = new DevExpress.XtraEditors.LabelControl();
             this.FacultyStartYearLabel = new DevExpress.XtraEditors.LabelControl();
-            this.EventTypeLabel = new DevExpress.XtraEditors.LabelControl();
-            this.MaleCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.FemaleCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.EventTypeComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.GenderComboBox = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.BirthDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.FstNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LstNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BirthDateTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyStartYearTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaleCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FemaleCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EventTypeComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderComboBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDateDateEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // SaveStudentButton
             // 
+            this.SaveStudentButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SaveStudentButton.Location = new System.Drawing.Point(179, 340);
             this.SaveStudentButton.Name = "SaveStudentButton";
             this.SaveStudentButton.Size = new System.Drawing.Size(107, 30);
@@ -82,6 +79,7 @@
             // 
             // ReturnToAdminPannelButton
             // 
+            this.ReturnToAdminPannelButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ReturnToAdminPannelButton.Location = new System.Drawing.Point(179, 376);
             this.ReturnToAdminPannelButton.Name = "ReturnToAdminPannelButton";
             this.ReturnToAdminPannelButton.Size = new System.Drawing.Size(107, 30);
@@ -190,14 +188,6 @@
             this.labelControl1.TabIndex = 15;
             this.labelControl1.Text = "Birthdate";
             // 
-            // BirthDateTextEdit
-            // 
-            this.BirthDateTextEdit.Location = new System.Drawing.Point(153, 147);
-            this.BirthDateTextEdit.MenuManager = this.barManager1;
-            this.BirthDateTextEdit.Name = "BirthDateTextEdit";
-            this.BirthDateTextEdit.Size = new System.Drawing.Size(94, 20);
-            this.BirthDateTextEdit.TabIndex = 16;
-            // 
             // EmailTextEdit
             // 
             this.EmailTextEdit.Location = new System.Drawing.Point(153, 174);
@@ -263,56 +253,43 @@
             this.FacultyStartYearLabel.TabIndex = 24;
             this.FacultyStartYearLabel.Text = "Faculty Start Year";
             // 
-            // EventTypeLabel
+            // GenderComboBox
             // 
-            this.EventTypeLabel.Location = new System.Drawing.Point(53, 289);
-            this.EventTypeLabel.Name = "EventTypeLabel";
-            this.EventTypeLabel.Size = new System.Drawing.Size(28, 13);
-            this.EventTypeLabel.TabIndex = 25;
-            this.EventTypeLabel.Text = "Event";
-            // 
-            // MaleCheckEdit
-            // 
-            this.MaleCheckEdit.Location = new System.Drawing.Point(153, 117);
-            this.MaleCheckEdit.MenuManager = this.barManager1;
-            this.MaleCheckEdit.Name = "MaleCheckEdit";
-            this.MaleCheckEdit.Properties.Caption = "Male";
-            this.MaleCheckEdit.Size = new System.Drawing.Size(75, 19);
-            this.MaleCheckEdit.TabIndex = 31;
-            // 
-            // FemaleCheckEdit
-            // 
-            this.FemaleCheckEdit.Location = new System.Drawing.Point(256, 118);
-            this.FemaleCheckEdit.MenuManager = this.barManager1;
-            this.FemaleCheckEdit.Name = "FemaleCheckEdit";
-            this.FemaleCheckEdit.Properties.Caption = "Female";
-            this.FemaleCheckEdit.Size = new System.Drawing.Size(75, 19);
-            this.FemaleCheckEdit.TabIndex = 32;
-            // 
-            // EventTypeComboBox
-            // 
-            this.EventTypeComboBox.EditValue = "...";
-            this.EventTypeComboBox.Location = new System.Drawing.Point(153, 281);
-            this.EventTypeComboBox.MenuManager = this.barManager1;
-            this.EventTypeComboBox.Name = "EventTypeComboBox";
-            this.EventTypeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.GenderComboBox.EditValue = "...";
+            this.GenderComboBox.Location = new System.Drawing.Point(153, 116);
+            this.GenderComboBox.MenuManager = this.barManager1;
+            this.GenderComboBox.Name = "GenderComboBox";
+            this.GenderComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.EventTypeComboBox.Properties.Items.AddRange(new object[] {
-            "Practice",
-            "Internship",
-            "NSA"});
-            this.EventTypeComboBox.Size = new System.Drawing.Size(100, 20);
-            this.EventTypeComboBox.TabIndex = 33;
+            this.GenderComboBox.Properties.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.GenderComboBox.Size = new System.Drawing.Size(100, 20);
+            this.GenderComboBox.TabIndex = 38;
+            // 
+            // BirthDateDateEdit
+            // 
+            this.BirthDateDateEdit.EditValue = null;
+            this.BirthDateDateEdit.Location = new System.Drawing.Point(153, 146);
+            this.BirthDateDateEdit.MenuManager = this.barManager1;
+            this.BirthDateDateEdit.Name = "BirthDateDateEdit";
+            this.BirthDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BirthDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BirthDateDateEdit.Properties.Mask.EditMask = "(0?[1-9]|1[012])/([012]?[1-9]|[123]0|31)/([123][0-9])?[0-9][0-9]";
+            this.BirthDateDateEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.BirthDateDateEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.BirthDateDateEdit.Size = new System.Drawing.Size(100, 20);
+            this.BirthDateDateEdit.TabIndex = 39;
             // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 427);
-            this.Controls.Add(this.EventTypeComboBox);
-            this.Controls.Add(this.FemaleCheckEdit);
-            this.Controls.Add(this.MaleCheckEdit);
-            this.Controls.Add(this.EventTypeLabel);
+            this.Controls.Add(this.BirthDateDateEdit);
+            this.Controls.Add(this.GenderComboBox);
             this.Controls.Add(this.FacultyStartYearLabel);
             this.Controls.Add(this.FacultyLabel);
             this.Controls.Add(this.PhoneNumberLabel);
@@ -321,7 +298,6 @@
             this.Controls.Add(this.FacultyTextEdit);
             this.Controls.Add(this.PhoneNumberTextEdit);
             this.Controls.Add(this.EmailTextEdit);
-            this.Controls.Add(this.BirthDateTextEdit);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.LastNameLabel);
             this.Controls.Add(this.GenderLabel);
@@ -340,14 +316,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.LstNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BirthDateTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyStartYearTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaleCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FemaleCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EventTypeComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderComboBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDateDateEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,14 +349,11 @@
         private DevExpress.XtraEditors.TextEdit FacultyTextEdit;
         private DevExpress.XtraEditors.TextEdit PhoneNumberTextEdit;
         private DevExpress.XtraEditors.TextEdit EmailTextEdit;
-        private DevExpress.XtraEditors.TextEdit BirthDateTextEdit;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl FacultyStartYearLabel;
         private DevExpress.XtraEditors.LabelControl FacultyLabel;
         private DevExpress.XtraEditors.LabelControl PhoneNumberLabel;
-        private DevExpress.XtraEditors.LabelControl EventTypeLabel;
-        private DevExpress.XtraEditors.CheckEdit FemaleCheckEdit;
-        private DevExpress.XtraEditors.CheckEdit MaleCheckEdit;
-        private DevExpress.XtraEditors.ComboBoxEdit EventTypeComboBox;
+        private DevExpress.XtraEditors.ComboBoxEdit GenderComboBox;
+        private DevExpress.XtraEditors.DateEdit BirthDateDateEdit;
     }
 }
