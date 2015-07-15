@@ -63,9 +63,13 @@ namespace ProiectPractica
             
             SqlConnection con = new SqlConnection(ProiectPractica.Properties.Settings.Default.DBConnection);
             SqlDataAdapter sda = new SqlDataAdapter("Select * From Student", con);
+            SqlDataAdapter sdaev = new SqlDataAdapter("Select * From Event", con);
             DataTable dt = new DataTable();
+            DataTable dtev = new DataTable();
             sda.Fill(dt);
+            sdaev.Fill(dtev);
             gridControl1.DataSource = dt;
+            gridControl2.DataSource = dtev;
 
         }
 
@@ -108,6 +112,11 @@ namespace ProiectPractica
             DataTable dt = new DataTable();
             sda.Fill(dt);
             gridControl1.DataSource = dt;
+        }
+
+        private void periodLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

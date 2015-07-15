@@ -32,7 +32,15 @@ namespace ProiectPractica.Model.DBOp
                 command.Parameters.Add("@FName", stud.FName);
                 command.Parameters.Add("@LName", stud.LName);
                 command.Parameters.Add("@Gender", stud.Gender);
-                command.Parameters.Add("@Birthdate", stud.Birthdate);
+                if (stud.Birthdate.HasValue)
+                {
+                    command.Parameters.Add("@Birthdate", stud.Birthdate.Value);
+                }
+                else 
+                {
+                    command.Parameters.Add("@Birthdate", DBNull.Value);
+                    
+                }
                 command.Parameters.Add("@Email", stud.Email);
                 command.Parameters.Add("@PhoneNumbers", stud.PhoneNumbers);
                 command.Parameters.Add("@Faculty", stud.Faculty);
@@ -104,7 +112,10 @@ namespace ProiectPractica.Model.DBOp
                     stud.FName = reader.GetString(reader.GetOrdinal("Fname"));
                     stud.LName = reader.GetString(reader.GetOrdinal("Lname")); ;
                     stud.Gender = reader.GetString(reader.GetOrdinal("Gender")); ;
-                    stud.Birthdate = reader.GetDateTime(reader.GetOrdinal("Birthdate"));
+                    if (!reader.IsDBNull(reader.GetOrdinal("Birthdate"))) 
+                    {
+                        stud.Birthdate = reader.GetDateTime(reader.GetOrdinal("Birthdate"));
+                    }
                     stud.Email = reader.GetString(reader.GetOrdinal("Email"));
                     stud.PhoneNumbers = reader.GetString(reader.GetOrdinal("PhoneNumbers"));
                     stud.Faculty = reader.GetString(reader.GetOrdinal("Faculty"));

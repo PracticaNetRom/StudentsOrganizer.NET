@@ -79,7 +79,10 @@ namespace ProiectPractica
             }
             _student.FName = textEdit1.Text;
             _student.LName = textEdit2.Text;
-            _student.Birthdate = Convert.ToDateTime(dateEdit1.Text);
+            if (dateEdit1.Text != "")
+            {
+                _student.Birthdate = Convert.ToDateTime(dateEdit1.Text);
+            }
             _student.PhoneNumbers = textEdit4.Text;
             _student.Email = textEdit3.Text;
             _student.Faculty = comboBoxEdit1.SelectedText;
@@ -113,7 +116,9 @@ namespace ProiectPractica
             if (_student != null) {
                 textEdit1.Text = _student.FName ;
                 textEdit2.Text = _student.LName;
-                dateEdit1.DateTime = _student.Birthdate;
+                if (_student.Birthdate.HasValue) {
+                    dateEdit1.DateTime = _student.Birthdate.Value;
+                }
                 textEdit4.Text = _student.PhoneNumbers;
                 textEdit3.Text = _student.Email;
                 comboBoxEdit1.SelectedText = _student.Faculty;

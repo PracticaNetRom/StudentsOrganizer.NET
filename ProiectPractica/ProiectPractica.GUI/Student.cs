@@ -12,7 +12,7 @@ namespace ProiectPractica
         public string FName { get; set; }
         public string LName { get; set; }
         public string Gender { get; set; }
-        public DateTime Birthdate { get; set; }
+        public DateTime? Birthdate { get; set; }
         public string Email { get; set; }
         public string PhoneNumbers { get; set; }
         public string Faculty { get; set; }
